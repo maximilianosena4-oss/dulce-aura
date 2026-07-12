@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es-AR">
 <head>
 <meta charset="UTF-8">
@@ -127,6 +127,14 @@ footer .pdf:hover{background:var(--gold);color:var(--bg)}
 .fab{position:fixed;bottom:20px;right:20px;z-index:60;width:54px;height:54px;border-radius:50%;background:linear-gradient(180deg,var(--wine),var(--wine-deep));border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.5);animation:pulse 2.4s infinite}
 .fab svg{width:26px;height:26px;fill:var(--gold)}
 @keyframes pulse{0%{box-shadow:0 8px 22px rgba(0,0,0,.5),0 0 0 0 rgba(212,175,55,.45)}70%{box-shadow:0 8px 22px rgba(0,0,0,.5),0 0 0 14px rgba(212,175,55,0)}100%{box-shadow:0 8px 22px rgba(0,0,0,.5),0 0 0 0 rgba(212,175,55,0)}}
+/* ── Stock indicators ─────────────────────────────────────────────────── */
+.stock-ok{font-size:10px;color:var(--ivory-soft);letter-spacing:.03em;margin-top:3px}
+.stock-low{font-size:11.5px;font-weight:500;color:var(--gold-light);letter-spacing:.02em;margin-top:3px}
+.stock-agotado{font-family:'Cinzel',serif;font-size:9px;font-weight:500;letter-spacing:.14em;color:var(--wine);text-transform:uppercase;margin-top:3px}
+.card.agotado .ph img{filter:grayscale(100%);opacity:.7;transition:filter .3s,opacity .3s}
+.card.agotado:hover .ph img{filter:grayscale(80%)}
+.card.agotado .wa{background:var(--surface-2);border-color:var(--line);color:var(--ivory-soft)}
+.card.agotado .wa:hover{box-shadow:none;background:var(--surface);color:var(--ivory)}
 @media(min-width:760px){.grid{grid-template-columns:repeat(4,1fr);gap:20px}.card .name{font-size:15px}}
 @media(max-width:720px){.sheet .top{grid-template-columns:1fr}.sheet .imgs{grid-template-columns:1fr 1fr}.recos .rgrid{grid-template-columns:repeat(2,1fr)}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
@@ -193,9 +201,12 @@ footer .pdf:hover{background:var(--gold);color:var(--bg)}
 <script>
 const WA_ICON = '<svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 .9-2.2c.2-.3.5-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.1.3.7 1.1 1.4 1.8 1 .8 1.7 1.1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.3-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.1.1.7-.1 1.3z"/></svg>';
 const money = v => '$' + v.toLocaleString('es-AR');
-let DATA=null, FILT={cat:'Todos',talle:null,q:'',sort:'destacado'}, SHOWN=24;
-fetch('productos.json').then(r=>r.json()).then(d=>{
-  DATA=d;
+let DATA=null, STOCK={}, FILT={cat:'Todos',talle:null,q:'',sort:'destacado'}, SHOWN=24;
+Promise.all([
+  fetch('productos.json').then(r=>r.json()),
+  fetch('stock.json').then(r=>r.json()).catch(()=>({}))
+]).then(([d,s])=>{
+  DATA=d; STOCK=s;
   document.getElementById('heroCount').textContent = d.total + ' prendas seleccionadas';
   buildChips(); buildTalles(); render();
 });
@@ -236,7 +247,13 @@ function filtered(){
   else if(FILT.sort==='nombre')list.sort((a,b)=>a.nombre_full.localeCompare(b.nombre_full));
   return list;
 }
-function badgeHtml(p){
+function stockHtml(cod){
+  const s=STOCK[cod];
+  if(!s||s.stock===null||s.stock===undefined)return '';
+  if(s.stock===0)return '<div class="stock-agotado">AGOTADO</div>';
+  if(s.stock<=2)return `<div class="stock-low">&#161;&#218;ltimas ${s.stock} unidad${s.stock>1?'es':''}!</div>`;
+  return `<div class="stock-ok">Stock: ${s.stock} unidades</div>`;
+}function badgeHtml(p){
   let b='';
   if(p.lanzamiento)b+='<span class="badge">Recién llegado</span>';
   if(p.promo)b+='<span class="badge">Promo</span>';
@@ -245,17 +262,23 @@ function badgeHtml(p){
 }
 function cardHtml(p){
   const antes=p.precio_antes?`<span class="antes">${money(p.precio_antes)}</span>`:'';
-  return `<div class="card" data-cod="${p.codigo}">
+  const s=STOCK[p.codigo];
+  const agotado=s&&s.stock===0;
+  const waHref=agotado
+    ?`https://wa.me/5491122413996?text=Hola%20Dulce%20Aura!%20Quisiera%20saber%20cu%C3%A1ndo%20reponen%20el%20${encodeURIComponent(p.nombre_full)}%20(${p.codigo}).`
+    :p.wa;
+  const waLabel=agotado?'Consultar reposición':'Pedir por WhatsApp';
+  return `<div class="card${agotado?' agotado':''}" data-cod="${p.codigo}">
     <div class="ph">${badgeHtml(p)}
       <img loading="lazy" src="${p.img_frente}" alt="${p.nombre_full}">
       <img loading="lazy" class="back" src="${p.img_espalda}" alt="">
     </div>
     <div class="body">
       <div class="cat">${p.categoria}</div>
-      <div class="name">${p.nombre_full}</div>
+      <div class="name">${p.nombre_full}</div>${stockHtml(p.codigo)}
       <div class="price-row"><span class="price">${money(p.precio)}</span>${antes}</div>
       <div class="talles-mini">Talles ${p.talles_str}</div>
-      <a class="wa" href="${p.wa}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${WA_ICON} Pedir por WhatsApp</a>
+      <a class="wa" href="${waHref}" target="_blank" rel="noopener" onclick="event.stopPropagation()">${WA_ICON} ${waLabel}</a>
     </div>
   </div>`;
 }
