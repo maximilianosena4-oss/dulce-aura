@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "actualizado": "2026-07-13T12:31:12.637Z",
+    "actualizado": "2026-07-13T22:55:52.055Z",
     "total": 143,
     "ok": 140,
     "errores": 0,
@@ -9,727 +9,727 @@
   "AM1141": {
     "stock": null,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z",
+    "actualizado": "2026-07-13T22:55:52.055Z",
     "nota": "sin-url-proveedor"
   },
   "AM1142": {
     "stock": null,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z",
+    "actualizado": "2026-07-13T22:55:52.055Z",
     "nota": "sin-url-proveedor"
   },
   "AM1143": {
     "stock": null,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z",
+    "actualizado": "2026-07-13T22:55:52.055Z",
     "nota": "sin-url-proveedor"
   },
   "AM1019": {
-    "stock": 43,
+    "stock": 35,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1022": {
-    "stock": 1,
+    "stock": 2,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1025": {
-    "stock": 5,
+    "stock": 1,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1028": {
-    "stock": 5,
+    "stock": 43,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1031": {
-    "stock": 5,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1039": {
     "stock": 10,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1039": {
+    "stock": 5,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1040": {
     "stock": 86,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1041": {
-    "stock": 5,
+    "stock": 2,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1043": {
-    "stock": 43,
+    "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1044": {
-    "stock": 4,
+    "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1045": {
     "stock": 4,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1023": {
     "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1024": {
-    "stock": 86,
+    "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1026": {
     "stock": 86,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1027": {
     "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1029": {
-    "stock": 11,
+    "stock": 2,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1030": {
-    "stock": 43,
+    "stock": 86,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1032": {
     "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1033": {
-    "stock": 4,
+    "stock": 2,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1034": {
-    "stock": 86,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1035": {
-    "stock": 86,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1036": {
-    "stock": 1,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1037": {
-    "stock": 86,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1038": {
     "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1035": {
+    "stock": 10,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1036": {
+    "stock": 86,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1037": {
+    "stock": 2,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1038": {
+    "stock": 86,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1042": {
     "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1046": {
-    "stock": 11,
+    "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1047": {
     "stock": 0,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z",
+    "actualizado": "2026-07-13T22:55:52.055Z",
     "nota": "url-404"
   },
   "AM1050": {
     "stock": 0,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z",
+    "actualizado": "2026-07-13T22:55:52.055Z",
     "nota": "url-404"
   },
   "AM1052": {
     "stock": 0,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z",
+    "actualizado": "2026-07-13T22:55:52.055Z",
     "nota": "url-404"
   },
   "AM1048": {
     "stock": 2,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1049": {
     "stock": 2,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1053": {
     "stock": 0,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z",
+    "actualizado": "2026-07-13T22:55:52.055Z",
     "nota": "url-404"
   },
   "AM1134": {
-    "stock": 43,
+    "stock": 76,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1137": {
     "stock": 0,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z",
+    "actualizado": "2026-07-13T22:55:52.055Z",
     "nota": "url-404"
   },
   "AM1138": {
     "stock": 0,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z",
+    "actualizado": "2026-07-13T22:55:52.055Z",
     "nota": "url-404"
   },
   "AM1139": {
     "stock": 0,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z",
+    "actualizado": "2026-07-13T22:55:52.055Z",
     "nota": "url-404"
   },
   "AM1140": {
-    "stock": 29,
+    "stock": 53,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1002": {
-    "stock": 37,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1017": {
-    "stock": 13,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1018": {
     "stock": 2,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1017": {
+    "stock": 44,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1018": {
+    "stock": 44,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1051": {
     "stock": 0,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z",
+    "actualizado": "2026-07-13T22:55:52.055Z",
     "nota": "url-404"
   },
   "AM1074": {
-    "stock": 29,
+    "stock": 76,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1093": {
-    "stock": 15,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1094": {
-    "stock": 44,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1095": {
-    "stock": 15,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1096": {
-    "stock": 29,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1006": {
-    "stock": 37,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1067": {
-    "stock": 40,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1014": {
-    "stock": 2,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1020": {
-    "stock": 40,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1069": {
-    "stock": 40,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1107": {
-    "stock": 29,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1004": {
-    "stock": 8,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1005": {
-    "stock": 8,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1008": {
-    "stock": 2,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1010": {
-    "stock": 46,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1013": {
-    "stock": 44,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1015": {
-    "stock": 13,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1066": {
     "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
-  "AM1097": {
-    "stock": 29,
+  "AM1094": {
+    "stock": 76,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
-  "AM1007": {
+  "AM1095": {
+    "stock": 53,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1096": {
+    "stock": 48,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1006": {
     "stock": 2,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
-  "AM1011": {
+  "AM1067": {
+    "stock": 29,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1014": {
+    "stock": 13,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1020": {
     "stock": 37,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
-  "AM1016": {
+  "AM1069": {
+    "stock": 29,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1107": {
+    "stock": 76,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1004": {
     "stock": 33,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1005": {
+    "stock": 2,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1008": {
+    "stock": 33,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1010": {
+    "stock": 12,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1013": {
+    "stock": 37,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1015": {
+    "stock": 2,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1066": {
+    "stock": 15,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1097": {
+    "stock": 23,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1007": {
+    "stock": 12,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1011": {
+    "stock": 7,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1016": {
+    "stock": 12,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1021": {
-    "stock": 48,
+    "stock": 34,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1054": {
-    "stock": 1,
+    "stock": 53,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1056": {
-    "stock": 43,
+    "stock": 44,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1057": {
-    "stock": 43,
+    "stock": 23,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1058": {
-    "stock": 48,
+    "stock": 39,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1060": {
     "stock": 48,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1070": {
-    "stock": 40,
+    "stock": 39,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1108": {
-    "stock": 53,
+    "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1109": {
-    "stock": 77,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1115": {
-    "stock": 1,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1075": {
-    "stock": 40,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1105": {
-    "stock": 15,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1001": {
-    "stock": 33,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1003": {
-    "stock": 37,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1009": {
-    "stock": 9,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1012": {
-    "stock": 13,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1063": {
-    "stock": 43,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1055": {
-    "stock": 23,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1061": {
     "stock": 48,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1115": {
+    "stock": 29,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1075": {
+    "stock": 53,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1105": {
+    "stock": 23,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1001": {
+    "stock": 13,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1003": {
+    "stock": 12,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1009": {
+    "stock": 2,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1012": {
+    "stock": 33,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1063": {
+    "stock": 29,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1055": {
+    "stock": 39,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1061": {
+    "stock": 20,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1062": {
-    "stock": 37,
+    "stock": 39,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1064": {
     "stock": 39,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1065": {
-    "stock": 40,
+    "stock": 37,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1071": {
     "stock": 48,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1072": {
-    "stock": 48,
+    "stock": 29,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1085": {
-    "stock": 48,
+    "stock": 39,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1090": {
     "stock": 53,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1091": {
     "stock": 20,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1092": {
-    "stock": 77,
+    "stock": 29,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1127": {
-    "stock": 44,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1128": {
-    "stock": 29,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1129": {
-    "stock": 29,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1116": {
-    "stock": 15,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1088": {
     "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1128": {
+    "stock": 48,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1129": {
+    "stock": 15,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1116": {
+    "stock": 23,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1088": {
+    "stock": 1,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1098": {
-    "stock": 77,
+    "stock": 44,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1099": {
     "stock": 48,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1100": {
     "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1103": {
-    "stock": 29,
+    "stock": 43,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1112": {
-    "stock": 23,
+    "stock": 43,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1113": {
-    "stock": 23,
+    "stock": 1,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1068": {
-    "stock": 10,
+    "stock": 11,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1082": {
-    "stock": 77,
+    "stock": 76,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1101": {
-    "stock": 48,
+    "stock": 1,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1102": {
-    "stock": 44,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1119": {
-    "stock": 53,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1120": {
-    "stock": 40,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1059": {
-    "stock": 44,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1080": {
     "stock": 29,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1119": {
+    "stock": 29,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1120": {
+    "stock": 29,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1059": {
+    "stock": 29,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1080": {
+    "stock": 5,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1083": {
-    "stock": 77,
+    "stock": 1,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1114": {
     "stock": 48,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1117": {
-    "stock": 29,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1118": {
-    "stock": 44,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1121": {
-    "stock": 44,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1122": {
-    "stock": 1,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1123": {
-    "stock": 40,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1124": {
-    "stock": 53,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1125": {
-    "stock": 53,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1126": {
-    "stock": 29,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1130": {
-    "stock": 43,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1131": {
-    "stock": 29,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1073": {
-    "stock": 44,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1086": {
     "stock": 5,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1118": {
+    "stock": 15,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1121": {
+    "stock": 43,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1122": {
+    "stock": 39,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1123": {
+    "stock": 43,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1124": {
+    "stock": 39,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1125": {
+    "stock": 29,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1126": {
+    "stock": 1,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1130": {
+    "stock": 39,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1131": {
+    "stock": 43,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1073": {
+    "stock": 76,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1086": {
+    "stock": 53,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1087": {
-    "stock": 48,
+    "stock": 23,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1076": {
-    "stock": 44,
+    "stock": 29,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1077": {
     "stock": 15,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1078": {
-    "stock": 5,
+    "stock": 76,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1079": {
-    "stock": 77,
+    "stock": 48,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1089": {
-    "stock": 15,
+    "stock": 44,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1110": {
     "stock": 23,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1111": {
-    "stock": 1,
+    "stock": 44,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1132": {
-    "stock": 15,
+    "stock": 1,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1133": {
-    "stock": 48,
+    "stock": 1,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1081": {
-    "stock": 15,
+    "stock": 39,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1084": {
     "stock": 29,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1104": {
-    "stock": 29,
+    "stock": 76,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
   },
   "AM1106": {
-    "stock": 48,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1135": {
-    "stock": 53,
-    "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
-  },
-  "AM1136": {
     "stock": 44,
     "proveedor": "africa-mia",
-    "actualizado": "2026-07-13T12:31:12.637Z"
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1135": {
+    "stock": 1,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
+  },
+  "AM1136": {
+    "stock": 1,
+    "proveedor": "africa-mia",
+    "actualizado": "2026-07-13T22:55:52.055Z"
   }
 }
