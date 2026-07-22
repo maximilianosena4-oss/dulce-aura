@@ -131,8 +131,8 @@ footer .pdf:hover{background:var(--gold);color:var(--bg)}
 .stock-ok{font-size:10px;color:var(--ivory-soft);letter-spacing:.03em;margin-top:3px}
 .stock-low{font-size:11.5px;font-weight:500;color:var(--gold-light);letter-spacing:.02em;margin-top:3px}
 .stock-agotado{font-family:'Cinzel',serif;font-size:9px;font-weight:500;letter-spacing:.14em;color:var(--wine);text-transform:uppercase;margin-top:3px}
-.card.agotado .ph img{filter:grayscale(100%);opacity:.7;transition:filter .3s,opacity .3s}
-.card.agotado:hover .ph img{filter:grayscale(80%)}
+.card.agotado .ph img:not(.back){filter:grayscale(100%);opacity:.7;transition:filter .3s,opacity .3s}
+.card.agotado:hover .ph img:not(.back){filter:grayscale(80%)}
 .card.agotado .wa{background:var(--surface-2);border-color:var(--line);color:var(--ivory-soft)}
 .card.agotado .wa:hover{box-shadow:none;background:var(--surface);color:var(--ivory)}
 @media(min-width:760px){.grid{grid-template-columns:repeat(4,1fr);gap:20px}.card .name{font-size:15px}}

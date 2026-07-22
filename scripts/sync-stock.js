@@ -46,7 +46,7 @@ async function fetchHtml(url) {
     try {
       const res = await fetch(url, {
         timeout: TIMEOUT_MS,
-        headers: { "User-Agent": "Mozilla/5.0 (compatible; DulceAuraSyncBot/1.0)" },
+        headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" },
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return await res.text();
@@ -60,32 +60,42 @@ async function fetchHtml(url) {
 
 /**
  * Extrae el stock de una ficha de producto de África Mía.
- * Fuente primaria: JSON-LD inventoryLevel.value
- * Fuente secundaria: texto visible ("Sin stock" → 0)
- * Devuelve number | null (null = no se pudo determinar)
+ * Fuente: JSON-LD offers.availability del bloque que matchea el slug.
+ * Devuelve: 1 (InStock) | 0 (OutOfStock) | null (no determinado → conservar anterior)
+ *
+ * Tiendanube anida los offers en WebPage > mainEntity > hasVariant[] > offers[].
+ * La búsqueda es recursiva para ser robusta ante cambios de estructura.
  */
-function extraerStock(html) {
+function extraerStock(html, slug) {
   const $ = cheerio.load(html);
+  let resultado = null;
 
-  // ── JSON-LD ──────────────────────────────────────────────────────────────
-  let stockLd = null;
+  function buscarOfers(obj) {
+    if (!obj || typeof obj !== "object" || resultado !== null) return;
+
+    if (obj.offers) {
+      const offers = Array.isArray(obj.offers) ? obj.offers : [obj.offers];
+      const matching = offers.filter(o => o && o.url && o.url.includes(slug));
+      if (matching.length > 0) {
+        if (matching.some(o => (o.availability || "").includes("InStock")))    { resultado = 1; return; }
+        if (matching.some(o => (o.availability || "").includes("OutOfStock"))) { resultado = 0; return; }
+      }
+    }
+
+    for (const [k, v] of Object.entries(obj)) {
+      if (resultado !== null) return;
+      if (k === "offers") continue; // ya revisado arriba
+      if (Array.isArray(v))         v.forEach(item => buscarOfers(item));
+      else if (typeof v === "object") buscarOfers(v);
+    }
+  }
+
   $('script[type="application/ld+json"]').each((_, el) => {
-    try {
-      const data = JSON.parse($(el).html());
-      const nivel = data?.offers?.inventoryLevel?.value;
-      if (nivel !== undefined) stockLd = parseInt(nivel, 10);
-    } catch { /* ignorar JSON malformado */ }
+    if (resultado !== null) return false; // break si ya encontramos
+    try { buscarOfers(JSON.parse($(el).html())); } catch { /* ignorar JSON malformado */ }
   });
-  if (stockLd !== null && !isNaN(stockLd)) return stockLd;
 
-  // ── texto visible ("Sin stock" / "X en stock") ────────────────────────────
-  const texto = $("body").text();
-  if (/sin stock/i.test(texto)) return 0;
-  const m = texto.match(/Solo quedan (\d+) en stock/i)
-         || texto.match(/(\d+) en stock/i);
-  if (m) return parseInt(m[1], 10);
-
-  return null; // sin dato
+  return resultado; // null = no se pudo determinar → conservar stock anterior
 }
 
 // ── lógica principal ──────────────────────────────────────────────────────────
@@ -127,9 +137,20 @@ async function main() {
 
     try {
       const html  = await fetchHtml(url);
-      const stock = extraerStock(html);
-      resultado[codigo] = { stock, proveedor: "africa-mia", actualizado: ahora };
-      process.stdout.write(`stock=${stock !== null ? stock : "null"}\n`);
+      const stock = extraerStock(html, ref);
+      if (stock !== null) {
+        resultado[codigo] = { stock, proveedor: "africa-mia", actualizado: ahora };
+        process.stdout.write(`stock=${stock}\n`);
+      } else {
+        // No se pudo determinar availability → conservar stock anterior
+        if (stockAnterior[codigo]) {
+          resultado[codigo] = { ...stockAnterior[codigo], actualizado: ahora };
+          process.stdout.write(`sin dato → conservando anterior (${stockAnterior[codigo].stock})\n`);
+        } else {
+          resultado[codigo] = { stock: null, proveedor: "africa-mia", actualizado: ahora };
+          process.stdout.write(`sin dato (sin historial)\n`);
+        }
+      }
       ok++;
     } catch (err) {
       const es404 = err.message.includes("404");
@@ -152,6 +173,15 @@ async function main() {
     }
 
     await sleep(PAUSA_MS);
+  }
+
+  // ── Sanity-check: abortar si >70% de positivos pasaron a 0 ───────────────
+  const anteriorPositivos = Object.values(stockAnterior).filter(x => x && x.stock > 0).length;
+  const nuevosPositivos   = Object.values(resultado).filter(x => x && x.stock > 0).length;
+  if (anteriorPositivos > 10 && nuevosPositivos / anteriorPositivos < 0.3) {
+    console.error(`\n⛔ ABORTANDO: ${anteriorPositivos} positivos → ${nuevosPositivos} (${Math.round(nuevosPositivos / anteriorPositivos * 100)}%) — posible error de scraping`);
+    console.error("stock.json NO fue sobreescrito.");
+    process.exit(1);
   }
 
   // ── Escribir stock.json ──────────────────────────────────────────────────
