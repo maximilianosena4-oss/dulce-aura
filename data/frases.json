@@ -1,0 +1,53 @@
+{
+  "hero": {
+    "titulo": "Verano 2026/27. Tu estilo, tu momento.",
+    "subtitulo": "Ochenta y un prendas nuevas y una sola pregunta: ¿con cuál empezás?"
+  },
+  "transiciones": {
+    "antes_catalogo": "Bajá tranquila. Esto se mira sin apuro.",
+    "mitad_grilla": "¿Seguís acá? Buena señal.",
+    "antes_urgencia": "Lo bueno de la temporada: llega. Lo malo: se va igual de rápido."
+  },
+  "categorias": {
+    "Basica": "Las que nunca fallan. Literalmente nunca.",
+    "Remera": "Treinta y cinco. Una para cada humor.",
+    "Musculosa": "Para los días en que el ventilador no alcanza.",
+    "Pupera": "Cortitas y al pie.",
+    "Saquito": "Porque a la noche siempre refresca. Siempre.",
+    "Buzo": "El abrazo que te podés poner.",
+    "Pantalon": "Cómodos de verdad, no \"cómodos\" con comillas.",
+    "Palazo": "Se siente pijama. Se ve impecable.",
+    "Jogging": "Para estar en casa sin parecer que te rendiste.",
+    "Pijama": "Dormir bien también es cuidarse.",
+    "Campera": "Las noches de verano refrescan. Tené una lista.",
+    "Short": "El básico que nunca sobra en la valija.",
+    "Vestido": "Una prenda, cero decisiones."
+  },
+  "buscador_vacio": {
+    "titulo": "No encontramos esa.",
+    "cuerpo": "Puede que la hayamos escrito distinto — probá con otra palabra. O escribinos y te la buscamos nosotras.",
+    "cta": "Escribinos por WhatsApp"
+  },
+  "carrito_vacio": {
+    "titulo": "Tu pedido está vacío.",
+    "cuerpo": "Por ahora.",
+    "cta": "Ver la colección"
+  },
+  "carrito": {
+    "titulo": "Tu pedido",
+    "aclaracion_total": "Total estimado. El envío y la disponibilidad final los confirmamos por WhatsApp.",
+    "cta": "Mandar el pedido por WhatsApp",
+    "microcopy": "Te respondemos rápido. Coordinás envío o retiro."
+  },
+  "confirmacion": {
+    "titulo": "Listo. Ya lo tenemos.",
+    "cuerpo": "Te escribimos en un rato para confirmar todo. Mientras tanto, seguí mirando — nadie te mira mal."
+  },
+  "popup": {
+    "microcopy_confianza": "Respuesta rápida · Coordinás envío o retiro · Talles reales",
+    "consultar": "Este no tiene precio publicado todavía. Preguntanos y te lo pasamos al toque."
+  },
+  "footer": {
+    "firma": "La moda es una tentación… y nosotras no ayudamos a resistirla."
+  }
+}
