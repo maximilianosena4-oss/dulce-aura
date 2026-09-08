@@ -24,8 +24,12 @@ build/
 # Archivos de trabajo y gobernanza local
 AUDITORIA_REPO.md
 MIGRACION_REPO.md
+INVENTARIO_WEB.md
+PATRON_CATALOGO.md
+TESTS.md
 CLAUDE.md
 AGENT_WEB_DulceAura.md
 FASE_0_PROMPT.md
 PLAN_EJECUCION_WEB.md
 DATOS_WEB/
+muestra-b1.html
