@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
 <style>
 :root{
   --bg:#0B0709;--panel:#140C10;--surface:#1A1015;
@@ -78,28 +79,112 @@ a{text-decoration:none;color:inherit}
 .dots span{width:7px;height:7px;border-radius:50%;background:rgba(243,236,227,.25);transition:all .2s}
 .dots span.on{background:var(--gold);width:20px;border-radius:999px}
 
-/* ─── Catálogo grilla ─── */
-.catalog{padding:30px 18px;max-width:1100px;margin:0 auto}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .2s}
-.card:hover{transform:translateY(-4px)}
-.card-img{position:relative;aspect-ratio:3/4;background:linear-gradient(150deg,#2A1820,#160C11)}
-.card-img img{width:100%;height:100%;object-fit:cover}
-.card-img .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:12px;text-align:center;padding:10px}
-.badge{position:absolute;top:10px;left:10px;z-index:2;background:linear-gradient(180deg,var(--wine),var(--wine-deep));border:1px solid var(--gold);color:var(--ivory);font-size:10.5px;font-weight:500;letter-spacing:.4px;padding:5px 10px;border-radius:999px}
-.card-body{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
-.card-body h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:20px;line-height:1.1}
-.card-body .desc{font-size:13px;color:var(--ivory-soft);flex:1}
-.card-body .talles{font-size:11.5px;color:var(--gold);letter-spacing:.5px;margin-top:2px}
-.price-row{display:flex;flex-direction:column;gap:5px;margin-top:6px}
-.price-minorista,.price-mayorista{display:flex;align-items:center;justify-content:space-between;gap:8px}
-.price-label{font-family:'Cinzel',serif;font-size:9px;letter-spacing:1.5px;font-weight:500;padding:3px 7px;border-radius:999px;white-space:nowrap;flex:none}
-.price-label.min{background:linear-gradient(180deg,var(--wine),var(--wine-deep));border:1px solid var(--gold);color:var(--ivory)}
-.price-label.may{background:transparent;border:1px solid var(--line);color:var(--gold)}
-.price{font-size:18px;font-weight:600;color:var(--gold)}
-.price.mayor{font-size:13px;color:var(--ivory-soft);font-weight:400}
-.price-note{font-size:10px;color:var(--ivory-soft);font-style:italic;letter-spacing:.3px;margin-top:2px}
-.card .btn{margin-top:10px;width:100%;font-size:14.5px;padding:12px}
+/* ─── Catálogo (zona clara — Fase B1/C1) ─── */
+.catalog{background:var(--crema);color:var(--text-dark);padding:var(--sp-8) var(--sp-5);margin:0;max-width:none}
+.catalog .section-head{max-width:1100px;margin:0 auto var(--sp-5)}
+.catalog .section-head .eyebrow{color:var(--wine)}
+.cat-titulo-manuscrito{font-family:var(--font-manuscrita);font-weight:700;font-size:var(--fs-2xl);color:var(--wine);margin-top:4px}
+.cat-frase-categoria{font-family:var(--font-manuscrita);font-weight:400;font-size:var(--fs-md);color:var(--text-dark);margin-top:var(--sp-2)}
+.cat-frase-categoria[hidden]{display:none}
+
+.cat-filtros{max-width:1100px;margin:0 auto var(--sp-5);display:flex;flex-direction:column;gap:var(--sp-3)}
+.cat-filtros-row{display:flex;flex-wrap:wrap;gap:var(--sp-3)}
+.cat-search{flex:1 1 220px;position:relative}
+.cat-search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);width:16px;height:16px;color:var(--wine);pointer-events:none}
+.cat-search input{width:100%;padding:var(--sp-3) var(--sp-4) var(--sp-3) 40px;border:1px solid var(--line-light);border-radius:var(--r-full);background:#fff;color:var(--text-dark);font-size:var(--fs-sm);font-family:inherit}
+.cat-search input:focus-visible{outline:2px solid var(--gold-deep);outline-offset:1px}
+.cat-sort{padding:var(--sp-3) var(--sp-4);border:1px solid var(--line-light);border-radius:var(--r-full);background:#fff;color:var(--text-dark);font-size:var(--fs-sm);font-family:inherit;cursor:pointer}
+.cat-chips{display:flex;gap:var(--sp-2);overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.cat-chips::-webkit-scrollbar{display:none}
+.cat-chip{flex:0 0 auto;padding:var(--sp-2) var(--sp-4);border-radius:var(--r-full);border:1px solid var(--line-light);background:#fff;color:var(--text-dark);font-size:var(--fs-sm);cursor:pointer}
+.cat-chip.activo{background:var(--rosa);border-color:var(--wine);color:var(--text-dark);font-weight:600}
+.cat-talles-row{display:flex;gap:var(--sp-2);flex-wrap:wrap;align-items:center}
+.cat-talles-row .lbl{font-size:var(--fs-xs);color:var(--text-dark);opacity:.7;margin-right:2px}
+.cat-talle{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:var(--r-sm);border:1px solid var(--line-light);background:#fff;color:var(--text-dark);font-size:var(--fs-xs);cursor:pointer}
+.cat-talle.activo{background:var(--celeste);border-color:var(--wine);color:var(--text-dark);font-weight:700}
+
+.cat-meta{max-width:1100px;margin:0 auto var(--sp-4);font-size:var(--fs-sm);color:var(--text-dark);opacity:.75}
+
+.cat-empty{max-width:480px;margin:0 auto var(--sp-6);text-align:center;padding:var(--sp-6) var(--sp-4);border:1px solid var(--line-light);border-radius:var(--r-md);background:#fff}
+.cat-empty[hidden]{display:none}
+.cat-empty-titulo{font-family:var(--font-manuscrita);font-weight:700;font-size:var(--fs-lg);color:var(--wine);margin:0 0 var(--sp-3)}
+.cat-empty-cuerpo{font-size:var(--fs-sm);color:var(--text-dark);margin:0 0 var(--sp-4);line-height:1.5}
+.cat-empty-cta{display:inline-block;padding:var(--sp-3) var(--sp-5);border-radius:var(--r-full);background:var(--wine);color:var(--ivory);font-size:var(--fs-sm);font-weight:600}
+
+.catalog .grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-4)}
+@media(min-width:760px){.catalog .grid{grid-template-columns:repeat(4,1fr);gap:var(--sp-5)}}
+
+.catalog .card{background:#fff;border:1px solid var(--line-light);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--sh-sm);cursor:pointer;display:flex;flex-direction:column;transition:transform .2s}
+.catalog .card:hover{transform:translateY(-4px)}
+.catalog .card-img{position:relative;aspect-ratio:.667;background:var(--crema-warm);overflow:hidden}
+.catalog .card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .3s}
+.catalog .card-img img.back{opacity:0}
+.catalog .card:hover .card-img img.back{opacity:1}
+.catalog .badge{position:absolute;top:var(--sp-3);left:var(--sp-3);z-index:2;padding:var(--sp-1) var(--sp-3);border-radius:var(--r-full);font-size:var(--fs-xs);font-weight:700;letter-spacing:.04em;color:var(--text-dark);background:var(--rosa)}
+.catalog .card-body{padding:var(--sp-4);display:flex;flex-direction:column;gap:var(--sp-1);flex:1}
+.catalog .card-body .cat{font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--wine)}
+.catalog .card-body h3{font-family:'Jost',sans-serif;font-weight:600;font-size:var(--fs-base);color:var(--text-dark);margin:0}
+.catalog .card-body .precio-row{margin-top:var(--sp-1);display:flex;flex-direction:column;gap:2px}
+.catalog .card-body .precio{font-size:var(--fs-md);font-weight:700;color:var(--wine)}
+.catalog .card-body .precio-tramo{font-size:var(--fs-xs);color:var(--text-dark);opacity:.75}
+.catalog .card-body .consultar{font-size:var(--fs-sm);color:var(--text-dark)}
+.catalog .card-body .talles-mini{display:flex;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:var(--sp-2)}
+.catalog .card-body .talles-mini span{font-size:var(--fs-xs);padding:2px var(--sp-2);border:1px solid var(--line-light);border-radius:var(--r-sm);color:var(--text-dark)}
+
+.cat-loadmore{display:block;margin:var(--sp-6) auto 0;padding:var(--sp-3) var(--sp-6);background:transparent;border:1px solid var(--wine);color:var(--wine);border-radius:var(--r-full);font-family:'Jost',sans-serif;font-size:var(--fs-sm);letter-spacing:.05em;cursor:pointer}
+.cat-loadmore:hover{background:var(--wine);color:var(--ivory)}
+.cat-loadmore[hidden]{display:none}
+
+/* ── Popup del catálogo ── */
+.cat-modal{position:fixed;inset:0;z-index:100;display:none;align-items:flex-start;justify-content:center;background:rgba(11,7,9,.72);backdrop-filter:blur(4px);overflow-y:auto;padding:30px 16px}
+.cat-modal.open{display:flex}
+.cat-sheet{background:var(--crema);color:var(--text-dark);border-radius:var(--r-lg);max-width:900px;width:100%;overflow:hidden;animation:catpop .25s ease}
+@keyframes catpop{from{transform:translateY(14px);opacity:0}to{transform:none;opacity:1}}
+.cat-sheet .top{display:grid;grid-template-columns:1fr 1fr}
+@media(max-width:720px){.cat-sheet .top{grid-template-columns:1fr}}
+.cat-sheet .imgs{display:grid;grid-template-columns:1fr 1fr;background:var(--crema-warm)}
+.cat-sheet .imgs img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.cat-sheet .info{padding:var(--sp-5);position:relative;display:flex;flex-direction:column;gap:var(--sp-2)}
+.cat-sheet .close{position:absolute;top:var(--sp-3);right:var(--sp-3);width:32px;height:32px;border-radius:50%;border:1px solid var(--line-light);background:#fff;color:var(--text-dark);font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.cat-sheet .cat{font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--wine)}
+.cat-sheet h2{font-family:'Jost',sans-serif;font-weight:600;font-size:var(--fs-lg);margin:0;padding-right:36px}
+.cat-sheet .art{font-size:var(--fs-xs);color:var(--text-dark);opacity:.6}
+.cat-sheet .desc{font-size:var(--fs-sm);line-height:1.5;color:var(--text-dark)}
+.cat-sheet .pr{font-size:var(--fs-xl);font-weight:700;color:var(--wine)}
+.cat-sheet .pr-tramo{font-size:var(--fs-sm);color:var(--text-dark);opacity:.8}
+.cat-sheet .pr-consultar{font-size:var(--fs-base);color:var(--text-dark)}
+
+.cat-sheet .colores{margin-top:var(--sp-2)}
+.cat-sheet .colores .lbl,.cat-sheet .colores-elegir .lbl,.cat-sheet .talles-elegir .lbl{font-size:var(--fs-xs);text-transform:uppercase;letter-spacing:.06em;color:var(--text-dark);opacity:.7;margin-bottom:var(--sp-2);display:block}
+.cat-sheet .color-row{margin-bottom:var(--sp-2)}
+.cat-sheet .color-row .color-nombre{font-size:var(--fs-sm);font-weight:600;margin-bottom:4px;text-transform:capitalize}
+.cat-sheet .color-row .talles-disp{display:flex;flex-wrap:wrap;gap:4px}
+.cat-sheet .color-row .talles-disp span{font-size:var(--fs-xs);padding:2px 8px;border-radius:var(--r-sm);border:1px solid var(--line-light)}
+.cat-sheet .color-row .talles-disp span.disp{background:var(--salvia);color:var(--text-dark);border-color:var(--wine)}
+.cat-sheet .color-row .talles-disp span.agotado{color:var(--text-dark);opacity:.4;text-decoration:line-through}
+
+.cat-sheet .colores-elegir,.cat-sheet .talles-elegir{margin-top:var(--sp-2)}
+.cat-sheet .opt-row{display:flex;flex-wrap:wrap;gap:var(--sp-2)}
+.cat-sheet .opt{padding:var(--sp-2) var(--sp-3);border:1px solid var(--line-light);border-radius:var(--r-sm);background:#fff;color:var(--text-dark);font-size:var(--fs-sm);cursor:pointer;text-transform:capitalize;font-family:inherit}
+.cat-sheet .opt.activo{background:var(--celeste);border-color:var(--wine);font-weight:700}
+.cat-sheet .opt:disabled{opacity:.35;cursor:not-allowed;text-decoration:line-through}
+
+.cat-sheet .aviso-seleccion{font-size:var(--fs-xs);color:var(--wine);min-height:1em}
+
+.cat-sheet .wa-big{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:var(--sp-3);padding:var(--sp-3) var(--sp-5);border-radius:var(--r-full);background:var(--wine);color:var(--ivory);font-weight:600;font-size:var(--fs-base);text-align:center}
+.cat-sheet .wa-big[aria-disabled="true"]{opacity:.45;pointer-events:none}
+.cat-sheet .wa-big svg{width:18px;height:18px;fill:var(--ivory)}
+.cat-sheet .reassure{font-size:var(--fs-xs);color:var(--text-dark);opacity:.7;text-align:center}
+
+.cat-recos{padding:var(--sp-5);border-top:1px solid var(--line-light)}
+.cat-recos h4{font-family:var(--font-manuscrita);font-weight:700;font-size:var(--fs-md);color:var(--wine);margin:0 0 var(--sp-3)}
+.cat-recos .rgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-3)}
+@media(max-width:720px){.cat-recos .rgrid{grid-template-columns:repeat(2,1fr)}}
+.cat-recos .rc{background:#fff;border:1px solid var(--line-light);border-radius:var(--r-sm);cursor:pointer;overflow:hidden}
+.cat-recos .rc img{width:100%;aspect-ratio:.667;object-fit:cover;display:block}
+.cat-recos .rn{font-size:var(--fs-xs);padding:var(--sp-2) var(--sp-2) 0;color:var(--text-dark)}
+.cat-recos .rp{font-size:var(--fs-xs);font-weight:700;padding:2px var(--sp-2) var(--sp-2);color:var(--wine)}
+@media(prefers-reduced-motion:reduce){.cat-sheet{animation:none}}
 
 /* ─── Urgencia ─── */
 .urgency{margin:30px auto;max-width:620px;text-align:center;padding:0 18px}
@@ -131,7 +216,6 @@ footer a{color:var(--gold)}
 /* ─── Desktop ─── */
 @media(min-width:760px){
   body{padding-bottom:0}
-  .grid{grid-template-columns:repeat(3,1fr);gap:22px}
   .testi-grid{grid-template-columns:repeat(3,1fr)}
   .slide{flex:0 0 360px}
   .sticky-cta{display:none}
@@ -244,13 +328,46 @@ src="https://www.facebook.com/tr?id=2227502608002276&ev=PageView&noscript=1"
   </a>
 </section>
 
-<section class="catalog" id="catalogo" style="display:none">
+<section class="catalog" id="catalogo">
   <div class="section-head">
     <p class="eyebrow">CATÁLOGO COMPLETO</p>
-    <h2>Toda la colección</h2>
+    <h2 class="cat-titulo-manuscrito" id="catTitulo">Toda la colección</h2>
+    <p class="cat-frase-categoria" id="catFraseCategoria" hidden></p>
   </div>
+
+  <div class="cat-filtros">
+    <div class="cat-filtros-row">
+      <div class="cat-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input id="catQ" type="search" placeholder="Buscar por nombre o código…" autocomplete="off" aria-label="Buscar prenda">
+      </div>
+      <select class="cat-sort" id="catSort" aria-label="Ordenar">
+        <option value="destacado">Destacados</option>
+        <option value="menor">Precio: menor a mayor</option>
+        <option value="mayor">Precio: mayor a menor</option>
+        <option value="nombre">Nombre A-Z</option>
+      </select>
+    </div>
+    <div class="cat-chips" id="catChips"></div>
+    <div class="cat-talles-row" id="catTallesRow"></div>
+  </div>
+
+  <p class="cat-meta" id="catMeta"></p>
+
+  <div class="cat-empty" id="catEmpty" hidden>
+    <p class="cat-empty-titulo" id="catEmptyTitulo"></p>
+    <p class="cat-empty-cuerpo" id="catEmptyCuerpo"></p>
+    <a class="cat-empty-cta" id="catEmptyCta" href="#" target="_blank" rel="noopener"></a>
+  </div>
+
   <div class="grid" id="grid"></div>
+
+  <button class="cat-loadmore" id="catLoadmore" hidden>Ver más prendas</button>
 </section>
+
+<div class="cat-modal" id="catModal">
+  <div class="cat-sheet" id="catSheet"></div>
+</div>
 
 <div class="urgency">
   <div class="inner">
@@ -325,92 +442,6 @@ const CARRUSEL = [
   { img:"img/WhatsApp Image 2026-06-12 at 22.28.21.jpeg",     nombre:"Saco Monterrey Bremer ($25.600)" }
 ];
 
-/* ── CATÁLOGO COMPLETO DEL PDF ── */
-const PRODUCTOS = [
-  { nombre:"Pantalón Rústico Baggy", desc:"ART.461 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000 / $25.600", precioAntes:"", stock:"", img:"img/cat/art461.jpeg" },
-  { nombre:"Buzo Rústico Rayado", desc:"ART.466 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$22.400 / $24.000", precioAntes:"", stock:"", img:"img/cat/art466.jpeg" },
-  { nombre:"Buzo Rústico Rayado c/Cordón", desc:"ART.473 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$25.600", precioAntes:"", stock:"", img:"img/cat/art473.jpeg" },
-  { nombre:"Buzo Rústico Sport", desc:"ART.492 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$25.600", precioAntes:"", stock:"", img:"img/cat/art492.jpeg" },
-  { nombre:"Campera Toalla Rayada", desc:"ART.494 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$32.000 / $33.600", precioAntes:"", stock:"", img:"img/cat/art494.jpeg" },
-  { nombre:"Campera Rústico Cordón Cintura", desc:"ART.497 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$27.200", precioAntes:"", stock:"", img:"img/cat/art497.jpeg" },
-  { nombre:"Campera Rústico S/Capucha", desc:"ART.504 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$25.600 / $27.200", precioAntes:"", stock:"", img:"img/cat/art504.jpeg" },
-  { nombre:"Babucha Frizada", desc:"ART.506 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$16.000", precioAntes:"", stock:"", img:"img/cat/art506.jpeg" },
-  { nombre:"Campera Frizada Clásica", desc:"ART.508 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$30.400 / $32.000", precioAntes:"", stock:"", img:"img/cat/art508.jpeg" },
-  { nombre:"Jogging Frizado", desc:"ART.509 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000 / $25.600", precioAntes:"", stock:"", img:"img/cat/art509.jpeg" },
-  { nombre:"Campera Rústico (570)", desc:"ART.570 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$25.600 / $27.200", precioAntes:"", stock:"", img:"img/cat/art570.jpeg" },
-  { nombre:"Babucha Rústico", desc:"ART.571 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$16.000", precioAntes:"", stock:"", img:"img/cat/art571.jpeg" },
-  { nombre:"Jogging Rústico", desc:"ART.573 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$20.800 / $22.400", precioAntes:"", stock:"", img:"img/cat/art573.jpeg" },
-  { nombre:"Palazzo Rústico", desc:"ART.804 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000 / $25.600", precioAntes:"", stock:"", img:"img/cat/art804.jpeg" },
-  { nombre:"Saquito Morley c/Botón", desc:"ART.880 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000 / $25.600", precioAntes:"", stock:"", img:"img/cat/art880.jpeg" },
-  { nombre:"Buzo Rústico c/Cuello Morley Cierre", desc:"ART.883 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$25.600 / $27.200", precioAntes:"", stock:"", img:"img/cat/art883.jpeg" },
-  { nombre:"Remera Básica Algodón M/L", desc:"ART.1001 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800 / $14.400", precioAntes:"", stock:"", img:"img/cat/art1001.jpeg" },
-  { nombre:"Remera Básica Morley", desc:"ART.1002 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$14.400 / $15.200", precioAntes:"", stock:"", img:"img/cat/art1002.jpeg" },
-  { nombre:"Palazzo Frizado c/Ganga", desc:"ART.1003 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$25.600 / $27.200", precioAntes:"", stock:"", img:"img/cat/art1003.jpeg" },
-  { nombre:"Palazzo Micropolar Rayado", desc:"ART.1004 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$25.600 / $27.200", precioAntes:"", stock:"", img:"img/cat/art1004.jpeg" },
-  { nombre:"Remera Lanilla Animal Print", desc:"ART.1005 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800", precioAntes:"", stock:"", img:"img/cat/art1005.jpeg" },
-  { nombre:"Remera Morley Puntilla Cuello", desc:"ART.1006 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$14.400 / $16.000", precioAntes:"", stock:"", img:"img/cat/art1006.jpeg" },
-  { nombre:"Pijama Algodón Snoopy Rosa", desc:"ART.1008 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$36.800", precioAntes:"", stock:"", img:"img/cat/art1008.jpeg" },
-  { nombre:"Buzo Micropolar Rayado", desc:"ART.1010 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$22.400 / $24.000", precioAntes:"", stock:"", img:"img/cat/art1010.jpeg" },
-  { nombre:"Remera Micropolar Rayado Curious", desc:"ART.1011 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$22.400 / $24.000", precioAntes:"", stock:"", img:"img/cat/art1011.jpeg" },
-  { nombre:"Básica Morley Escote V", desc:"ART.1012 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$15.200 / $16.000", precioAntes:"", stock:"", img:"img/cat/art1012.jpeg" },
-  { nombre:"Campera Friza Vivo", desc:"ART.1013 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$35.200", precioAntes:"", stock:"", img:"img/cat/art1013.jpeg" },
-  { nombre:"Pantalón Frizado Recto c/Vivo", desc:"ART.1014 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$27.200 / $28.800", precioAntes:"", stock:"", img:"img/cat/art1014.jpeg" },
-  { nombre:"Buzo Micropolar New Romantic", desc:"ART.1015 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$27.200 / $28.800", precioAntes:"", stock:"", img:"img/cat/art1015.jpeg" },
-  { nombre:"Buzo Micropolar Estampa Corona", desc:"ART.1016 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000 / $25.600", precioAntes:"", stock:"", img:"img/cat/art1016.jpeg" },
-  { nombre:"Campera c/Capucha Micropolar Broche", desc:"ART.1017 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$35.200 / $36.800", precioAntes:"", stock:"", img:"img/cat/art1017.jpeg" },
-  { nombre:"Campera S/Capucha Micropolar Rayado", desc:"ART.1018 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$33.600 / $35.200", precioAntes:"", stock:"", img:"img/cat/art1018.jpeg" },
-  { nombre:"Campera c/Capucha Micropolar Rayado", desc:"ART.1019 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$32.000 / $33.600", precioAntes:"", stock:"", img:"img/cat/art1019.jpeg" },
-  { nombre:"Buzo Micropolar Rayado Medio Cierre", desc:"ART.1020 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$27.200 / $28.800", precioAntes:"", stock:"", img:"img/cat/art1020.jpeg" },
-  { nombre:"Polerón Micropolar Rayado", desc:"ART.1021 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$25.600 / $27.200", precioAntes:"", stock:"", img:"img/cat/art1021.jpeg" },
-  { nombre:"Buzo Micropolar", desc:"ART.1022 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000 / $25.600", precioAntes:"", stock:"", img:"img/cat/art1022.jpeg" },
-  { nombre:"Palazzo Morley", desc:"ART.1023 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$22.400 / $24.000", precioAntes:"", stock:"", img:"img/cat/art1023.jpeg" },
-  { nombre:"Palazzo Micropolar", desc:"ART.1024 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$25.600 / $27.200", precioAntes:"", stock:"", img:"img/cat/art1024.jpeg" },
-  { nombre:"Remera Micropolar Rayado", desc:"ART.1025 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$17.600 / $19.200", precioAntes:"", stock:"", img:"img/cat/art1025.jpeg" },
-  { nombre:"Buzo Frizado Oversize Canguro", desc:"ART.1026 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$30.400", precioAntes:"", stock:"", img:"img/cat/art1026.jpeg" },
-  { nombre:"Palazzo Frizado", desc:"ART.1027 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000 / $25.600", precioAntes:"", stock:"", img:"img/cat/art1027.jpeg" },
-  { nombre:"Polera Lanilla", desc:"ART.1028 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800", precioAntes:"", stock:"", img:"img/cat/art1028.jpeg" },
-  { nombre:"Campera Frizado Oversize", desc:"ART.1029 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$32.000 / $33.600", precioAntes:"", stock:"", img:"img/cat/art1029.jpeg" },
-  { nombre:"Remera Lanilla c/Lazo PROMO", desc:"ART.1030 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800", precioAntes:"", stock:"", img:"img/cat/art1030.jpeg" },
-  { nombre:"Mediapolera Morley", desc:"ART.1031 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$14.400 / $16.000", precioAntes:"", stock:"", img:"img/cat/art1031.jpeg" },
-  { nombre:"Remera Morley Escote V Picot c/Botón", desc:"ART.1036 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$14.400 / $16.000", precioAntes:"", stock:"", img:"img/cat/art1036.jpeg" },
-  { nombre:"Buzo Lanilla Morley PROMO", desc:"ART.1040 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$16.000", precioAntes:"", stock:"", img:"img/cat/art1040.jpeg" },
-  { nombre:"Remera Jersey New Attitude", desc:"ART.1043 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$16.000 / $17.600", precioAntes:"", stock:"", img:"img/cat/art1043.png" },
-  { nombre:"Remera Morley Lanilla c/Picot", desc:"ART.1044 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800", precioAntes:"", stock:"", img:"img/cat/art1044.jpeg" },
-  { nombre:"Remera Jersey Manga Caída LA", desc:"ART.1045 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800", precioAntes:"", stock:"", img:"img/cat/art1045.png" },
-  { nombre:"Remera Jersey Rayado Laugh&Shine", desc:"ART.1046 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800", precioAntes:"", stock:"", img:"img/cat/art1046.png" },
-  { nombre:"Saquito Morley c/Puntilla", desc:"ART.1047 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$16.000 / $17.600", precioAntes:"", stock:"", img:"img/cat/art1047.jpeg" },
-  { nombre:"Remera Algodón Cuello Abierto c/Botón", desc:"ART.1048 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$16.000 / $17.600", precioAntes:"", stock:"", img:"img/cat/art1048.jpeg" },
-  { nombre:"Mediapolera Algodón", desc:"ART.1050 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800 / $14.400", precioAntes:"", stock:"", img:"img/cat/art1050.jpeg" },
-  { nombre:"Remera Jersey Estampa Argentina", desc:"ART.1051 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$11.200", precioAntes:"", stock:"", img:"img/cat/art1051.jpeg" },
-  { nombre:"Polera Lanilla (1052)", desc:"ART.1052 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800", precioAntes:"", stock:"", img:"img/cat/art1052.jpeg" },
-  { nombre:"Remera Morley c/Botón", desc:"ART.1053 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800 / $14.400", precioAntes:"", stock:"", img:"img/cat/art1053.jpeg" },
-  { nombre:"Remera Algodón Frunce Upper West", desc:"ART.1054 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800 / $14.400", precioAntes:"", stock:"", img:"img/cat/art1054.jpeg" },
-  { nombre:"Buzo Friza Manga Caída NYC", desc:"ART.1055 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000 / $25.600", precioAntes:"", stock:"", img:"img/cat/art1055.jpeg" },
-  { nombre:"Polera Micropolar", desc:"ART.1056 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$16.000", precioAntes:"", stock:"", img:"img/cat/art1056.jpeg" },
-  { nombre:"Remera Algodón Rib", desc:"ART.1057 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$11.200", precioAntes:"", stock:"", img:"img/cat/art1057.jpeg" },
-  { nombre:"Remera Morley Elastizado", desc:"ART.1058 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$11.200 / $12.800", precioAntes:"", stock:"", img:"img/cat/art1058.jpeg" },
-  { nombre:"Buzo Frizado Good Mood", desc:"ART.1059 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000", precioAntes:"", stock:"", img:"img/cat/art1059.jpeg" },
-  { nombre:"Pantalón Friza Semioxford", desc:"ART.1060 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000", precioAntes:"", stock:"", img:"img/cat/art1060.jpeg" },
-  { nombre:"Pantalón Capri Cuerina", desc:"ART.1061 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000", precioAntes:"", stock:"", img:"img/cat/art1061.png" },
-  { nombre:"Buzo Friza Mediocierre NY", desc:"ART.1062 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$25.600", precioAntes:"", stock:"", img:"img/cat/art1062.jpeg" },
-  { nombre:"Buzo Rústico Estampa Argentina", desc:"ART.1063 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000", precioAntes:"", stock:"", img:"img/cat/art1063.jpeg" },
-  { nombre:"Buzo Friza Mediocierre", desc:"ART.1064 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$24.000", precioAntes:"", stock:"", img:"img/cat/art1064.jpeg" },
-  { nombre:"Remera Algodón Rib Manga Ranglán", desc:"ART.1065 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$11.200", precioAntes:"", stock:"", img:"img/cat/art1065.jpeg" },
-  { nombre:"Buzo Friza Liso Canguro", desc:"ART.1066 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$30.400", precioAntes:"", stock:"", img:"img/cat/art1066.jpeg" },
-  { nombre:"Calza Semi Oxford", desc:"ART.1067 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$20.800", precioAntes:"", stock:"", img:"img/cat/art1067.jpeg" },
-  { nombre:"Promo Lanilla Jaspeado", desc:"ART.PROMO · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800", precioAntes:"", stock:"", img:"img/cat/artPROMO.jpeg" },
-  { nombre:"Remera Algodón Rib Recorte Costado", desc:"ART.1068 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$11.200", precioAntes:"", stock:"", img:"img/cat/art1068.png" },
-  { nombre:"Remera Morley Frunce Costado", desc:"ART.1069 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800", precioAntes:"", stock:"", img:"img/cat/art1069.jpeg" },
-  { nombre:"Pantalón Friza", desc:"ART.1070 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$30.400", precioAntes:"", stock:"", img:"img/cat/art1070.jpeg" },
-  { nombre:"Pantalón Baggy Friza", desc:"ART.1071 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$25.600 / $27.200", precioAntes:"", stock:"", img:"img/cat/art1071.jpeg" },
-  { nombre:"Remera Rayado Modal/Lycra", desc:"ART.1072 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$11.200 / $12.800", precioAntes:"", stock:"", img:"img/cat/art1072.jpeg" },
-  { nombre:"Pantalón Pijama Algodón Soft", desc:"ART.1073 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$17.600", precioAntes:"", stock:"", img:"img/cat/art1073.jpeg" },
-  { nombre:"Remera Pijama Algodón Soft", desc:"ART.1074 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$12.800", precioAntes:"", stock:"", img:"img/cat/art1074.jpeg" },
-  { nombre:"Conjunto Pijama Floreado", desc:"ART.1075 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$27.200", precioAntes:"", stock:"", img:"img/cat/art1075.jpeg" },
-  { nombre:"Remera Rayado Modal Contratodo Cuello", desc:"ART.1076 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$11.200", precioAntes:"", stock:"", img:"img/cat/art1076.png" },
-  { nombre:"Buzo Jersey Estampa Argentina", desc:"ART.1077 · Consultá talles y colores disponibles por WhatsApp.", talles:"", precio:"$14.400", precioAntes:"", stock:"", img:"img/cat/art1077.jpeg" },
-];
-
 /* ── TESTIMONIOS (Zona Sur) ── */
 const TESTIMONIOS = [
   { texto:"Compré el buzo frizado y llegó el mismo día al punto de entrega en Berazategui. La calidad es hermosa, súper recomendable 💕", nombre:"Caro · Berazategui" },
@@ -456,35 +487,316 @@ car.addEventListener("scroll",()=>{
 document.getElementById("prev").onclick = ()=>car.scrollBy({left:-slideW(),behavior:"smooth"});
 document.getElementById("next").onclick = ()=>car.scrollBy({left: slideW(),behavior:"smooth"});
 
-/* ── Grilla catálogo ── */
-if(PRODUCTOS.length){
-  document.getElementById("catalogo").style.display="block";
-  document.getElementById("grid").innerHTML = PRODUCTOS.map(p=>{
-    const partes = p.precio.split('/').map(s=>s.trim());
-    const precioMin = partes.length > 1 ? partes[1] : partes[0];
-    const precioMay = partes.length > 1 ? partes[0] : null;
-    const artCode = p.desc && p.desc.match(/ART\.([^·]+)/) ? p.desc.match(/ART\.([^·]+)/)[0].trim() : '';
-    const msg = `¡Hola Dulce Aura! 💕 Quiero consultar por el siguiente artículo:\n▸ ${artCode ? artCode+' — ' : ''}${p.nombre}\n▸ Precio unidad: ${precioMin}${precioMay ? '\n▸ Precio x mayor (10u): '+precioMay+' c/u' : ''}\n¿Está disponible? ¿Qué talles tenés?`;
-    const imgTag = p.img
-      ? `<img src="${p.img}" alt="${p.nombre}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none">[ ${p.nombre} ]</div>`
-      : `<div class="ph">[ ${p.nombre} ]</div>`;
-    const badge = p.stock ? `<span class="badge">${p.stock}</span>` : "";
-    const talles = p.talles ? `<p class="talles">&#9658; ${p.talles}</p>` : "";
-    const precioHTML = precioMay
-      ? `<div class="price-row">
-          <div class="price-minorista"><span class="price-label min">UNIDAD</span><span class="price">${precioMin}</span></div>
-          <div class="price-mayorista"><span class="price-label may">x10 MAYOR</span><span class="price mayor">${precioMay} c/u</span></div>
-          <p class="price-note">&#10022; Precio mayorista desde 10 prendas</p>
-        </div>`
-      : `<div class="price-row"><div class="price-minorista"><span class="price-label min">UNIDAD</span><span class="price">${precioMin}</span></div></div>`;
-    return `<article class="card"><div class="card-img">${badge}${imgTag}</div>
-      <div class="card-body"><h3>${p.nombre}</h3><p class="desc">${p.desc}</p>${talles}
-      ${precioHTML}
-      <a class="btn" href="${link(msg)}" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20z"/></svg>
-        Lo quiero</a></div></article>`;
-  }).join("");
+/* ══════════════════════════════════════════════════
+   CATÁLOGO — 81 productos reales desde data/productos.json
+   Implementado en Fase C1 según PATRON_CATALOGO.md + TESTS.md
+   ══════════════════════════════════════════════════ */
+const WA_ICON_SVG = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20z"/></svg>';
+const catMoney = v => '$' + v.toLocaleString('es-AR');
+function catNormalizar(s){
+  return (s||'').toString().toLowerCase().normalize('NFD').replace(/\p{Diacritic}/gu,'');
 }
+
+let CAT_DATA = null;
+let CAT_FRASES = null;
+let CAT_LABELS = { Todos: 'Todos' };
+const FILT = { cat: 'Todos', talle: null, q: '', sort: 'destacado' };
+let SHOWN = 24;
+
+function buildCatChips(){
+  CAT_DATA.categorias.forEach(c => CAT_LABELS[c.id] = c.label);
+  const cats = ['Todos', ...CAT_DATA.categorias.map(c => c.id)];
+  const el = document.getElementById('catChips');
+  el.innerHTML = cats.map(c =>
+    `<button class="cat-chip${c===FILT.cat?' activo':''}" data-cat="${c}">${CAT_LABELS[c]}</button>`
+  ).join('');
+  el.querySelectorAll('.cat-chip').forEach(b => b.onclick = () => {
+    el.querySelectorAll('.cat-chip').forEach(x => x.classList.remove('activo'));
+    b.classList.add('activo');
+    FILT.cat = b.dataset.cat;
+    SHOWN = 24;
+    actualizarEncabezadoCategoria();
+    renderCatalogo();
+  });
+}
+
+function buildCatTalles(){
+  const el = document.getElementById('catTallesRow');
+  el.innerHTML = '<span class="lbl">Talle</span>' + CAT_DATA.talles.map(t =>
+    `<button class="cat-talle" data-t="${t}">${t}</button>`
+  ).join('');
+  el.querySelectorAll('.cat-talle').forEach(b => b.onclick = () => {
+    const on = b.classList.contains('activo');
+    el.querySelectorAll('.cat-talle').forEach(x => x.classList.remove('activo'));
+    if(!on){ b.classList.add('activo'); FILT.talle = b.dataset.t; }
+    else { FILT.talle = null; }
+    SHOWN = 24;
+    renderCatalogo();
+  });
+}
+
+function actualizarEncabezadoCategoria(){
+  const titulo = document.getElementById('catTitulo');
+  const frase = document.getElementById('catFraseCategoria');
+  if(FILT.cat === 'Todos'){
+    titulo.textContent = 'Toda la colección';
+    frase.hidden = true;
+    frase.textContent = '';
+  } else {
+    titulo.textContent = CAT_LABELS[FILT.cat] || FILT.cat;
+    const f = CAT_FRASES.categorias[FILT.cat];
+    if(f){ frase.hidden = false; frase.textContent = f; }
+    else { frase.hidden = true; frase.textContent = ''; }
+  }
+}
+
+function catalogoFiltrado(){
+  let list = CAT_DATA.productos.slice();
+  if(FILT.cat !== 'Todos') list = list.filter(p => p.categoria === FILT.cat);
+  if(FILT.talle) list = list.filter(p => p.talles.includes(FILT.talle));
+  if(FILT.q){
+    const q = catNormalizar(FILT.q);
+    list = list.filter(p => catNormalizar(p.nombre + ' ' + p.categoria_label + ' ' + p.codigo).includes(q));
+  }
+  const consultarAlFinal = (a,b) => {
+    if(a.consultar && !b.consultar) return 1;
+    if(!a.consultar && b.consultar) return -1;
+    return 0;
+  };
+  if(FILT.sort === 'menor'){
+    list.sort((a,b) => consultarAlFinal(a,b) || (a.precio_1 - b.precio_1));
+  } else if(FILT.sort === 'mayor'){
+    list.sort((a,b) => consultarAlFinal(a,b) || (b.precio_1 - a.precio_1));
+  } else if(FILT.sort === 'nombre'){
+    list.sort((a,b) => a.nombre.localeCompare(b.nombre, 'es'));
+  }
+  return list;
+}
+
+function catCardHtml(p){
+  const foto0 = p.fotos[0] ? 'assets/productos/' + p.fotos[0] : '';
+  // CL-1: el popup siempre usa fotos[0] y fotos[1]. Si hay 3 fotos, la
+  // tercera (no la segunda) se reserva para el hover de la card.
+  let backSrc = '';
+  if(p.fotos.length >= 3) backSrc = 'assets/productos/' + p.fotos[2];
+  else if(p.fotos.length === 2) backSrc = 'assets/productos/' + p.fotos[1];
+  const backImg = backSrc ? `<img class="back" loading="lazy" src="${backSrc}" alt="">` : '';
+  const badge = p.promo ? '<span class="badge">PROMO</span>' : '';
+  const precioHtml = (p.consultar || p.precio_1 == null)
+    ? `<div class="consultar">Consultar disponibilidad</div>`
+    : `<div class="precio-row"><span class="precio">${catMoney(p.precio_1)}</span>${p.precio_2 ? `<span class="precio-tramo">${p.etiqueta_2 || 'Talle mayor'}: ${catMoney(p.precio_2)}</span>` : ''}</div>`;
+  const talles = p.talles.map(t => `<span>${t}</span>`).join('');
+  return `<article class="card" data-cod="${p.codigo}">
+    <div class="card-img">
+      ${badge}
+      <img loading="lazy" src="${foto0}" alt="${p.nombre}">
+      ${backImg}
+    </div>
+    <div class="card-body">
+      <div class="cat">${p.categoria_label}</div>
+      <h3>${p.nombre}</h3>
+      ${precioHtml}
+      <div class="talles-mini">${talles}</div>
+    </div>
+  </article>`;
+}
+
+function renderCatalogo(){
+  const list = catalogoFiltrado();
+  const grid = document.getElementById('grid');
+  const meta = document.getElementById('catMeta');
+  const more = document.getElementById('catLoadmore');
+  const empty = document.getElementById('catEmpty');
+
+  if(!list.length){
+    grid.innerHTML = '';
+    meta.textContent = '';
+    more.hidden = true;
+    empty.hidden = false;
+    document.getElementById('catEmptyTitulo').textContent = CAT_FRASES.buscador_vacio.titulo;
+    document.getElementById('catEmptyCuerpo').textContent = CAT_FRASES.buscador_vacio.cuerpo;
+    const cta = document.getElementById('catEmptyCta');
+    cta.textContent = CAT_FRASES.buscador_vacio.cta;
+    cta.href = link(CONFIG.mensajeGeneral);
+    return;
+  }
+  empty.hidden = true;
+
+  const slice = list.slice(0, SHOWN);
+  meta.textContent = `Mostrando ${slice.length} de ${CAT_DATA.productos.length} prendas`;
+  grid.innerHTML = slice.map(catCardHtml).join('');
+  more.hidden = SHOWN >= list.length;
+
+  grid.querySelectorAll('.card').forEach(c => c.onclick = () => openCatModal(c.dataset.cod));
+}
+
+document.getElementById('catQ').addEventListener('input', e => {
+  FILT.q = e.target.value;
+  SHOWN = 24;
+  renderCatalogo();
+});
+document.getElementById('catSort').addEventListener('change', e => {
+  FILT.sort = e.target.value;
+  renderCatalogo();
+});
+document.getElementById('catLoadmore').onclick = () => { SHOWN += 24; renderCatalogo(); };
+
+/* ── Popup del catálogo ── */
+let popupSeleccion = { talle: null, color: null };
+
+function tieneColores(p){
+  return !p.sin_planilla_colores && Array.isArray(p.colores) && p.colores.length > 0;
+}
+
+function coloresGridHtml(p){
+  if(!tieneColores(p)) return '';
+  const filas = p.colores.map(c => {
+    const chips = p.talles.map((t,i) => {
+      const disp = c.disponible_por_talle[i] === 1;
+      return `<span class="${disp?'disp':'agotado'}">${t}</span>`;
+    }).join('');
+    return `<div class="color-row"><div class="color-nombre">${c.nombre}</div><div class="talles-disp">${chips}</div></div>`;
+  }).join('');
+  return `<div class="colores"><span class="lbl">Colores disponibles</span>${filas}</div>`;
+}
+
+function opcionesTalleHtml(p){
+  return p.talles.map(t => `<button type="button" class="opt" data-talle="${t}">${t}</button>`).join('');
+}
+function opcionesColorHtml(p){
+  if(!tieneColores(p)) return '';
+  return `<div class="colores-elegir"><span class="lbl">Elegí un color</span><div class="opt-row" id="colorOpts">
+    ${p.colores.map(c => `<button type="button" class="opt" data-color="${c.nombre}">${c.nombre}</button>`).join('')}
+  </div></div>`;
+}
+
+function actualizarCTAPopup(p){
+  const necesitaColor = tieneColores(p);
+  const listo = popupSeleccion.talle && (!necesitaColor || popupSeleccion.color);
+  const cta = document.getElementById('catWaBig');
+  const aviso = document.getElementById('catAviso');
+  if(listo){
+    cta.setAttribute('aria-disabled', 'false');
+    let msg = `¡Hola Dulce Aura! 💕 Quiero pedir:\n▸ ${p.codigo} — ${p.nombre}\n▸ Talle: ${popupSeleccion.talle}`;
+    if(popupSeleccion.color) msg += `\n▸ Color: ${popupSeleccion.color}`;
+    msg += `\n¿Está disponible?`;
+    cta.href = link(msg);
+    aviso.textContent = '';
+  } else {
+    cta.setAttribute('aria-disabled', 'true');
+    cta.href = '#';
+    aviso.textContent = necesitaColor ? 'Elegí talle y color para continuar.' : 'Elegí un talle para continuar.';
+  }
+}
+
+function openCatModal(cod){
+  const p = CAT_DATA.productos.find(x => x.codigo === cod);
+  popupSeleccion = { talle: null, color: null };
+
+  // CL-1: el popup muestra siempre las 2 primeras fotos (frente/espalda),
+  // sin importar si el producto tiene 1, 2 o 3 fotos en total.
+  const fotos = p.fotos.slice(0,2).map(f => `<img src="assets/productos/${f}" alt="${p.nombre}">`).join('');
+
+  const precioHtml = (p.consultar || p.precio_1 == null)
+    ? `<div class="pr-consultar">${CAT_FRASES.popup.consultar}</div>`
+    : `<div class="pr">${catMoney(p.precio_1)}</div>${p.precio_2 ? `<div class="pr-tramo">${p.etiqueta_2 || 'Talle mayor'}: ${catMoney(p.precio_2)}</div>` : ''}`;
+
+  const recos = (p.relacionados || [])
+    .map(c => CAT_DATA.productos.find(x => x.codigo === c))
+    .filter(Boolean)
+    .slice(0,4);
+
+  const recoHtml = recos.length ? `<div class="cat-recos">
+    <h4>También te puede gustar</h4>
+    <div class="rgrid">
+      ${recos.map(r => `<div class="rc" data-cod="${r.codigo}">
+        <img loading="lazy" src="assets/productos/${r.fotos[0]}" alt="${r.nombre}">
+        <div class="rn">${r.nombre}</div>
+        <div class="rp">${(r.consultar || r.precio_1 == null) ? 'Consultar' : catMoney(r.precio_1)}</div>
+      </div>`).join('')}
+    </div>
+  </div>` : '';
+
+  document.getElementById('catSheet').innerHTML = `
+    <div class="top">
+      <div class="imgs">${fotos}</div>
+      <div class="info">
+        <button class="close" aria-label="Cerrar">×</button>
+        <div class="cat">${p.categoria_label}</div>
+        <h2>${p.nombre}</h2>
+        <div class="art">ART. ${p.codigo.replace('ART.','')}</div>
+        <div class="desc">${p.descripcion}</div>
+        ${precioHtml}
+        ${coloresGridHtml(p)}
+        <div class="talles-elegir">
+          <span class="lbl">Elegí un talle</span>
+          <div class="opt-row" id="talleOpts">${opcionesTalleHtml(p)}</div>
+        </div>
+        ${opcionesColorHtml(p)}
+        <div class="aviso-seleccion" id="catAviso"></div>
+        <a class="wa-big" id="catWaBig" href="#" target="_blank" rel="noopener" aria-disabled="true" onclick="fbq('track','Contact')">
+          ${WA_ICON_SVG} Consultar y pedir por WhatsApp
+        </a>
+        <div class="reassure">${CAT_FRASES.popup.microcopy_confianza}</div>
+      </div>
+    </div>
+    ${recoHtml}
+  `;
+
+  document.getElementById('talleOpts').querySelectorAll('.opt').forEach(b => b.onclick = () => {
+    document.getElementById('talleOpts').querySelectorAll('.opt').forEach(x => x.classList.remove('activo'));
+    b.classList.add('activo');
+    popupSeleccion.talle = b.dataset.talle;
+    actualizarCTAPopup(p);
+  });
+  const colorOpts = document.getElementById('colorOpts');
+  if(colorOpts){
+    colorOpts.querySelectorAll('.opt').forEach(b => b.onclick = () => {
+      colorOpts.querySelectorAll('.opt').forEach(x => x.classList.remove('activo'));
+      b.classList.add('activo');
+      popupSeleccion.color = b.dataset.color;
+      actualizarCTAPopup(p);
+    });
+  }
+  actualizarCTAPopup(p);
+
+  document.querySelector('.cat-sheet .close').onclick = closeCatModal;
+  document.querySelectorAll('.cat-recos .rc').forEach(r => r.onclick = () => {
+    openCatModal(r.dataset.cod);
+    document.getElementById('catSheet').scrollIntoView({block:'start'});
+  });
+
+  const modal = document.getElementById('catModal');
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeCatModal(){
+  document.getElementById('catModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('catModal').addEventListener('click', e => {
+  if(e.target.id === 'catModal') closeCatModal();
+});
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape') closeCatModal();
+});
+
+Promise.all([
+  fetch('data/productos.json').then(r => r.json()),
+  fetch('data/frases.json').then(r => r.json())
+]).then(([data, frases]) => {
+  CAT_DATA = data;
+  CAT_FRASES = frases;
+  buildCatChips();
+  buildCatTalles();
+  actualizarEncabezadoCategoria();
+  renderCatalogo();
+}).catch(err => {
+  document.getElementById('grid').innerHTML =
+    `<p style="grid-column:1/-1;text-align:center;color:var(--wine)">No se pudo cargar el catálogo: ${err.message}</p>`;
+});
 
 /* ── Testimonios ── */
 document.getElementById("testi").innerHTML = TESTIMONIOS.map(t=>`
