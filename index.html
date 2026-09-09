@@ -31,6 +31,53 @@ a{text-decoration:none;color:inherit}
 .brand em{font-family:'Great Vibes',cursive;font-style:normal;color:var(--gold);font-size:30px}
 .ig-link{font-size:12.5px;color:var(--ivory-soft);display:flex;align-items:center;gap:6px}
 .ig-link svg{width:16px;height:16px}
+.topbar-right{display:flex;align-items:center;gap:14px}
+.cart-btn{position:relative;display:flex;align-items:center;justify-content:center;width:30px;height:30px;border:none;background:transparent;color:var(--ivory);cursor:pointer;padding:0;flex:none}
+.cart-btn svg{width:21px;height:21px}
+.cart-count{position:absolute;top:-4px;right:-6px;min-width:16px;height:16px;padding:0 3px;border-radius:999px;background:var(--gold);color:var(--bg);font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1}
+.cart-count[hidden]{display:none}
+
+/* ─── Toast ─── */
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%) translateY(20px);background:var(--wine);color:var(--ivory);padding:10px 22px;border-radius:999px;font-size:13px;font-weight:600;box-shadow:var(--sh-md);opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:200;text-align:center;max-width:88vw}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(min-width:760px){.toast{bottom:24px}}
+
+/* ─── Carrito (drawer) ─── */
+.cart-drawer{position:fixed;inset:0;z-index:110;display:none}
+.cart-drawer.open{display:block}
+.cart-drawer .backdrop{position:absolute;inset:0;background:rgba(11,7,9,.6)}
+.cart-drawer .panel{position:absolute;top:0;right:0;height:100%;width:100%;max-width:420px;background:var(--crema);color:var(--text-dark);box-shadow:-10px 0 30px rgba(0,0,0,.4);display:flex;flex-direction:column;transform:translateX(100%);transition:transform .28s ease}
+.cart-drawer.open .panel{transform:translateX(0)}
+.cart-drawer .panel-head{display:flex;align-items:center;justify-content:space-between;padding:var(--sp-4) var(--sp-5);border-bottom:1px solid var(--line-light)}
+.cart-drawer .panel-head h2{font-family:var(--font-manuscrita);font-weight:700;font-size:var(--fs-lg);color:var(--wine);margin:0}
+.cart-drawer .panel-close{width:32px;height:32px;border-radius:50%;border:1px solid var(--line-light);background:#fff;color:var(--text-dark);font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;flex:none}
+.cart-drawer .panel-body{flex:1;overflow-y:auto;padding:var(--sp-5)}
+.cart-drawer .panel-foot{padding:var(--sp-5);border-top:1px solid var(--line-light)}
+
+.cart-vacio{text-align:center;padding:var(--sp-6) var(--sp-4)}
+.cart-vacio-cuerpo{font-size:var(--fs-sm);color:var(--text-dark);margin:0 0 var(--sp-4)}
+.cart-vacio-cta{display:inline-block;padding:var(--sp-3) var(--sp-5);border-radius:var(--r-full);background:var(--wine);color:var(--ivory);font-size:var(--fs-sm);font-weight:600;cursor:pointer;border:none;font-family:inherit}
+
+.cart-item{display:flex;gap:var(--sp-3);padding:var(--sp-3) 0;border-bottom:1px solid var(--line-light)}
+.cart-item img{width:56px;height:75px;object-fit:cover;border-radius:var(--r-sm);flex:none;background:var(--crema-warm)}
+.cart-item .ci-info{flex:1;min-width:0}
+.cart-item .ci-nombre{font-size:var(--fs-sm);font-weight:600;margin:0 0 2px}
+.cart-item .ci-cantidad{font-weight:700;color:var(--wine)}
+.cart-item .ci-detalle{font-size:var(--fs-xs);color:var(--text-dark);opacity:.75;margin:0 0 2px}
+.cart-item .ci-precio{font-size:var(--fs-sm);font-weight:700;color:var(--wine);margin:0 0 4px}
+.cart-item .ci-quitar{border:none;background:transparent;color:var(--wine);font-size:var(--fs-xs);text-decoration:underline;cursor:pointer;padding:0;font-family:inherit}
+
+.cart-total-row{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:var(--sp-2)}
+.cart-total-row .lbl{font-size:var(--fs-sm);color:var(--text-dark)}
+.cart-total-row .val{font-size:var(--fs-xl);font-weight:700;color:var(--wine)}
+.cart-aclaracion{font-size:var(--fs-xs);color:var(--text-dark);opacity:.7;margin-bottom:var(--sp-3);line-height:1.4}
+.cart-cta{display:block;width:100%;text-align:center;padding:var(--sp-3) var(--sp-5);border-radius:var(--r-full);background:var(--wine);color:var(--ivory);font-weight:600;font-size:var(--fs-base);border:none;cursor:pointer;font-family:inherit}
+.cart-microcopy{font-size:var(--fs-xs);color:var(--text-dark);opacity:.7;text-align:center;margin-top:var(--sp-2)}
+
+.cart-confirmacion{text-align:center;padding:var(--sp-6) var(--sp-4)}
+.cart-confirmacion-cuerpo{font-size:var(--fs-sm);color:var(--text-dark);line-height:1.5}
+
+@media(prefers-reduced-motion:reduce){.cart-drawer .panel{transition:none}.toast{transition:none}}
 
 /* ─── Hero ─── */
 .hero{position:relative;overflow:hidden;text-align:center;padding:50px 22px 44px}
@@ -275,10 +322,16 @@ src="https://www.facebook.com/tr?id=2227502608002276&ev=PageView&noscript=1"
 
 <header class="topbar">
   <div class="brand">Dulce <em>Aura</em></div>
-  <a class="ig-link" href="https://instagram.com/dulceaura.style" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-    @dulceaura.style
-  </a>
+  <div class="topbar-right">
+    <a class="ig-link" href="https://instagram.com/dulceaura.style" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      @dulceaura.style
+    </a>
+    <button class="cart-btn" id="cartBtn" type="button" aria-label="Ver mi pedido">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      <span class="cart-count" id="cartCount" hidden>0</span>
+    </button>
+  </div>
 </header>
 
 <section class="hero">
@@ -368,6 +421,20 @@ src="https://www.facebook.com/tr?id=2227502608002276&ev=PageView&noscript=1"
 <div class="cat-modal" id="catModal">
   <div class="cat-sheet" id="catSheet"></div>
 </div>
+
+<div class="cart-drawer" id="cartDrawer">
+  <div class="backdrop"></div>
+  <div class="panel">
+    <div class="panel-head">
+      <h2 id="cartPanelTitulo">Tu pedido</h2>
+      <button class="panel-close" id="cartCloseBtn" aria-label="Cerrar">×</button>
+    </div>
+    <div class="panel-body" id="cartPanelBody"></div>
+    <div class="panel-foot" id="cartPanelFoot"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
 
 <div class="urgency">
   <div class="inner">
@@ -673,18 +740,13 @@ function opcionesColorHtml(p){
 function actualizarCTAPopup(p){
   const necesitaColor = tieneColores(p);
   const listo = popupSeleccion.talle && (!necesitaColor || popupSeleccion.color);
-  const cta = document.getElementById('catWaBig');
+  const cta = document.getElementById('catAgregarBtn');
   const aviso = document.getElementById('catAviso');
   if(listo){
     cta.setAttribute('aria-disabled', 'false');
-    let msg = `¡Hola Dulce Aura! 💕 Quiero pedir:\n▸ ${p.codigo} — ${p.nombre}\n▸ Talle: ${popupSeleccion.talle}`;
-    if(popupSeleccion.color) msg += `\n▸ Color: ${popupSeleccion.color}`;
-    msg += `\n¿Está disponible?`;
-    cta.href = link(msg);
     aviso.textContent = '';
   } else {
     cta.setAttribute('aria-disabled', 'true');
-    cta.href = '#';
     aviso.textContent = necesitaColor ? 'Elegí talle y color para continuar.' : 'Elegí un talle para continuar.';
   }
 }
@@ -734,9 +796,9 @@ function openCatModal(cod){
         </div>
         ${opcionesColorHtml(p)}
         <div class="aviso-seleccion" id="catAviso"></div>
-        <a class="wa-big" id="catWaBig" href="#" target="_blank" rel="noopener" aria-disabled="true" onclick="fbq('track','Contact')">
-          ${WA_ICON_SVG} Consultar y pedir por WhatsApp
-        </a>
+        <button type="button" class="wa-big" id="catAgregarBtn" aria-disabled="true">
+          ${WA_ICON_SVG} Agregar al pedido
+        </button>
         <div class="reassure">${CAT_FRASES.popup.microcopy_confianza}</div>
       </div>
     </div>
@@ -760,6 +822,20 @@ function openCatModal(cod){
   }
   actualizarCTAPopup(p);
 
+  document.getElementById('catAgregarBtn').onclick = () => {
+    if(document.getElementById('catAgregarBtn').getAttribute('aria-disabled') === 'true') return;
+    const item = {
+      codigo: p.codigo,
+      nombre: p.nombre,
+      talle: popupSeleccion.talle,
+      color: popupSeleccion.color || null,
+      precio: (p.consultar || p.precio_1 == null) ? null : p.precio_1,
+      foto: p.fotos[0] ? 'assets/productos/' + p.fotos[0] : ''
+    };
+    agregarAlCarrito(item);
+    showToast('Agregado a tu pedido');
+  };
+
   document.querySelector('.cat-sheet .close').onclick = closeCatModal;
   document.querySelectorAll('.cat-recos .rc').forEach(r => r.onclick = () => {
     openCatModal(r.dataset.cod);
@@ -779,9 +855,170 @@ function closeCatModal(){
 document.getElementById('catModal').addEventListener('click', e => {
   if(e.target.id === 'catModal') closeCatModal();
 });
+
+/* ══════════════════════════════════════════════════
+   CARRITO — Fase C2. Estado en localStorage, un solo
+   mensaje de WhatsApp con todo el pedido.
+   ══════════════════════════════════════════════════ */
+const CARRITO_KEY = 'dulceaura_carrito';
+
+function cargarCarrito(){
+  try {
+    const raw = localStorage.getItem(CARRITO_KEY);
+    return raw ? JSON.parse(raw) : [];
+  } catch(e) { return []; }
+}
+function guardarCarrito(items){
+  try { localStorage.setItem(CARRITO_KEY, JSON.stringify(items)); } catch(e) {}
+}
+function agregarAlCarrito(item){
+  const items = cargarCarrito();
+  const existente = items.find(it =>
+    it.codigo === item.codigo && it.talle === item.talle && it.color === item.color
+  );
+  if(existente){
+    existente.cantidad = (existente.cantidad || 1) + 1;
+  } else {
+    items.push({ ...item, cantidad: 1 });
+  }
+  guardarCarrito(items);
+  actualizarContadorCarrito();
+}
+function quitarDelCarrito(index){
+  const items = cargarCarrito();
+  items.splice(index, 1);
+  guardarCarrito(items);
+  actualizarContadorCarrito();
+}
+function vaciarCarrito(){
+  guardarCarrito([]);
+  actualizarContadorCarrito();
+}
+function totalCarrito(){
+  return cargarCarrito().reduce((sum, it) => sum + (typeof it.precio === 'number' ? it.precio * (it.cantidad || 1) : 0), 0);
+}
+function cantidadCarrito(){
+  return cargarCarrito().reduce((sum, it) => sum + (it.cantidad || 1), 0);
+}
+function actualizarContadorCarrito(){
+  const n = cantidadCarrito();
+  const el = document.getElementById('cartCount');
+  el.textContent = n;
+  el.hidden = n === 0;
+}
+
+let toastTimeout = null;
+function showToast(msg){
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => el.classList.remove('show'), 2200);
+}
+
+function renderCarritoPanel(){
+  const items = cargarCarrito();
+  const body = document.getElementById('cartPanelBody');
+  const foot = document.getElementById('cartPanelFoot');
+  const titulo = document.getElementById('cartPanelTitulo');
+
+  if(!items.length){
+    titulo.textContent = CAT_FRASES.carrito_vacio.titulo;
+    body.innerHTML = `<div class="cart-vacio">
+      <p class="cart-vacio-cuerpo">${CAT_FRASES.carrito_vacio.cuerpo}</p>
+      <button type="button" class="cart-vacio-cta" id="cartVacioCta">${CAT_FRASES.carrito_vacio.cta}</button>
+    </div>`;
+    foot.innerHTML = '';
+    document.getElementById('cartVacioCta').onclick = () => {
+      closeCartDrawer();
+      const catalogo = document.getElementById('catalogo');
+      catalogo.scrollIntoView({block:'start'});
+      document.getElementById('catQ').focus();
+    };
+    return;
+  }
+
+  titulo.textContent = CAT_FRASES.carrito.titulo;
+  body.innerHTML = items.map((it, i) => {
+    const cant = it.cantidad || 1;
+    const precioLinea = typeof it.precio === 'number' ? catMoney(it.precio * cant) : 'A confirmar';
+    return `
+    <div class="cart-item">
+      <img src="${it.foto}" alt="${it.nombre}">
+      <div class="ci-info">
+        <p class="ci-nombre">${it.codigo} — ${it.nombre}${cant > 1 ? ` <span class="ci-cantidad">x${cant}</span>` : ''}</p>
+        <p class="ci-detalle">Talle: ${it.talle}${it.color ? ' · Color: ' + it.color : ''}</p>
+        <p class="ci-precio">${precioLinea}</p>
+        <button type="button" class="ci-quitar" data-idx="${i}">Quitar</button>
+      </div>
+    </div>
+  `;
+  }).join('');
+
+  body.querySelectorAll('.ci-quitar').forEach(b => b.onclick = () => {
+    quitarDelCarrito(parseInt(b.dataset.idx, 10));
+    renderCarritoPanel();
+  });
+
+  const total = totalCarrito();
+  foot.innerHTML = `
+    <div class="cart-total-row"><span class="lbl">Total estimado</span><span class="val">${catMoney(total)}</span></div>
+    <p class="cart-aclaracion">${CAT_FRASES.carrito.aclaracion_total}</p>
+    <button type="button" class="cart-cta" id="cartEnviarBtn">${CAT_FRASES.carrito.cta}</button>
+    <p class="cart-microcopy">${CAT_FRASES.carrito.microcopy}</p>
+  `;
+  document.getElementById('cartEnviarBtn').onclick = enviarPedidoWhatsApp;
+}
+
+function mostrarConfirmacionCarrito(){
+  document.getElementById('cartPanelTitulo').textContent = CAT_FRASES.confirmacion.titulo;
+  document.getElementById('cartPanelBody').innerHTML = `<div class="cart-confirmacion">
+    <p class="cart-confirmacion-cuerpo">${CAT_FRASES.confirmacion.cuerpo}</p>
+  </div>`;
+  document.getElementById('cartPanelFoot').innerHTML = '';
+}
+
+function enviarPedidoWhatsApp(){
+  const items = cargarCarrito();
+  if(!items.length) return;
+  const lineas = items.map((it, i) => {
+    const cant = it.cantidad || 1;
+    const nombreConCantidad = cant > 1 ? `${it.nombre} (x${cant})` : it.nombre;
+    let l = `${i+1}. ${it.codigo} — ${nombreConCantidad}\n   Talle: ${it.talle}`;
+    if(it.color) l += ` | Color: ${it.color}`;
+    return l;
+  }).join('\n\n');
+  const total = catMoney(totalCarrito());
+  const msg = `¡Hola! Quiero hacer este pedido:\n\n${lineas}\n\nTotal estimado: ${total}`;
+  // Criterio documentado (TAREA 6): se abre WhatsApp primero (window.open,
+  // instantáneo) y luego se muestra la confirmación y se vacía el carrito.
+  // Si el navegador bloquea el popup, la clienta igual ve la confirmación.
+  window.open(link(msg), '_blank', 'noopener');
+  if(typeof fbq === 'function') fbq('track', 'Contact');
+  vaciarCarrito();
+  mostrarConfirmacionCarrito();
+}
+
+function openCartDrawer(){
+  renderCarritoPanel();
+  document.getElementById('cartDrawer').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCartDrawer(){
+  document.getElementById('cartDrawer').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('cartBtn').onclick = openCartDrawer;
+document.getElementById('cartCloseBtn').onclick = closeCartDrawer;
+document.querySelector('#cartDrawer .backdrop').onclick = closeCartDrawer;
+
 document.addEventListener('keydown', e => {
-  if(e.key === 'Escape') closeCatModal();
+  if(e.key !== 'Escape') return;
+  if(document.getElementById('cartDrawer').classList.contains('open')) closeCartDrawer();
+  else closeCatModal();
 });
+
+actualizarContadorCarrito();
 
 Promise.all([
   fetch('data/productos.json').then(r => r.json()),
