@@ -563,34 +563,6 @@ const CONFIG = {
   mensajeGeneral: "¡Hola Dulce Aura! 💕 Vi la colección Verano 2026/27 y quiero hacer mi pedido. ¿Me pasás disponibilidad y formas de pago?"
 };
 
-/* ── CARRUSEL: 24 fotos Bremer con precio impreso ── */
-const CARRUSEL = [
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.12.jpeg",     nombre:"Media Polera Alaska ($25.600)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.14 (1).jpeg", nombre:"Sweater Ámbar Bremer Soft ($28.000)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.14 (2).jpeg", nombre:"Campera Praga Bremer/Morley ($31.200)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.14.jpeg",     nombre:"Polera Montreal Bremer Soft ($27.200)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.15.jpeg",     nombre:"Chaleco Boston Bremer ($28.800)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.16 (1).jpeg", nombre:"Sweater Lovely Bremer ($26.400)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.16 (2).jpeg", nombre:"Chomba Maddie Bremer ($29.600)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.16.jpeg",     nombre:"Chomba Alba Bremer ($28.800)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.17 (1).jpeg", nombre:"Sweater Martina Morley/lanilla ($31.200)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.17.jpeg",     nombre:"Chomba Dacca Bremer ($28.800)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.18 (1).jpeg", nombre:"Sweater Habana Bremer ($25.600)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.18 (2).jpeg", nombre:"Chomba Madrid Morley/lanilla ($28.000)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.18 (3).jpeg", nombre:"Sweater Clara Bremer ($28.800)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.18.jpeg",     nombre:"Saco Florencia Bremer ($40.800)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.19 (1).jpeg", nombre:"Polera Montreal Bremer ($27.200)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.19 (2).jpeg", nombre:"Sweter Montana Bremer ($24.000)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.19 (3).jpeg", nombre:"Chomba Oslo Trenzado Bremer ($31.200)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.19.jpeg",     nombre:"Saco Viena Bremer ($33.600)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.20 (1).jpeg", nombre:"Chomba Belice Bremer ($28.800)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.20 (2).jpeg", nombre:"Sweter Marbella Bremer ($28.800)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.20 (3).jpeg", nombre:"Suéter Roma Bremer ($35.200)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.20 (4).jpeg", nombre:"Sweter Cantabrica Bremer ($20.800)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.20.jpeg",     nombre:"Sweter Venecia Bremer ($29.600)" },
-  { img:"img/WhatsApp Image 2026-06-12 at 22.28.21.jpeg",     nombre:"Saco Monterrey Bremer ($25.600)" }
-];
-
 /* ── TESTIMONIOS (Zona Sur) ── */
 const TESTIMONIOS = [
   { texto:"Compré el buzo frizado y llegó el mismo día al punto de entrega en Berazategui. La calidad es hermosa, súper recomendable 💕", nombre:"Caro · Berazategui" },
@@ -609,25 +581,14 @@ const link = msg => wa() + "?text=" + encodeURIComponent(msg);
 
 document.getElementById("stickyBtn").href = link(CONFIG.mensajeGeneral);
 
-/* ── Carrusel ── */
+/* ── Carrusel de destacados — mecanismo (scroll/flechas/dots/drag) ──
+   NO TOCAR: idéntico al de antes. Lo único que cambió (Fase C3.5) es de
+   dónde salen los slides — antes hardcodeados en CARRUSEL, ahora leídos
+   de data/destacados.json + data/productos.json (mismo fetch del catálogo,
+   sin duplicar la carga). ── */
 const car = document.getElementById("carousel");
-car.innerHTML = CARRUSEL.map(s => {
-  const msg = s.nombre
-    ? `¡Hola Dulce Aura! 💕 Me interesa "${s.nombre}" de la colección Verano 2026/27. ¿Está disponible? ¿Qué talles tenés?`
-    : CONFIG.mensajeGeneral;
-  const imgTag = s.img
-    ? `<img src="${s.img}" alt="${s.nombre||'Look Dulce Aura'}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="ph" style="display:none">[ ${s.nombre||'Foto'} ]</div>`
-    : `<div class="ph">[ ${s.nombre||'look'} ]</div>`;
-  return `<article class="slide"><div class="slide-img">${imgTag}</div>
-    <a class="btn" href="${link(msg)}" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 1 1 12 20z"/></svg>
-      Lo quiero</a></article>`;
-}).join("");
-
-/* Dots + flechas */
 const dots = document.getElementById("dots");
-dots.innerHTML = CARRUSEL.map((_,i)=>`<span class="${i===0?'on':''}"></span>`).join("");
-const dotEls = [...dots.children];
+let dotEls = [];
 const slideW = () => { const s=car.querySelector(".slide"); return s ? s.offsetWidth+14 : 1; };
 car.addEventListener("scroll",()=>{
   const i = Math.round(car.scrollLeft/slideW());
@@ -636,10 +597,45 @@ car.addEventListener("scroll",()=>{
 document.getElementById("prev").onclick = ()=>car.scrollBy({left:-slideW(),behavior:"smooth"});
 document.getElementById("next").onclick = ()=>car.scrollBy({left: slideW(),behavior:"smooth"});
 
+/* Arma los slides con datos reales de productos.json a partir de los
+   códigos de destacados.json. Casos borde (Fase C3.5, Tarea 2):
+   - código que no existe en productos.json -> se omite ese slide
+   - producto sin fotos -> se omite ese slide
+   - destacados.json ausente/inválido o sin códigos válidos -> el
+     carrusel no se renderiza (car/dots quedan vacíos), el resto del
+     sitio sigue funcionando normal
+   - menos de 24 códigos válidos -> se muestran los que haya */
+function renderCarruselDestacados(destacadosData, productosData){
+  const codigos = (destacadosData && Array.isArray(destacadosData.codigos)) ? destacadosData.codigos : [];
+  const slides = codigos
+    .map(cod => productosData.productos.find(p => p.codigo === cod))
+    .filter(p => p && Array.isArray(p.fotos) && p.fotos.length > 0);
+
+  if (!slides.length) return;
+
+  // El CTA no agrega directo al carrito: abre el popup de ese producto
+  // (mismo que el catálogo) para que la clienta elija talle/color antes
+  // de agregar — reusa openCatModal, sin duplicar esa lógica acá.
+  car.innerHTML = slides.map(p => {
+    const foto = 'assets/productos/' + p.fotos[0];
+    return `<article class="slide"><div class="slide-img"><img src="${foto}" alt="${p.nombre}" loading="lazy"></div>
+    <button type="button" class="btn" data-cod="${p.codigo}">
+      ${WA_ICON_SVG}
+      Agregar al pedido</button></article>`;
+  }).join("");
+
+  car.querySelectorAll(".slide .btn").forEach(btn => {
+    btn.onclick = () => openCatModal(btn.dataset.cod);
+  });
+
+  dots.innerHTML = slides.map((_,i)=>`<span class="${i===0?'on':''}"></span>`).join("");
+  dotEls = [...dots.children];
+}
+
 /* ══════════════════════════════════════════════════
    NOVEDADES — placas de campaña (Subfase C6.3)
    Componente independiente. No comparte código con el carrusel
-   de destacados (CARRUSEL / #carrusel) de más arriba.
+   de destacados (#carrusel) de más arriba.
    ══════════════════════════════════════════════════ */
 (function () {
   const seccion = document.getElementById("novedades");
@@ -1296,8 +1292,14 @@ actualizarContadorCarrito();
 
 Promise.all([
   fetch('data/productos.json').then(r => r.json()),
-  fetch('data/frases.json').then(r => r.json())
-]).then(([data, frases]) => {
+  fetch('data/frases.json').then(r => r.json()),
+  // destacados.json ausente/inválido no debe romper el catálogo ni el
+  // resto del sitio: se resuelve a null y el carrusel simplemente no
+  // se renderiza (ver renderCarruselDestacados).
+  fetch('data/destacados.json')
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .catch(() => null)
+]).then(([data, frases, destacados]) => {
   CAT_DATA = data;
   CAT_FRASES = frases;
   document.getElementById('heroSubtitulo').textContent = frases.hero.subtitulo;
@@ -1305,6 +1307,7 @@ Promise.all([
   buildCatTalles();
   actualizarEncabezadoCategoria();
   renderCatalogo();
+  renderCarruselDestacados(destacados, data);
 
   // Deep-link mínimo (adelanto de Fase C5): index.html?producto=ART.1147
   // Si el código no existe (viejo, dado de baja, typo), no hace nada —

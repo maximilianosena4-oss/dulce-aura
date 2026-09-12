@@ -14,6 +14,7 @@ const PRODUCTOS_PATH = path.join(ROOT, "data", "productos.json");
 const FOTOS_DIR = path.join(ROOT, "assets", "productos");
 const NOVEDADES_PATH = path.join(ROOT, "data", "novedades.json");
 const NOVEDADES_DIR = path.join(ROOT, "assets", "novedades");
+const DESTACADOS_PATH = path.join(ROOT, "data", "destacados.json");
 
 let ok = true;
 const fallos = [];
@@ -129,6 +130,7 @@ function main() {
   console.log(`  sin_planilla_colores: true ... ${sinPlanillaCount} productos`);
 
   validarNovedades();
+  validarDestacados(productos);
 
   console.log("");
   if (ok) {
@@ -213,6 +215,64 @@ function validarNovedades() {
   } else {
     console.log("Imágenes sin usar en assets/novedades/: 0");
   }
+}
+
+function validarDestacados(productos) {
+  console.log("\n--- Destacados del carrusel (data/destacados.json) ---");
+
+  // 1. Archivo existe y es JSON válido
+  if (!fs.existsSync(DESTACADOS_PATH)) {
+    fallar("destacados.json: el archivo no existe en data/");
+    console.log("destacados.json: NO EXISTE");
+    return;
+  }
+  let data;
+  try {
+    data = JSON.parse(fs.readFileSync(DESTACADOS_PATH, "utf8"));
+  } catch (e) {
+    fallar(`destacados.json: JSON inválido (${e.message})`);
+    console.log("destacados.json: JSON INVÁLIDO");
+    return;
+  }
+  const codigos = Array.isArray(data.codigos) ? data.codigos : null;
+  if (!codigos) {
+    fallar("destacados.json: falta el array \"codigos\"");
+    console.log("destacados.json: sin array \"codigos\"");
+    return;
+  }
+  console.log(`Total de códigos: ${codigos.length}`);
+
+  // 2. Entre 1 y 24 códigos
+  if (codigos.length < 1 || codigos.length > 24) {
+    fallar(`destacados.json: debe tener entre 1 y 24 códigos (tiene ${codigos.length})`);
+  }
+
+  // 4. Sin códigos repetidos
+  const codigosUnicos = new Set(codigos);
+  if (codigosUnicos.size !== codigos.length) {
+    const conteo = {};
+    codigos.forEach(c => { conteo[c] = (conteo[c] || 0) + 1; });
+    const repetidos = Object.entries(conteo).filter(([, n]) => n > 1).map(([c]) => c);
+    fallar(`destacados.json: códigos repetidos: ${repetidos.join(", ")}`);
+  }
+  console.log(`Códigos únicos: ${codigosUnicos.size} de ${codigos.length}`);
+
+  // 3. Todos los códigos existen en productos.json
+  const porCodigo = new Map(productos.map(p => [p.codigo, p]));
+  const inexistentes = codigos.filter(c => !porCodigo.has(c));
+  if (inexistentes.length > 0) {
+    fallar(`destacados.json: códigos que no existen en productos.json: ${inexistentes.join(", ")}`);
+  }
+  console.log(`Códigos que no existen en productos.json: ${inexistentes.length}`);
+
+  // 5. Todos los destacados tienen al menos 1 foto
+  const sinFotos = codigos
+    .filter(c => porCodigo.has(c))
+    .filter(c => !porCodigo.get(c).fotos || porCodigo.get(c).fotos.length === 0);
+  if (sinFotos.length > 0) {
+    fallar(`destacados.json: códigos sin fotos: ${sinFotos.join(", ")}`);
+  }
+  console.log(`Destacados sin fotos: ${sinFotos.length}`);
 }
 
 main();
