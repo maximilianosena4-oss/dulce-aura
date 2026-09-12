@@ -1,0 +1,6219 @@
+{
+ "meta": {
+  "temporada": "Verano 2026/27",
+  "generado": "2026-09-05",
+  "total_productos": 81,
+  "fuente": "Catalogo PDF v08 verificado",
+  "regla_precio": "markup x1.85 minimo, redondeo $500 arriba"
+ },
+ "categorias": [
+  {
+   "id": "Basica",
+   "label": "Básicas",
+   "cantidad": 3
+  },
+  {
+   "id": "Remera",
+   "label": "Remeras",
+   "cantidad": 35
+  },
+  {
+   "id": "Musculosa",
+   "label": "Musculosas",
+   "cantidad": 11
+  },
+  {
+   "id": "Pupera",
+   "label": "Puperas",
+   "cantidad": 2
+  },
+  {
+   "id": "Saquito",
+   "label": "Saquitos",
+   "cantidad": 2
+  },
+  {
+   "id": "Buzo",
+   "label": "Buzos",
+   "cantidad": 3
+  },
+  {
+   "id": "Pantalon",
+   "label": "Pantalones",
+   "cantidad": 2
+  },
+  {
+   "id": "Palazo",
+   "label": "Palazos",
+   "cantidad": 1
+  },
+  {
+   "id": "Jogging",
+   "label": "Jogging",
+   "cantidad": 1
+  },
+  {
+   "id": "Pijama",
+   "label": "Pijamas",
+   "cantidad": 5
+  },
+  {
+   "id": "Campera",
+   "label": "Camperas",
+   "cantidad": 10
+  },
+  {
+   "id": "Short",
+   "label": "Shorts",
+   "cantidad": 5
+  },
+  {
+   "id": "Vestido",
+   "label": "Vestidos",
+   "cantidad": 1
+  }
+ ],
+ "talles": [
+  "L",
+  "M",
+  "S",
+  "XL",
+  "XXL"
+ ],
+ "productos": [
+  {
+   "codigo": "ART.415",
+   "slug": "art415",
+   "nombre": "Basica algodon",
+   "categoria": "Basica",
+   "categoria_label": "Básicas",
+   "precio_1": 15000,
+   "precio_2": 17000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste claro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "crema",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "militar",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris melange",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris topo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rojo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "azul marino",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "marron",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      0,
+      1
+     ]
+    },
+    {
+     "nombre": "pistacho",
+     "disponible_por_talle": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "nombre": "camel",
+     "disponible_por_talle": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "nombre": "verde beneton",
+     "disponible_por_talle": [
+      0,
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "nombre": "fucsia",
+     "disponible_por_talle": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "nombre": "verde agua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART415_0.jpg",
+    "ART415_1.jpg"
+   ],
+   "titulo_venta": "La base de todo tu placard",
+   "descripcion": "La remera que se pone sola y combina con absolutamente todo. Con 18 colores para elegir, tenés una distinta para cada día del mes.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.416",
+    "ART.417"
+   ]
+  },
+  {
+   "codigo": "ART.416",
+   "slug": "art416",
+   "nombre": "Basica morley",
+   "categoria": "Basica",
+   "categoria_label": "Básicas",
+   "precio_1": 17000,
+   "precio_2": 18500,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa viejo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rojo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "nombre": "fucsia",
+     "disponible_por_talle": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART416_0.jpg",
+    "ART416_1.jpg",
+    "ART416_2.jpg"
+   ],
+   "titulo_venta": "Simple, cómoda, infalible",
+   "descripcion": "Corte clásico en morley, de esos que nunca fallan. Con 10 colores disponibles, es fácil encontrar el tuyo.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.415",
+    "ART.417"
+   ]
+  },
+  {
+   "codigo": "ART.417",
+   "slug": "art417",
+   "nombre": "Basica morley cuello V",
+   "categoria": "Basica",
+   "categoria_label": "Básicas",
+   "precio_1": 17000,
+   "precio_2": 18500,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "gris melange",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "nombre": "rosa viejo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "naranja",
+     "disponible_por_talle": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "nombre": "turquesa",
+     "disponible_por_talle": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "nombre": "verde",
+     "disponible_por_talle": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART417_0.jpg",
+    "ART417_1.jpg",
+    "ART417_2.jpg"
+   ],
+   "titulo_venta": "La básica que se anima al escote",
+   "descripcion": "Mismo corte cómodo de siempre, con escote en V que le suma un poco más de estilo. 11 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.415",
+    "ART.416"
+   ]
+  },
+  {
+   "codigo": "ART.419",
+   "slug": "art419",
+   "nombre": "Musculosa algodon",
+   "categoria": "Musculosa",
+   "categoria_label": "Musculosas",
+   "precio_1": 13000,
+   "precio_2": 15000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste claro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "crema",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris melange",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "azul marino",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rojo",
+     "disponible_por_talle": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      0,
+      0
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART419_0.jpg",
+    "ART419_1.jpg",
+    "ART419_2.jpg"
+   ],
+   "titulo_venta": "Tu aliada de todo el verano",
+   "descripcion": "En algodón fresco, ideal para los días de más calor. 10 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.420",
+    "ART.1115",
+    "ART.1117",
+    "ART.1120"
+   ]
+  },
+  {
+   "codigo": "ART.420",
+   "slug": "art420",
+   "nombre": "Musculosa morley",
+   "categoria": "Musculosa",
+   "categoria_label": "Musculosas",
+   "precio_1": 13000,
+   "precio_2": 15000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "gris melange",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa viejo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "naranja",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rojo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "pistacho",
+     "disponible_por_talle": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "nombre": "verde",
+     "disponible_por_talle": [
+      1,
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART420_0.jpg",
+    "ART420_1.jpg",
+    "ART420_2.jpg"
+   ],
+   "titulo_venta": "Simple y siempre a mano",
+   "descripcion": "Corte clásico en morley, la que nunca te falta en la valija. 11 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.419",
+    "ART.1115",
+    "ART.1117",
+    "ART.1120"
+   ]
+  },
+  {
+   "codigo": "ART.1100",
+   "slug": "art1100",
+   "nombre": "Remera rayado modal/lycra soft",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 12500,
+   "precio_2": 14000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "azul",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1100_0.jpg",
+    "ART1100_1.jpg",
+    "ART1100_2.jpg"
+   ],
+   "titulo_venta": "Rayas que nunca pasan de moda",
+   "descripcion": "En modal/lycra soft, con la caída suave que se siente en la primera probada. 4 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1101",
+    "ART.1102",
+    "ART.1105",
+    "ART.1106"
+   ]
+  },
+  {
+   "codigo": "ART.1101",
+   "slug": "art1101",
+   "nombre": "Remera morley cuello cuadrado puntilla",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 17000,
+   "precio_2": 18500,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rojo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1101_0.jpg",
+    "ART1101_1.jpg",
+    "ART1101_2.jpg"
+   ],
+   "titulo_venta": "El escote que estiliza",
+   "descripcion": "Cuello cuadrado con puntilla, un detalle que eleva una remera de todos los días. 5 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1102",
+    "ART.1105",
+    "ART.1106"
+   ]
+  },
+  {
+   "codigo": "ART.1102",
+   "slug": "art1102",
+   "nombre": "Remera jersey manga princesa",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 17000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "cemento",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1102_0.jpg",
+    "ART1102_1.jpg",
+    "ART1102_2.jpg"
+   ],
+   "titulo_venta": "Mangas con onda",
+   "descripcion": "Las mangas abullonadas le dan ese toque distinto sin perder comodidad. Disponible en 3 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1105",
+    "ART.1106"
+   ]
+  },
+  {
+   "codigo": "ART.1103",
+   "slug": "art1103",
+   "nombre": "Pupera jersey rayado c/boton hombro",
+   "categoria": "Pupera",
+   "categoria_label": "Puperas",
+   "precio_1": 17000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "acqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa viejo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1103_0.jpg",
+    "ART1103_1.jpg",
+    "ART1103_2.jpg"
+   ],
+   "titulo_venta": "El corte que está en todas",
+   "descripcion": "Rayas clásicas, con botón al hombro. Es de las que se agotan primero cada temporada. 4 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1131"
+   ]
+  },
+  {
+   "codigo": "ART.1104",
+   "slug": "art1104",
+   "nombre": "Campera rustico cordon cintura",
+   "categoria": "Campera",
+   "categoria_label": "Camperas",
+   "precio_1": 31500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris melange",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde militar",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa nude",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1104_0.jpg",
+    "ART1104_1.jpg",
+    "ART1104_2.jpg"
+   ],
+   "titulo_venta": "La que te acompaña todo el año",
+   "descripcion": "Cordón en la cintura para ajustar la caída a gusto. Liviana para el verano, perfecta para las noches frescas. 7 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1125",
+    "ART.1128",
+    "ART.570",
+    "ART.504"
+   ]
+  },
+  {
+   "codigo": "ART.1105",
+   "slug": "art1105",
+   "nombre": "Remera algodon cuello V estampa Bisous",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 15000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "verde militar",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1105_0.jpg",
+    "ART1105_1.jpg",
+    "ART1105_2.jpg"
+   ],
+   "titulo_venta": "Firma propia, estilo propio",
+   "descripcion": "La estampa Bisous le suma personalidad a un corte clásico en algodón. 4 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1106"
+   ]
+  },
+  {
+   "codigo": "ART.1106",
+   "slug": "art1106",
+   "nombre": "Remera algodon estampa hojas beauty",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 15000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1106_0.jpg",
+    "ART1106_1.jpg",
+    "ART1106_2.jpg"
+   ],
+   "titulo_venta": "Para las que aman los detalles",
+   "descripcion": "Estampa de hojas delicada sobre algodón suave. La tenés en 4 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1107",
+   "slug": "art1107",
+   "nombre": "Remera jersey cuello V bordado flor hombro",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 15000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa viejo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1107_0.jpg",
+    "ART1107_1.jpg",
+    "ART1107_2.jpg"
+   ],
+   "titulo_venta": "El bordado que se nota",
+   "descripcion": "Bordado floral en el hombro, un detalle hecho a mano que se siente distinto. 4 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1108",
+   "slug": "art1108",
+   "nombre": "Saquito morley c/boton",
+   "categoria": "Saquito",
+   "categoria_label": "Saquitos",
+   "precio_1": 18500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "verde",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris melange",
+     "disponible_por_talle": [
+      1,
+      0,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      0,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1108_0.jpg",
+    "ART1108_1.jpg",
+    "ART1108_2.jpg"
+   ],
+   "titulo_venta": "Para cuando refresca de golpe",
+   "descripcion": "Ese abrigo liviano que entra en cualquier cartera y te salva a la noche. 4 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1122"
+   ]
+  },
+  {
+   "codigo": "ART.1109",
+   "slug": "art1109",
+   "nombre": "Remera algodon cuello abierto c/boton",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 13000,
+   "precio_2": 15000,
+   "etiqueta_1": "TALLE M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "borravino",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "azul marino",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "marron",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1109_0.jpg",
+    "ART1109_1.jpg",
+    "ART1109_2.jpg"
+   ],
+   "titulo_venta": "Fresca por donde se la mire",
+   "descripcion": "El cuello abierto la hace ideal para los días de más calor. Disponible en 4 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1110",
+   "slug": "art1110",
+   "nombre": "Remera jersey cuello V puntilla hombro",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 15000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1110_0.jpg",
+    "ART1110_1.jpg",
+    "ART1110_2.jpg"
+   ],
+   "titulo_venta": "Femenina sin esfuerzo",
+   "descripcion": "Escote en V con puntilla en el hombro — el detalle que la hace especial. 4 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1111",
+   "slug": "art1111",
+   "nombre": "Remera jersey s/manga cuello V puntilla",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 13000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa viejo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1111_0.jpg",
+    "ART1111_1.jpg",
+    "ART1111_2.jpg"
+   ],
+   "titulo_venta": "La que no tiene mangas ni vueltas",
+   "descripcion": "Sin mangas, con puntilla y escote en V. Fresca, prolija, fácil de combinar. 5 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1112",
+   "slug": "art1112",
+   "nombre": "Buzo rustico c/cuello morley cierre",
+   "categoria": "Buzo",
+   "categoria_label": "Buzos",
+   "precio_1": 22500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "bordo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "pistacho",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1112_0.jpg",
+    "ART1112_1.jpg",
+    "ART1112_2.jpg"
+   ],
+   "titulo_venta": "Abrigo con cierre, comodidad total",
+   "descripcion": "Cuello morley y cierre completo — de esos que te ponés y no te sacás. 5 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1113",
+    "ART.1156"
+   ]
+  },
+  {
+   "codigo": "ART.1113",
+   "slug": "art1113",
+   "nombre": "Buzo rustico rayado c/cordon cintura",
+   "categoria": "Buzo",
+   "categoria_label": "Buzos",
+   "precio_1": 26000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "bordo",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "pistacho",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1113_0.jpg",
+    "ART1113_1.jpg",
+    "ART1113_2.jpg"
+   ],
+   "titulo_venta": "Rayado y con cordón en la cintura",
+   "descripcion": "El cordón ajusta la caída justo donde tiene que ajustar. 5 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1112",
+    "ART.1156"
+   ]
+  },
+  {
+   "codigo": "ART.1114",
+   "slug": "art1114",
+   "nombre": "Remera morley hombros descubierto",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 11500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "militar",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1114_0.jpg",
+    "ART1114_1.jpg",
+    "ART1114_2.jpg"
+   ],
+   "titulo_venta": "Hombros al descubierto, actitud al máximo",
+   "descripcion": "El corte con hombros descubiertos le da un aire más desenfadado a tu look. 5 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1115",
+   "slug": "art1115",
+   "nombre": "Musculosa algodon bretel fino bordado corazon",
+   "categoria": "Musculosa",
+   "categoria_label": "Musculosas",
+   "precio_1": 11500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1115_0.jpg",
+    "ART1115_1.jpg",
+    "ART1115_2.jpg"
+   ],
+   "titulo_venta": "El detalle que enamora",
+   "descripcion": "Un bordado de corazón sobre breteles finos, en algodón fresco. 4 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.419",
+    "ART.420",
+    "ART.1117",
+    "ART.1120"
+   ]
+  },
+  {
+   "codigo": "ART.1116",
+   "slug": "art1116",
+   "nombre": "Remera algodon cuello cuadrado",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 11500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "crema",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde militar",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1116_0.jpg",
+    "ART1116_1.jpg",
+    "ART1116_2.jpg"
+   ],
+   "titulo_venta": "Escote cuadrado, favorece a cualquier cuerpo",
+   "descripcion": "Un corte que estiliza sin ajustar de más. La encontrás en 5 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1117",
+   "slug": "art1117",
+   "nombre": "Musculosa algodon cuello V c/picot y boton",
+   "categoria": "Musculosa",
+   "categoria_label": "Musculosas",
+   "precio_1": 15000,
+   "precio_2": 17000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde militar",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1117_0.jpg",
+    "ART1117_1.jpg"
+   ],
+   "titulo_venta": "Escote en V con detalle de botón",
+   "descripcion": "Un picot y un botón que le dan personalidad al escote en V. Hasta talle XL, 5 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.419",
+    "ART.420",
+    "ART.1115",
+    "ART.1120"
+   ]
+  },
+  {
+   "codigo": "ART.1118",
+   "slug": "art1118",
+   "nombre": "Remera jersey jaspeado s/manga estampa hombros",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 18500,
+   "precio_2": 20500,
+   "etiqueta_1": "TALLE M/L",
+   "etiqueta_2": "TALLE XL/XXL",
+   "talles": [
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1118_0.jpg",
+    "ART1118_1.jpg",
+    "ART1118_2.jpg"
+   ],
+   "titulo_venta": "Textura que se nota, estilo que se luce",
+   "descripcion": "Jaspeado con estampa en los hombros, sin mangas para el calor. 4 colores, hasta talle XXL.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1119",
+   "slug": "art1119",
+   "nombre": "Remera jersey jaspeado bordado hoja",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 18500,
+   "precio_2": 20500,
+   "etiqueta_1": "TALLE M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1119_0.jpg",
+    "ART1119_1.jpg",
+    "ART1119_2.jpg"
+   ],
+   "titulo_venta": "Bordado que cuenta una historia",
+   "descripcion": "Un bordado de hoja bien delicado sobre la tela jaspeada. Solo 2 colores, edición más limitada.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1120",
+   "slug": "art1120",
+   "nombre": "Musculosa jersey jaspeado cuello V puntilla hombro",
+   "categoria": "Musculosa",
+   "categoria_label": "Musculosas",
+   "precio_1": 15000,
+   "precio_2": 17000,
+   "etiqueta_1": "TALLE M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "rosa nude",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1120_0.jpg",
+    "ART1120_1.jpg",
+    "ART1120_2.jpg"
+   ],
+   "titulo_venta": "Jaspeada y con puntilla en el hombro",
+   "descripcion": "Combina textura jaspeada con un toque de puntilla — el balance justo. 5 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.419",
+    "ART.420",
+    "ART.1115",
+    "ART.1117"
+   ]
+  },
+  {
+   "codigo": "ART.1121",
+   "slug": "art1121",
+   "nombre": "Musculosa morley doble bretel tira",
+   "categoria": "Musculosa",
+   "categoria_label": "Musculosas",
+   "precio_1": 11500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "amarillo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1121_0.jpg",
+    "ART1121_1.jpg",
+    "ART1121_2.jpg"
+   ],
+   "titulo_venta": "Doble bretel, doble comodidad",
+   "descripcion": "Los breteles dobles la hacen más firme sin perder frescura. 3 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.419",
+    "ART.420",
+    "ART.1115",
+    "ART.1117"
+   ]
+  },
+  {
+   "codigo": "ART.1122",
+   "slug": "art1122",
+   "nombre": "Saquito morley",
+   "categoria": "Saquito",
+   "categoria_label": "Saquitos",
+   "precio_1": 13000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1122_0.jpg",
+    "ART1122_1.jpg",
+    "ART1122_2.jpg"
+   ],
+   "titulo_venta": "Liviano, elegante, versátil",
+   "descripcion": "Combina con todo lo que ya tenés en el placard. 5 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1108"
+   ]
+  },
+  {
+   "codigo": "ART.1123",
+   "slug": "art1123",
+   "nombre": "Musculosa morley c/puntilla en bretel tira",
+   "categoria": "Musculosa",
+   "categoria_label": "Musculosas",
+   "precio_1": 13000,
+   "precio_2": 15000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1123_0.jpg",
+    "ART1123_1.jpg",
+    "ART1123_2.jpg"
+   ],
+   "titulo_venta": "Con puntilla en los breteles",
+   "descripcion": "El detalle de puntilla en los breteles le suma delicadeza a un básico de morley. 4 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.419",
+    "ART.420",
+    "ART.1115",
+    "ART.1117"
+   ]
+  },
+  {
+   "codigo": "ART.1124",
+   "slug": "art1124",
+   "nombre": "Musculosa morley bretel fino c/boton",
+   "categoria": "Musculosa",
+   "categoria_label": "Musculosas",
+   "precio_1": 13000,
+   "precio_2": 15000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "gris",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "amarillo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1124_0.jpg",
+    "ART1124_1.jpg",
+    "ART1124_2.jpg"
+   ],
+   "titulo_venta": "Breteles finos, mucha comodidad",
+   "descripcion": "Breteles finos con cierre de botón, en morley suave. 5 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.419",
+    "ART.420",
+    "ART.1115",
+    "ART.1117"
+   ]
+  },
+  {
+   "codigo": "ART.1125",
+   "slug": "art1125",
+   "nombre": "Campera scuba",
+   "categoria": "Campera",
+   "categoria_label": "Camperas",
+   "precio_1": 33500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1125_0.jpg",
+    "ART1125_1.jpg",
+    "ART1125_2.jpg"
+   ],
+   "titulo_venta": "Scuba, la campera todo terreno",
+   "descripcion": "Tela scuba liviana, cierre completo, ideal para las noches de verano. 3 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1104",
+    "ART.1128",
+    "ART.570",
+    "ART.504"
+   ]
+  },
+  {
+   "codigo": "ART.1126",
+   "slug": "art1126",
+   "nombre": "Pantalon scuba",
+   "categoria": "Pantalon",
+   "categoria_label": "Pantalones",
+   "precio_1": 26000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1126_0.jpg",
+    "ART1126_1.jpg",
+    "ART1126_2.jpg"
+   ],
+   "titulo_venta": "Scuba: comodidad con caída",
+   "descripcion": "Tela scuba con buena caída, para looks relajados que igual se ven prolijos. 3 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.461"
+   ]
+  },
+  {
+   "codigo": "ART.1127",
+   "slug": "art1127",
+   "nombre": "Pijama jersey estampado",
+   "categoria": "Pijama",
+   "categoria_label": "Pijamas",
+   "precio_1": 26000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "Unico"
+   ],
+   "talles_grilla": null,
+   "colores": [],
+   "sin_planilla_colores": true,
+   "fotos": [
+    "ART1127_0.jpg",
+    "ART1127_1.jpg",
+    "ART1127_2.jpg"
+   ],
+   "titulo_venta": "Descansar también es cuidarse",
+   "descripcion": "Estampa tierna, tela suave. Un regalo seguro, para vos o para regalar. Talle único.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1137",
+    "ART.1142",
+    "ART.1143",
+    "ART.1167"
+   ]
+  },
+  {
+   "codigo": "ART.1128",
+   "slug": "art1128",
+   "nombre": "Campera Rib elastizado",
+   "categoria": "Campera",
+   "categoria_label": "Camperas",
+   "precio_1": 24500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": null,
+   "colores": [],
+   "sin_planilla_colores": true,
+   "fotos": [
+    "ART1128_0.jpg",
+    "ART1128_1.jpg",
+    "ART1128_2.jpg"
+   ],
+   "titulo_venta": "Elastizada, se adapta a vos",
+   "descripcion": "La tela con elastizado la hace más cómoda todavía. Disponible en 4 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1104",
+    "ART.1125",
+    "ART.570",
+    "ART.504"
+   ]
+  },
+  {
+   "codigo": "ART.1129",
+   "slug": "art1129",
+   "nombre": "Remera morley estampado floreado c/puntilla",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 9500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "amarillo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1129_0.jpg",
+    "ART1129_1.jpg"
+   ],
+   "titulo_venta": "Floreada y con promo",
+   "descripcion": "Estampa floreada con puntilla, a precio promocional. 3 colores disponibles.",
+   "promo": true,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1130",
+   "slug": "art1130",
+   "nombre": "Remera morley puntilla cuello cuadrado floreado",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 9500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde agua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1130_0.jpg",
+    "ART1130_1.jpg",
+    "ART1130_2.jpg"
+   ],
+   "titulo_venta": "Cuello cuadrado con flores",
+   "descripcion": "Puntilla en el cuello cuadrado y estampa floreada — todo en una sola prenda, a precio promo. 3 colores.",
+   "promo": true,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1131",
+   "slug": "art1131",
+   "nombre": "Pupera jersey estampa palta",
+   "categoria": "Pupera",
+   "categoria_label": "Puperas",
+   "precio_1": 9500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "verde",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      0,
+      0
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1131_0.jpg",
+    "ART1131_1.jpg",
+    "ART1131_2.jpg"
+   ],
+   "titulo_venta": "Con estampa de palta",
+   "descripcion": "Una estampa distinta, tierna y con onda. Disponible en 3 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1103"
+   ]
+  },
+  {
+   "codigo": "ART.1132",
+   "slug": "art1132",
+   "nombre": "Musculosa jersey c/broderie (beige/cemento/natural)",
+   "categoria": "Musculosa",
+   "categoria_label": "Musculosas",
+   "precio_1": 13000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "nombre": "cemento",
+     "disponible_por_talle": [
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      0,
+      0
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1132_0.jpg",
+    "ART1132_1.jpg",
+    "ART1132_2.jpg"
+   ],
+   "titulo_venta": "Broderie que se nota",
+   "descripcion": "El broderie en algodón le da un aire más femenino a la musculosa de siempre. 3 colores disponibles.",
+   "promo": true,
+   "consultar": false,
+   "relacionados": [
+    "ART.419",
+    "ART.420",
+    "ART.1115",
+    "ART.1117"
+   ]
+  },
+  {
+   "codigo": "ART.1133",
+   "slug": "art1133",
+   "nombre": "Musculosa jersey c/broderie (beige/cemento)",
+   "categoria": "Musculosa",
+   "categoria_label": "Musculosas",
+   "precio_1": 13000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "cemento",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1133_0.jpg",
+    "ART1133_1.jpg",
+    "ART1133_2.jpg"
+   ],
+   "titulo_venta": "Broderie en versión más chica",
+   "descripcion": "Mismo broderie delicado, en una paleta más acotada de 2 colores.",
+   "promo": true,
+   "consultar": false,
+   "relacionados": [
+    "ART.419",
+    "ART.420",
+    "ART.1115",
+    "ART.1117"
+   ]
+  },
+  {
+   "codigo": "ART.1134",
+   "slug": "art1134",
+   "nombre": "Remera jersey estampa c/tachas",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 17000,
+   "precio_2": 18500,
+   "etiqueta_1": "TALLE M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1134_0.jpg",
+    "ART1134_1.jpg",
+    "ART1134_2.jpg"
+   ],
+   "titulo_venta": "Con actitud en cada tacha",
+   "descripcion": "Estampa con apliques de tachas, para las que buscan algo con más punch. 4 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1135",
+   "slug": "art1135",
+   "nombre": "Remera jersey estampa engomado",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 18500,
+   "precio_2": 20500,
+   "etiqueta_1": "TALLE M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1135_0.jpg",
+    "ART1135_1.jpg",
+    "ART1135_2.jpg"
+   ],
+   "titulo_venta": "Estampa con textura",
+   "descripcion": "El engomado le da relieve a la estampa — se siente tanto como se ve. 3 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1136",
+   "slug": "art1136",
+   "nombre": "Remeron jersey estampado",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 9500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "Unico"
+   ],
+   "talles_grilla": [
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "rosa viejo",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1136_0.jpg",
+    "ART1136_1.jpg",
+    "ART1136_2.jpg"
+   ],
+   "titulo_venta": "El remerón que se vive en talle único",
+   "descripcion": "Estampa grande, corte oversize, a precio promocional. Talle único, 3 colores.",
+   "promo": true,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1137",
+   "slug": "art1137",
+   "nombre": "Pantalon pijama algodon soft estampado",
+   "categoria": "Pijama",
+   "categoria_label": "Pijamas",
+   "precio_1": 20500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "gris",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "osito",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1137_0.jpg",
+    "ART1137_1.jpg",
+    "ART1137_2.jpg"
+   ],
+   "titulo_venta": "El pantalón de pijama que se siente en la piel",
+   "descripcion": "Algodón soft con estampa delicada, para dormir con toda la comodidad. 3 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1127",
+    "ART.1142",
+    "ART.1143",
+    "ART.1167"
+   ]
+  },
+  {
+   "codigo": "ART.461",
+   "slug": "art461",
+   "nombre": "Pantalon rustico Baggy",
+   "categoria": "Pantalon",
+   "categoria_label": "Pantalones",
+   "precio_1": 28000,
+   "precio_2": 30000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L",
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde militar",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa nude",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART461_0.jpg",
+    "ART461_1.jpg",
+    "ART461_2.jpg"
+   ],
+   "titulo_venta": "El pantalón que resuelve el look",
+   "descripcion": "Corte baggy, cómodo de verdad, combina con una básica o con algo más arreglado. 7 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1126"
+   ]
+  },
+  {
+   "codigo": "ART.570",
+   "slug": "art570",
+   "nombre": "Campera clasico rustico",
+   "categoria": "Campera",
+   "categoria_label": "Camperas",
+   "precio_1": 30000,
+   "precio_2": 31500,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "gris topo",
+     "disponible_por_talle": [
+      1,
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "nombre": "azul marino",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris jaspeado",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART570_0.jpg",
+    "ART570_1.jpg",
+    "ART570_2.jpg"
+   ],
+   "titulo_venta": "La clásica que nunca falla",
+   "descripcion": "Corte rústico de siempre, la campera que se pone con todo. 4 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1104",
+    "ART.1125",
+    "ART.1128",
+    "ART.504"
+   ]
+  },
+  {
+   "codigo": "ART.804",
+   "slug": "art804",
+   "nombre": "Palazo Rustico",
+   "categoria": "Palazo",
+   "categoria_label": "Palazos",
+   "precio_1": 28000,
+   "precio_2": 30000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L",
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde militar",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa nude",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART804_0.jpg",
+    "ART804_1.jpg",
+    "ART804_2.jpg"
+   ],
+   "titulo_venta": "Fresco, suelto, con caída perfecta",
+   "descripcion": "El secreto mejor guardado del verano: se siente como pijama, se ve impecable. 8 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": []
+  },
+  {
+   "codigo": "ART.573",
+   "slug": "art573",
+   "nombre": "Jogging clasico rustico",
+   "categoria": "Jogging",
+   "categoria_label": "Jogging",
+   "precio_1": 24500,
+   "precio_2": 26000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "gris topo",
+     "disponible_por_talle": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "nombre": "azul marino",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris melange",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART573_0.jpg",
+    "ART573_1.jpg",
+    "ART573_2.jpg"
+   ],
+   "titulo_venta": "Comodidad que también se luce",
+   "descripcion": "Para estar en casa, salir a hacer mandados o viajar. Cómodo de verdad, sin resignar estilo. 4 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": []
+  },
+  {
+   "codigo": "ART.504",
+   "slug": "art504",
+   "nombre": "Campera rustico s/capucha",
+   "categoria": "Campera",
+   "categoria_label": "Camperas",
+   "precio_1": 30000,
+   "precio_2": 31500,
+   "etiqueta_1": "TALLE M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste xl",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde militar",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART504_0.jpg",
+    "ART504_1.jpg",
+    "ART504_2.jpg"
+   ],
+   "titulo_venta": "La campera liviana de siempre",
+   "descripcion": "Sin capucha, corte simple, para tener siempre a mano en el verano.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1104",
+    "ART.1125",
+    "ART.1128",
+    "ART.570"
+   ]
+  },
+  {
+   "codigo": "ART.1138",
+   "slug": "art1138",
+   "nombre": "Remera baby tee algodon viscosa/lycra",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 13000,
+   "precio_2": 15000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "amarillo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "malva",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1138_0.jpg",
+    "ART1138_1.jpg"
+   ],
+   "titulo_venta": "Baby tee que se pone con todo",
+   "descripcion": "En algodón con viscosa/lycra, corte cortito y fresco. Ideal para combinar con jean o short.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1139",
+   "slug": "art1139",
+   "nombre": "Remera jersey estampa floreado c/brillo",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 18500,
+   "precio_2": 20500,
+   "etiqueta_1": "TALLE M/L",
+   "etiqueta_2": "TALLE XL/XXL",
+   "talles": [
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "colores": [
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1139_0.jpg",
+    "ART1139_1.jpg"
+   ],
+   "titulo_venta": "Estampa floreada con brillo",
+   "descripcion": "El detalle de brillo le da un toque especial a la estampa floreada. 4 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1140",
+   "slug": "art1140",
+   "nombre": "Remera baby tee viscosa/lycra combi mangas",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 11500,
+   "precio_2": 13000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L",
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "malva",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "amarillo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1140_0.jpg",
+    "ART1140_1.jpg"
+   ],
+   "titulo_venta": "Mangas con estilo propio",
+   "descripcion": "Baby tee con las mangas combinadas — un detalle que se nota. 5 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1141",
+   "slug": "art1141",
+   "nombre": "Remera baby tee viscosa/lycra combi cuello",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 11500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "azul",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa viejo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1141_0.jpg",
+    "ART1141_1.jpg"
+   ],
+   "titulo_venta": "Cuello combinado, look distinto",
+   "descripcion": "El mismo baby tee de siempre, con el cuello combinado que le da personalidad. 4 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1142",
+   "slug": "art1142",
+   "nombre": "Remera pijama algodon soft estampado c/puntilla",
+   "categoria": "Pijama",
+   "categoria_label": "Pijamas",
+   "precio_1": 11500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "c/osito",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris c",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "c/lunares",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "c/lunares",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1142_0.jpg",
+    "ART1142_1.jpg"
+   ],
+   "titulo_venta": "Pijama con puntilla en el cuello",
+   "descripcion": "Algodón soft con un detalle de puntilla que lo hace especial. 6 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1127",
+    "ART.1137",
+    "ART.1143",
+    "ART.1167"
+   ]
+  },
+  {
+   "codigo": "ART.1143",
+   "slug": "art1143",
+   "nombre": "Short pijama algodon soft estampado",
+   "categoria": "Pijama",
+   "categoria_label": "Pijamas",
+   "precio_1": 12500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "c/osito",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris c",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "c/lunares",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "c/lunares",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1143_0.jpg",
+    "ART1143_1.jpg"
+   ],
+   "titulo_venta": "El short de pijama que se siente en la piel",
+   "descripcion": "Algodón soft con estampa delicada. 6 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1127",
+    "ART.1137",
+    "ART.1142",
+    "ART.1167"
+   ]
+  },
+  {
+   "codigo": "ART.1144",
+   "slug": "art1144",
+   "nombre": "Campera rustico/lycra manga ranglan",
+   "categoria": "Campera",
+   "categoria_label": "Camperas",
+   "precio_1": 33500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural c",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "amarillo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1144_0.jpg",
+    "ART1144_1.jpg"
+   ],
+   "titulo_venta": "Manga ranglán, estilo deportivo",
+   "descripcion": "Sin capucha, con la manga ranglán que suma comodidad al movimiento. 4 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1104",
+    "ART.1125",
+    "ART.1128",
+    "ART.570"
+   ]
+  },
+  {
+   "codigo": "ART.1145",
+   "slug": "art1145",
+   "nombre": "Vestido jersey",
+   "categoria": "Vestido",
+   "categoria_label": "Vestidos",
+   "precio_1": 13000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "azul",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste c",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris topo",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1145_0.jpg",
+    "ART1145_1.jpg"
+   ],
+   "titulo_venta": "El vestido que resuelve cualquier día",
+   "descripcion": "En jersey suave, fácil de poner y siempre bien. 3 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": []
+  },
+  {
+   "codigo": "ART.1146",
+   "slug": "art1146",
+   "nombre": "Remera jersey estampa naranja",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 9500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1146_0.jpg",
+    "ART1146_1.jpg",
+    "ART1146_2.jpg"
+   ],
+   "titulo_venta": "Detalle bordado que enamora",
+   "descripcion": "Un pequeño bordado en el pecho le da personalidad a esta remera en jersey. 3 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1147",
+   "slug": "art1147",
+   "nombre": "Remera jersey estampa ositos",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 13000,
+   "precio_2": 15000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "c/osito",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris c",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "c/lunares",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "c/lunares",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1147_0.jpg",
+    "ART1147_1.jpg"
+   ],
+   "titulo_venta": "Estampa de ositos, tierna y original",
+   "descripcion": "Pequeños ositos sobre fondo de lunares en jersey suave — el detalle que se luce sin ser demasiado. 6 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1148",
+   "slug": "art1148",
+   "nombre": "Remera modal/lycra",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 13000,
+   "precio_2": 15000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L",
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural c",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "azul",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1148_0.jpg",
+    "ART1148_1.jpg"
+   ],
+   "titulo_venta": "Simple, en modal con lycra",
+   "descripcion": "La tela que se siente suave desde el primer uso. 4 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1149",
+   "slug": "art1149",
+   "nombre": "Remera jersey c/puntilla hombro",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 18500,
+   "precio_2": 20500,
+   "etiqueta_1": "TALLE M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige c",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1149_0.jpg",
+    "ART1149_1.jpg"
+   ],
+   "titulo_venta": "Puntilla en el hombro, el detalle justo",
+   "descripcion": "Un toque de puntilla en el hombro sobre jersey liviano. 4 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1150",
+   "slug": "art1150",
+   "nombre": "Remera algodon soft c/puntilla cuello",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 11500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "gris",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "azul",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1150_0.jpg",
+    "ART1150_1.jpg"
+   ],
+   "titulo_venta": "Puntilla en el cuello, algodón soft",
+   "descripcion": "El cuello con puntilla le suma un plus a un básico de algodón. 5 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1151",
+   "slug": "art1151",
+   "nombre": "Campera rustico/lycra s/capucha",
+   "categoria": "Campera",
+   "categoria_label": "Camperas",
+   "precio_1": 33500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "amarillo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1151_0.jpg",
+    "ART1151_1.jpg"
+   ],
+   "titulo_venta": "Rústica, sin capucha, con lycra",
+   "descripcion": "El elastizado la hace más cómoda todavía. 3 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1104",
+    "ART.1125",
+    "ART.1128",
+    "ART.570"
+   ]
+  },
+  {
+   "codigo": "ART.1152",
+   "slug": "art1152",
+   "nombre": "Remera jersey rayado combi cuello",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 13000,
+   "precio_2": 15000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L",
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa viejo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1152_0.jpg",
+    "ART1152_1.jpg"
+   ],
+   "titulo_venta": "Rayas con cuello combinado",
+   "descripcion": "El clásico rayado, con el cuello en un color combinado. 3 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1153",
+   "slug": "art1153",
+   "nombre": "Remeron jersey estampa chill",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 9500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1153_0.jpg",
+    "ART1153_1.jpg",
+    "ART1153_2.jpg"
+   ],
+   "titulo_venta": "El remerón con onda chill",
+   "descripcion": "Estampa relajada, corte oversize, para los días de no hacer nada. 3 color disponible.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1154",
+   "slug": "art1154",
+   "nombre": "Remeron jersey rayado estampa heartbreak club",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 9500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "acqua",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa viejo",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1154_0.jpg",
+    "ART1154_1.jpg",
+    "ART1154_2.jpg"
+   ],
+   "titulo_venta": "Rayado con estampa statement",
+   "descripcion": "Rayas clásicas con una estampa grande que hace la diferencia. 4 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1155",
+   "slug": "art1155",
+   "nombre": "Remeron jersey estampado rio",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 15000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "Unico"
+   ],
+   "talles_grilla": null,
+   "colores": [],
+   "sin_planilla_colores": true,
+   "fotos": [
+    "ART1155_0.jpg"
+   ],
+   "titulo_venta": "Remerón con estampa de río",
+   "descripcion": "Un estampado distinto, fresco y con onda. Talles M, L y XL.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.500",
+   "slug": "art500",
+   "nombre": "Remeron jersey estampado rio",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": null,
+   "precio_2": null,
+   "etiqueta_1": null,
+   "etiqueta_2": null,
+   "talles": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART500_0.jpg",
+    "ART500_1.jpg",
+    "ART500_2.jpg"
+   ],
+   "titulo_venta": "Remerón con estampa de río — otra partida",
+   "descripcion": "Mismo diseño, otra tanda de producción. Este código en particular sin precio impreso — consultá disponibilidad por WhatsApp.",
+   "promo": false,
+   "consultar": true,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1156",
+   "slug": "art1156",
+   "nombre": "Buzo toalla",
+   "categoria": "Buzo",
+   "categoria_label": "Buzos",
+   "precio_1": 18500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "verde",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa chicle",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "azulino",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1156_0.jpg",
+    "ART1156_1.jpg",
+    "ART1156_2.jpg"
+   ],
+   "titulo_venta": "El buzo toalla que se siente en el verano",
+   "descripcion": "Tela toalla fresca, ideal para después de la playa o la pileta. 6 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1112",
+    "ART.1113"
+   ]
+  },
+  {
+   "codigo": "ART.1157",
+   "slug": "art1157",
+   "nombre": "Short toalla",
+   "categoria": "Short",
+   "categoria_label": "Shorts",
+   "precio_1": 13000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "verde",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa chicle",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "azulino",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1157_0.jpg",
+    "ART1157_1.jpg",
+    "ART1157_2.jpg"
+   ],
+   "titulo_venta": "El short toalla que combina con todo",
+   "descripcion": "Mismo tejido fresco del buzo, en formato short. 6 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1159",
+    "ART.1160",
+    "ART.1161",
+    "ART.1164"
+   ]
+  },
+  {
+   "codigo": "ART.1158",
+   "slug": "art1158",
+   "nombre": "Campera toalla",
+   "categoria": "Campera",
+   "categoria_label": "Camperas",
+   "precio_1": 24500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "Unico"
+   ],
+   "talles_grilla": null,
+   "colores": [],
+   "sin_planilla_colores": true,
+   "fotos": [
+    "ART1158_0.jpg"
+   ],
+   "titulo_venta": "Campera toalla, fresca y práctica",
+   "descripcion": "Ideal para la salida de la playa o la pileta. Talles S, M y L.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1104",
+    "ART.1125",
+    "ART.1128",
+    "ART.570"
+   ]
+  },
+  {
+   "codigo": "ART.459",
+   "slug": "art459",
+   "nombre": "Campera toalla",
+   "categoria": "Campera",
+   "categoria_label": "Camperas",
+   "precio_1": null,
+   "precio_2": null,
+   "etiqueta_1": null,
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "gris",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "coral",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART459_0.jpg",
+    "ART459_1.jpg",
+    "ART459_2.jpg"
+   ],
+   "titulo_venta": "Campera toalla — otra partida",
+   "descripcion": "Mismo diseño, otra tanda de producción. Este código en particular sin precio impreso — consultá por WhatsApp antes de pedir.",
+   "promo": false,
+   "consultar": true,
+   "relacionados": [
+    "ART.1104",
+    "ART.1125",
+    "ART.1128",
+    "ART.570"
+   ]
+  },
+  {
+   "codigo": "ART.1159",
+   "slug": "art1159",
+   "nombre": "Short morley estampa flor y kitty",
+   "categoria": "Short",
+   "categoria_label": "Shorts",
+   "precio_1": 9500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "beige L",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "aqua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde agua",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "amarillo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1159_0.jpg",
+    "ART1159_1.jpg",
+    "ART1159_2.jpg"
+   ],
+   "titulo_venta": "Estampa de flores y Hello Kitty",
+   "descripcion": "Un short tierno y fresco, con estampa que combina flores y Hello Kitty. 12 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1157",
+    "ART.1160",
+    "ART.1161",
+    "ART.1164"
+   ]
+  },
+  {
+   "codigo": "ART.1160",
+   "slug": "art1160",
+   "nombre": "Bermuda rustico",
+   "categoria": "Short",
+   "categoria_label": "Shorts",
+   "precio_1": 15000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "negro xl",
+     "disponible_por_talle": [
+      1,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde militar",
+     "disponible_por_talle": [
+      1,
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "nombre": "rosa nude",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1160_0.jpg",
+    "ART1160_1.jpg",
+    "ART1160_2.jpg"
+   ],
+   "titulo_venta": "La bermuda rústica de siempre",
+   "descripcion": "Corte cómodo, tela rústica, para el día a día. 6 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1157",
+    "ART.1159",
+    "ART.1161",
+    "ART.1164"
+   ]
+  },
+  {
+   "codigo": "ART.1161",
+   "slug": "art1161",
+   "nombre": "Short rustico elastico costado",
+   "categoria": "Short",
+   "categoria_label": "Shorts",
+   "precio_1": 15000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste xl",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "natural",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "verde militar",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa nude",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1161_0.jpg",
+    "ART1161_1.jpg",
+    "ART1161_2.jpg"
+   ],
+   "titulo_venta": "Elástico al costado, comodidad total",
+   "descripcion": "El detalle elástico en el costado suma comodidad sin perder el corte. 5 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1157",
+    "ART.1159",
+    "ART.1160",
+    "ART.1164"
+   ]
+  },
+  {
+   "codigo": "ART.1162",
+   "slug": "art1162",
+   "nombre": "Remera morley c/boton",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 15000,
+   "precio_2": 17000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste xl",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "gris",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "amarillo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1162_0.jpg",
+    "ART1162_1.jpg"
+   ],
+   "titulo_venta": "Con botón, un clásico que no falla",
+   "descripcion": "Morley suave con cierre de botón. 4 colores para elegir.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1163",
+   "slug": "art1163",
+   "nombre": "Remera modal/lycra rayado",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 13000,
+   "precio_2": 15000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "azulino xl",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "blanco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1163_0.jpg",
+    "ART1163_1.jpg"
+   ],
+   "titulo_venta": "Rayado en modal con lycra",
+   "descripcion": "La tela que se siente suave, con el rayado de siempre. 4 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1164",
+   "slug": "art1164",
+   "nombre": "Short rustico azul marino",
+   "categoria": "Short",
+   "categoria_label": "Shorts",
+   "precio_1": 15000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "Unico"
+   ],
+   "talles_grilla": null,
+   "colores": [],
+   "sin_planilla_colores": true,
+   "fotos": [
+    "ART1164_0.jpg"
+   ],
+   "titulo_venta": "El short azul marino que va con todo",
+   "descripcion": "Corte rústico, color infaltable. Un básico que no puede faltar.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1157",
+    "ART.1159",
+    "ART.1160",
+    "ART.1161"
+   ]
+  },
+  {
+   "codigo": "ART.1165",
+   "slug": "art1165",
+   "nombre": "Musculosa morley puntilla cuello cuadrado estampa floreado",
+   "categoria": "Musculosa",
+   "categoria_label": "Musculosas",
+   "precio_1": 9500,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "amarillo celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "rosa",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1165_0.jpg",
+    "ART1165_1.jpg",
+    "ART1165_2.jpg"
+   ],
+   "titulo_venta": "Puntilla, escote cuadrado y estampa floreada",
+   "descripcion": "Todos los detalles en una sola musculosa de morley. 2 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.419",
+    "ART.420",
+    "ART.1115",
+    "ART.1117"
+   ]
+  },
+  {
+   "codigo": "ART.1166",
+   "slug": "art1166",
+   "nombre": "Remera viscosa/lycra combinado",
+   "categoria": "Remera",
+   "categoria_label": "Remeras",
+   "precio_1": 15000,
+   "precio_2": 17000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L",
+   "talles": [
+    "S",
+    "M",
+    "L"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L"
+   ],
+   "colores": [
+    {
+     "nombre": "negro xl",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "amarillo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "beige",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "malva",
+     "disponible_por_talle": [
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART1166_0.jpg",
+    "ART1166_1.jpg"
+   ],
+   "titulo_venta": "Combinado, en viscosa con lycra",
+   "descripcion": "La tela fresca de siempre, con un combinado de color que le suma onda. 5 colores.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1100",
+    "ART.1101",
+    "ART.1102",
+    "ART.1105"
+   ]
+  },
+  {
+   "codigo": "ART.1167",
+   "slug": "art1167",
+   "nombre": "Conjunto pijama remeron/short caritas",
+   "categoria": "Pijama",
+   "categoria_label": "Pijamas",
+   "precio_1": 30000,
+   "precio_2": null,
+   "etiqueta_1": "PRECIO",
+   "etiqueta_2": null,
+   "talles": [
+    "Unico"
+   ],
+   "talles_grilla": null,
+   "colores": [],
+   "sin_planilla_colores": true,
+   "fotos": [
+    "ART1167_0.jpg",
+    "ART1167_1.jpg",
+    "ART1167_2.jpg"
+   ],
+   "titulo_venta": "Conjunto pijama con caritas",
+   "descripcion": "Remerón y short a juego, con estampa de caritas. Talle único.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1127",
+    "ART.1137",
+    "ART.1142",
+    "ART.1143"
+   ]
+  },
+  {
+   "codigo": "ART.494",
+   "slug": "art494",
+   "nombre": "Campera toalla rayada",
+   "categoria": "Campera",
+   "categoria_label": "Camperas",
+   "precio_1": 37000,
+   "precio_2": 39000,
+   "etiqueta_1": "TALLE S/M",
+   "etiqueta_2": "TALLE L/XL",
+   "talles": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "talles_grilla": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "colores": [
+    {
+     "nombre": "celeste",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "bordo",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "choco",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "pistacho",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "nombre": "negro",
+     "disponible_por_talle": [
+      1,
+      1,
+      1,
+      1
+     ]
+    }
+   ],
+   "sin_planilla_colores": false,
+   "fotos": [
+    "ART494_0.jpg",
+    "ART494_1.jpg",
+    "ART494_2.jpg"
+   ],
+   "titulo_venta": "Campera toalla rayada",
+   "descripcion": "El mismo diseño toalla, ahora en versión rayada. 5 colores disponibles.",
+   "promo": false,
+   "consultar": false,
+   "relacionados": [
+    "ART.1104",
+    "ART.1125",
+    "ART.1128",
+    "ART.570"
+   ]
+  }
+ ]
+}

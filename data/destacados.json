@@ -1,0 +1,11 @@
+{
+  "_comentario": "Productos destacados del carrusel de la home. Para cambiar un destacado, reemplazá su código por otro de data/productos.json. El orden de esta lista es el orden de los slides.",
+  "codigos": [
+    "ART.416", "ART.1132", "ART.1130", "ART.1103",
+    "ART.1104", "ART.1108", "ART.1112", "ART.1126",
+    "ART.1127", "ART.804", "ART.573", "ART.1157",
+    "ART.1136", "ART.1133", "ART.1125", "ART.1159",
+    "ART.1113", "ART.1137", "ART.417", "ART.1131",
+    "ART.1122", "ART.461", "ART.1100", "ART.419"
+  ]
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>OG Image Template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Great+Vibes&family=Cinzel:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0709;
+    --gold:#D4AF37;
+    --gold-light:#EBCB6B;
+    --ivory:#F3ECE3;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{
+    width:1200px;
+    height:630px;
+    overflow:hidden;
+    background:var(--bg);
+    font-family:'Jost',system-ui,sans-serif;
+  }
+  .og{
+    position:relative;
+    width:1200px;
+    height:630px;
+    overflow:hidden;
+  }
+  .og-bg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:22% 28%; /* mismo encuadre que el hero real en desktop */
+  }
+  .og-overlay{
+    position:absolute;
+    inset:0;
+    /* mismo criterio de degradado que el hero real: oscuro donde va el
+       texto, dejando ver la foto arriba/derecha */
+    background:linear-gradient(100deg,
+      rgba(11,7,9,.97) 0%,
+      rgba(11,7,9,.90) 42%,
+      rgba(11,7,9,.55) 62%,
+      rgba(11,7,9,.20) 80%,
+      transparent 100%
+    );
+  }
+  .og-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    align-items:center;
+    gap:48px;
+    padding:0 0 0 72px;
+  }
+  .og-emblem{
+    width:280px;
+    height:280px;
+    object-fit:contain;
+    flex:none;
+    filter:brightness(3.5) contrast(.8) drop-shadow(0 4px 14px rgba(0,0,0,.8));
+  }
+  .og-text{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .og-brand{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    line-height:1;
+  }
+  .og-brand .dulce{
+    font-family:'Cormorant Garamond',serif;
+    font-weight:600;
+    font-size:76px;
+    color:var(--ivory);
+  }
+  .og-brand .aura{
+    font-family:'Great Vibes',cursive;
+    font-size:96px;
+    color:var(--gold);
+  }
+  .og-eyebrow{
+    font-family:'Cinzel',serif;
+    font-weight:500;
+    font-size:20px;
+    letter-spacing:6px;
+    color:var(--gold);
+  }
+  .og-subtitle{
+    font-family:'Cinzel',serif;
+    font-size:26px;
+    letter-spacing:2px;
+    color:var(--ivory);
+    opacity:.9;
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+  <div class="og">
+    <img class="og-bg" src="assets/hero/hero-desktop.jpg" alt="">
+    <div class="og-overlay"></div>
+    <div class="og-content">
+      <img class="og-emblem" src="assets/branding/emblem-dulceaura.webp" alt="">
+      <div class="og-text">
+        <p class="og-eyebrow">COLECCIÓN</p>
+        <div class="og-brand">
+          <span class="dulce">Dulce</span><span class="aura">Aura</span>
+        </div>
+        <p class="og-subtitle">Verano 2026/27</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

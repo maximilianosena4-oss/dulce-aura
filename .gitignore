@@ -20,3 +20,21 @@ npm-debug.log*
 # Build outputs
 dist/
 build/
+
+# Archivos de trabajo y gobernanza local
+AUDITORIA_REPO.md
+MIGRACION_REPO.md
+INVENTARIO_WEB.md
+PATRON_CATALOGO.md
+TESTS.md
+CLAUDE.md
+AGENT_WEB_DulceAura.md
+FASE_0_PROMPT.md
+PLAN_EJECUCION_WEB.md
+muestra-b1.html
+FASE_B1.md
+FASE_B2.md
+FASE_B3.md
+capturas-*/
+FASE_C6.md
+FASE_C6_3.md
