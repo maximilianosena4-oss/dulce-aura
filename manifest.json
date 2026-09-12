@@ -1,0 +1,22 @@
+{
+  "name": "Dulce Aura Fashion",
+  "short_name": "Dulce Aura",
+  "description": "Catálogo de indumentaria femenina Dulce Aura Style — Zona Sur GBA. Pedí por WhatsApp.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#8E1428",
+  "theme_color": "#8E1428",
+  "icons": [
+    {
+      "src": "/assets/branding/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/branding/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
