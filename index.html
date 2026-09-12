@@ -39,6 +39,25 @@
 <link rel="icon" href="/assets/branding/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/branding/icon-192.png">
 
+<!-- Schema.org — Organization (Fase C5.3). Datos fijos de marca, no
+     depende de ningún producto. sameAs solo lleva canales reales y
+     verificados (Instagram y WhatsApp) — no hay página de Facebook
+     propia (el script de Meta es solo el Pixel de tracking, no un link
+     de página), así que ese campo se omite en vez de inventarlo. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Dulce Aura Fashion",
+  "url": "https://dulceaura.netlify.app",
+  "logo": "https://dulceaura.netlify.app/assets/branding/emblem-dulceaura.png",
+  "sameAs": [
+    "https://instagram.com/dulceaura.style",
+    "https://wa.me/5491122413996"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
@@ -1353,6 +1372,89 @@ document.addEventListener('keydown', e => {
 
 actualizarContadorCarrito();
 
+/* ══════════════════════════════════════════════════
+   SCHEMA.ORG — Product / ItemList (Fase C5.3)
+   ══════════════════════════════════════════════════
+   Generado en runtime desde data/productos.json, nunca hardcodeado —
+   mismo criterio que destacados.json: una sola fuente de verdad. Si
+   productos.json cambia (precio, stock, producto nuevo), el schema se
+   regenera solo en la próxima carga, sin tocar código.
+
+   ItemList en vez de 81 bloques Product sueltos: es el catálogo entero
+   en una sola página (sin URL propia por producto, más allá del
+   parámetro ?producto=), y Google recomienda ItemList para páginas que
+   listan varios productos — el marcado Product suelto está pensado para
+   una página de detalle dedicada a un solo producto. Cada item de la
+   lista igual lleva su propio bloque Product completo adentro.
+
+   Precio "a consultar" (ART.500, ART.459, los 2 con consultar:true): el
+   Offer NO declara "price" — se omite el campo en vez de inventar un
+   valor, siguiendo la regla del proyecto de nunca asumir un precio que
+   el proveedor no dio. Offer sí lleva availability y priceCurrency. Esto
+   va a hacer que el Rich Results Test marque esos 2 productos con un
+   error de "price faltante" — es esperado y correcto: la exactitud del
+   dato le gana a la elegibilidad de rich result para esos 2 casos.
+
+   Disponibilidad (instock/outofstock): se calcula de la grilla real
+   colores[].disponible_por_talle (si CUALQUIER combinación color×talle
+   tiene 1, el producto está en stock). Los 6 productos con
+   sin_planilla_colores:true no tienen esa grilla cargada — para esos no
+   hay señal de "sin stock" en ningún lado del dato (están publicados y
+   a la venta en el catálogo activo), así que se toman como en stock:
+   es la única lectura honesta de la fuente disponible, no un default
+   arbitrario. Hoy los 81 productos del catálogo están en stock (0 con
+   la grilla en ceros); si en el futuro alguno queda sin stock real, va
+   a reflejarse solo con que se actualice productos.json.
+   ══════════════════════════════════════════════════ */
+function generarSchemaProductos(data){
+  const BASE = 'https://dulceaura.netlify.app';
+
+  function tieneStock(p){
+    if (p.sin_planilla_colores || !Array.isArray(p.colores) || !p.colores.length) return true;
+    return p.colores.some(c => (c.disponible_por_talle || []).some(v => v === 1));
+  }
+
+  const itemListElement = data.productos.map((p, i) => {
+    const offers = {
+      '@type': 'Offer',
+      priceCurrency: 'ARS',
+      availability: tieneStock(p) ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+      url: `${BASE}/?producto=${encodeURIComponent(p.codigo)}`
+    };
+    if (!p.consultar && p.precio_1 != null) {
+      offers.price = p.precio_1;
+    }
+
+    return {
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Product',
+        name: p.nombre,
+        description: p.descripcion,
+        sku: p.codigo,
+        image: p.fotos.map(f => `${BASE}/assets/productos/${f}`),
+        url: `${BASE}/?producto=${encodeURIComponent(p.codigo)}`,
+        offers
+      }
+    };
+  });
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Catálogo Dulce Aura Fashion — Verano 2026/27',
+    numberOfItems: itemListElement.length,
+    itemListElement
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.id = 'schema-productos';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+}
+
 Promise.all([
   fetch('data/productos.json').then(r => r.json()),
   fetch('data/frases.json').then(r => r.json()),
@@ -1371,6 +1473,7 @@ Promise.all([
   actualizarEncabezadoCategoria();
   renderCatalogo();
   renderCarruselDestacados(destacados, data);
+  generarSchemaProductos(data);
 
   // Deep-link mínimo (adelanto de Fase C5): index.html?producto=ART.1147
   // Si el código no existe (viejo, dado de baja, typo), no hace nada —
