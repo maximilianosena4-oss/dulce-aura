@@ -6,7 +6,19 @@
 <title>Dulce Aura Fashion · Colección Verano 2026/27</title>
 <meta name="description" content="Dulce Aura Fashion — Colección Verano 2026/27. Remeras, musculosas y camperas. Envíos y puntos de entrega en Zona Sur GBA. Pedí por WhatsApp.">
 
-<!-- Open Graph / Facebook / WhatsApp -->
+<!-- Open Graph / Facebook / WhatsApp
+     LIMITACIÓN (Fase C5.1): este es un sitio 100% estático, sin build ni
+     servidor propio. Los bots de WhatsApp/Instagram/Facebook que arman la
+     miniatura de un link compartido leen el HTML crudo tal como lo sirve
+     Netlify — NO ejecutan JS. Por eso estas etiquetas son siempre las
+     mismas (genéricas de marca) sin importar si la URL trae
+     ?producto=ART.XXXX. El JS de más abajo (setMetaTagsProducto) actualiza
+     estas mismas etiquetas en el DOM cuando se abre un producto, pero eso
+     solo mejora lo que ve la propia clienta en su navegador (ej. si usa el
+     botón "Compartir" del celular y esa hoja de compartir lee el DOM vivo);
+     no cambia lo que ve la persona que recibe el link. Generar una
+     miniatura distinta por producto para los bots requeriría un paso de
+     build o una función server-side, que este proyecto no tiene. -->
 <meta property="og:title" content="Dulce Aura Fashion · Colección Verano 2026/27">
 <meta property="og:description" content="Dulce Aura Fashion — Colección Verano 2026/27. Remeras, musculosas y camperas. Envíos y puntos de entrega en Zona Sur GBA. Pedí por WhatsApp.">
 <meta property="og:image" content="https://dulceaura.netlify.app/assets/og-image.jpg">
@@ -1013,9 +1025,54 @@ function compartirProducto(p){
   }
 }
 
+/* ══════════════════════════════════════════════════
+   OPEN GRAPH DINÁMICO (Fase C5.1) — ver comentario de
+   limitación en el <head>. Esto solo mejora la vista
+   previa dentro del propio navegador de la clienta,
+   no lo que ve un bot de redes al escanear el link.
+   ══════════════════════════════════════════════════ */
+const META_DEFAULT = {
+  title: document.querySelector('title').textContent,
+  ogTitle: document.querySelector('meta[property="og:title"]').content,
+  ogDesc: document.querySelector('meta[property="og:description"]').content,
+  ogImage: document.querySelector('meta[property="og:image"]').content,
+  ogUrl: document.querySelector('meta[property="og:url"]').content,
+  twTitle: document.querySelector('meta[name="twitter:title"]').content,
+  twDesc: document.querySelector('meta[name="twitter:description"]').content,
+  twImage: document.querySelector('meta[name="twitter:image"]').content
+};
+
+function setMetaTagsProducto(p){
+  const titulo = `${p.nombre} · Dulce Aura Fashion`;
+  const desc = p.descripcion || META_DEFAULT.ogDesc;
+  const img = location.origin + '/assets/productos/' + p.fotos[0];
+  const url = location.origin + location.pathname + '?producto=' + encodeURIComponent(p.codigo);
+
+  document.querySelector('title').textContent = titulo;
+  document.querySelector('meta[property="og:title"]').content = titulo;
+  document.querySelector('meta[property="og:description"]').content = desc;
+  document.querySelector('meta[property="og:image"]').content = img;
+  document.querySelector('meta[property="og:url"]').content = url;
+  document.querySelector('meta[name="twitter:title"]').content = titulo;
+  document.querySelector('meta[name="twitter:description"]').content = desc;
+  document.querySelector('meta[name="twitter:image"]').content = img;
+}
+
+function resetMetaTagsDefault(){
+  document.querySelector('title').textContent = META_DEFAULT.title;
+  document.querySelector('meta[property="og:title"]').content = META_DEFAULT.ogTitle;
+  document.querySelector('meta[property="og:description"]').content = META_DEFAULT.ogDesc;
+  document.querySelector('meta[property="og:image"]').content = META_DEFAULT.ogImage;
+  document.querySelector('meta[property="og:url"]').content = META_DEFAULT.ogUrl;
+  document.querySelector('meta[name="twitter:title"]').content = META_DEFAULT.twTitle;
+  document.querySelector('meta[name="twitter:description"]').content = META_DEFAULT.twDesc;
+  document.querySelector('meta[name="twitter:image"]').content = META_DEFAULT.twImage;
+}
+
 function openCatModal(cod){
   const p = CAT_DATA.productos.find(x => x.codigo === cod);
   popupSeleccion = { talle: null, color: null };
+  setMetaTagsProducto(p);
 
   // CL-1: el popup muestra siempre las 2 primeras fotos (frente/espalda),
   // sin importar si el producto tiene 1, 2 o 3 fotos en total.
@@ -1119,6 +1176,7 @@ function openCatModal(cod){
 function closeCatModal(){
   document.getElementById('catModal').classList.remove('open');
   document.body.style.overflow = '';
+  resetMetaTagsDefault();
 }
 
 document.getElementById('catModal').addEventListener('click', e => {
