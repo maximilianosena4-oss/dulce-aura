@@ -12,6 +12,8 @@ const path = require("path");
 const ROOT = path.join(__dirname, "..");
 const PRODUCTOS_PATH = path.join(ROOT, "data", "productos.json");
 const FOTOS_DIR = path.join(ROOT, "assets", "productos");
+const NOVEDADES_PATH = path.join(ROOT, "data", "novedades.json");
+const NOVEDADES_DIR = path.join(ROOT, "assets", "novedades");
 
 let ok = true;
 const fallos = [];
@@ -126,6 +128,8 @@ function main() {
   console.log(`  promo: true .................. ${promoCount} productos`);
   console.log(`  sin_planilla_colores: true ... ${sinPlanillaCount} productos`);
 
+  validarNovedades();
+
   console.log("");
   if (ok) {
     console.log("✅ Validación OK — todos los checks pasaron.");
@@ -134,6 +138,80 @@ function main() {
     console.error("❌ Validación FALLIDA:");
     fallos.forEach(f => console.error(`  - ${f}`));
     process.exit(1);
+  }
+}
+
+function validarNovedades() {
+  console.log("\n--- Novedades (data/novedades.json) ---");
+
+  // 1. Archivo existe y es JSON válido
+  if (!fs.existsSync(NOVEDADES_PATH)) {
+    fallar("novedades.json: el archivo no existe en data/");
+    console.log("novedades.json: NO EXISTE");
+    return;
+  }
+  let data;
+  try {
+    data = JSON.parse(fs.readFileSync(NOVEDADES_PATH, "utf8"));
+  } catch (e) {
+    fallar(`novedades.json: JSON inválido (${e.message})`);
+    console.log("novedades.json: JSON INVÁLIDO");
+    return;
+  }
+  const placas = Array.isArray(data.placas) ? data.placas : null;
+  if (!placas) {
+    fallar("novedades.json: falta el array \"placas\"");
+    console.log("novedades.json: sin array \"placas\"");
+    return;
+  }
+  console.log(`Total de placas: ${placas.length}`);
+
+  // 2. Cada placa tiene id, imagen, alt y mensaje_wa no vacíos
+  const camposFaltantes = [];
+  placas.forEach((p, i) => {
+    ["id", "imagen", "alt", "mensaje_wa"].forEach(campo => {
+      if (!p[campo] || !String(p[campo]).trim()) {
+        camposFaltantes.push(`placa #${i} (${p.id || "sin id"}): falta "${campo}"`);
+      }
+    });
+  });
+  if (camposFaltantes.length > 0) fallar(`Placas con campos vacíos: ${camposFaltantes.join(" | ")}`);
+  console.log(`Placas con campos vacíos: ${camposFaltantes.length}`);
+
+  // 4. Sin ids duplicados
+  const ids = placas.map(p => p.id).filter(Boolean);
+  const idsUnicos = new Set(ids);
+  if (idsUnicos.size !== ids.length) {
+    const idsCount = {};
+    ids.forEach(id => { idsCount[id] = (idsCount[id] || 0) + 1; });
+    const dup = Object.entries(idsCount).filter(([, n]) => n > 1).map(([id]) => id);
+    fallar(`Ids duplicados en novedades.json: ${dup.join(", ")}`);
+  }
+  console.log(`Ids únicos: ${idsUnicos.size} de ${ids.length}`);
+
+  // 3. Cada imagen referenciada existe en assets/novedades/
+  const referenciadas = new Set();
+  const faltantes = [];
+  placas.forEach(p => {
+    if (!p.imagen) return;
+    referenciadas.add(p.imagen);
+    if (!fs.existsSync(path.join(NOVEDADES_DIR, p.imagen))) {
+      faltantes.push(`${p.id || "sin id"}: ${p.imagen}`);
+    }
+  });
+  if (faltantes.length > 0) fallar(`Novedades — imágenes referenciadas que faltan en disco: ${faltantes.join(", ")}`);
+  console.log(`Imágenes referenciadas que faltan en disco: ${faltantes.length}`);
+
+  // 5. Imágenes en assets/novedades/ que ninguna placa usa
+  let archivosEnDisco = [];
+  if (fs.existsSync(NOVEDADES_DIR)) {
+    archivosEnDisco = fs.readdirSync(NOVEDADES_DIR).filter(f => !f.startsWith("."));
+  }
+  const huerfanas = archivosEnDisco.filter(f => !referenciadas.has(f));
+  if (huerfanas.length > 0) {
+    console.log(`⚠️  Imágenes en assets/novedades/ sin usar en novedades.json (${huerfanas.length}): ${huerfanas.join(", ")}`);
+  } else {
+    console.log("Imágenes sin usar en assets/novedades/: 0");
   }
 }
 
