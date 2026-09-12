@@ -18,7 +18,7 @@ El cierre de venta no ocurre en la web — ocurre en el chat. Todo lo que se con
 
 - **HTML/CSS/JS puro** — sin framework, sin build, sin dependencias del lado del cliente
 - **Netlify** para deploy continuo desde `main`
-- **JSON estático** como capa de datos (`catalogo/productos.json`)
+- **JSON estático** como capa de datos (`data/productos.json`)
 
 ### Por qué sin framework
 
@@ -30,7 +30,7 @@ El sitio tiene que cargar rápido en dispositivos de gama media con conexión m�
 
 **Un solo JSON como fuente de datos**
 
-`catalogo/productos.json` contiene el catálogo completo. El JS del catálogo lo lee una vez y construye todas las cards, filtros y popups en memoria. No hay llamadas a APIs, no hay base de datos.
+`data/productos.json` contiene el catálogo completo. El JS del catálogo lo lee una vez y construye todas las cards, filtros y popups en memoria. No hay llamadas a APIs, no hay base de datos.
 
 **Popup de producto sin librería**
 
@@ -49,13 +49,11 @@ El reproductor de audio espera el primer `touchstart` o `click` del usuario ante
 ## Estructura del repositorio
 
 ```
-catalogo/           → catálogo completo (HTML + JSON + imágenes de productos)
-  index.html        → página del catálogo con filtros, buscador y popup
-  productos.json    → datos de todos los productos
-  stock.json        → estado de stock actualizado
-  img/              → fotos de productos (2 por artículo)
-img/                → imágenes del home (portada, carrusel de looks, categorías)
-index.html          → home del sitio
+data/               → capa de datos (productos, destacados, novedades, copy)
+assets/             → fotos de productos, hero, novedades y branding
+img/                → imágenes del home (portada, carrusel de looks)
+scripts/            → validador de datos (node scripts/validar-datos.js)
+index.html          → home del sitio — catálogo, carrito y todo lo demás
 netlify.toml        → configuración de deploy y headers de seguridad
 ```
 
