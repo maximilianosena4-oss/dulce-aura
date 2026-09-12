@@ -244,7 +244,11 @@ a{text-decoration:none;color:inherit}
 .cat-sheet .close{position:absolute;top:var(--sp-3);right:var(--sp-3);width:32px;height:32px;border-radius:50%;border:1px solid var(--line-light);background:#fff;color:var(--text-dark);font-size:18px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
 .cat-sheet .cat{font-size:var(--fs-xs);letter-spacing:.1em;text-transform:uppercase;color:var(--wine)}
 .cat-sheet h2{font-family:'Jost',sans-serif;font-weight:600;font-size:var(--fs-lg);margin:0;padding-right:36px}
+.cat-sheet .art-row{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-2)}
 .cat-sheet .art{font-size:var(--fs-xs);color:var(--text-dark);opacity:.6}
+.cat-sheet .share-btn{width:26px;height:26px;flex:none;border:none;background:transparent;color:var(--text-dark);opacity:.55;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:opacity .15s,background .15s}
+.cat-sheet .share-btn:hover{opacity:1;background:var(--line-light)}
+.cat-sheet .share-btn svg{width:16px;height:16px}
 .cat-sheet .desc{font-size:var(--fs-sm);line-height:1.5;color:var(--text-dark)}
 .cat-sheet .pr{font-size:var(--fs-xl);font-weight:700;color:var(--wine)}
 .cat-sheet .pr-tramo{font-size:var(--fs-sm);color:var(--text-dark);opacity:.8}
@@ -991,6 +995,22 @@ function actualizarCTAPopup(p){
   }
 }
 
+function compartirProducto(p){
+  const url = location.origin + location.pathname + '?producto=' + encodeURIComponent(p.codigo);
+  const titulo = `Dulce Aura — ${p.nombre}`;
+  const texto = 'Mirá esta prenda de Dulce Aura Style';
+
+  if (navigator.share) {
+    navigator.share({ title: titulo, text: texto, url: url })
+      .then(() => showToast('Compartido'))
+      .catch(() => {}); // cancelado por la clienta: no mostramos error
+  } else {
+    const msg = `¡Hola! Mirá esta prenda de Dulce Aura: ${p.nombre}\n${url}`;
+    window.open(link(msg), '_blank', 'noopener');
+    showToast('Abriendo WhatsApp para compartir');
+  }
+}
+
 function openCatModal(cod){
   const p = CAT_DATA.productos.find(x => x.codigo === cod);
   popupSeleccion = { talle: null, color: null };
@@ -1026,7 +1046,12 @@ function openCatModal(cod){
         <button class="close" aria-label="Cerrar">×</button>
         <div class="cat">${p.categoria_label}</div>
         <h2>${p.nombre}</h2>
-        <div class="art">ART. ${p.codigo.replace('ART.','')}</div>
+        <div class="art-row">
+          <div class="art">ART. ${p.codigo.replace('ART.','')}</div>
+          <button type="button" class="share-btn" id="catShareBtn" aria-label="Compartir este producto">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          </button>
+        </div>
         <div class="desc">${p.descripcion}</div>
         ${precioHtml}
         ${coloresGridHtml(p)}
@@ -1075,6 +1100,8 @@ function openCatModal(cod){
     agregarAlCarrito(item);
     showToast('Agregado a tu pedido');
   };
+
+  document.getElementById('catShareBtn').onclick = () => compartirProducto(p);
 
   document.querySelector('.cat-sheet .close').onclick = closeCatModal;
   document.querySelectorAll('.cat-recos .rc').forEach(r => r.onclick = () => {
@@ -1271,6 +1298,16 @@ Promise.all([
   buildCatTalles();
   actualizarEncabezadoCategoria();
   renderCatalogo();
+
+  // Deep-link mínimo (adelanto de Fase C5): index.html?producto=ART.1147
+  // Si el código no existe (viejo, dado de baja, typo), no hace nada —
+  // la home sigue funcionando normal, sin error visible.
+  try {
+    const codParam = new URLSearchParams(location.search).get('producto');
+    if (codParam && CAT_DATA.productos.some(x => x.codigo === codParam)) {
+      openCatModal(codParam);
+    }
+  } catch (e) {}
 }).catch(err => {
   document.getElementById('grid').innerHTML =
     `<p style="grid-column:1/-1;text-align:center;color:var(--wine)">No se pudo cargar el catálogo: ${err.message}</p>`;
