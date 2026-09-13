@@ -1101,6 +1101,15 @@ function openCatModal(cod){
 
   // CL-1: el popup muestra siempre las 2 primeras fotos (frente/espalda),
   // sin importar si el producto tiene 1, 2 o 3 fotos en total.
+  //
+  // Fase C5.4: estas 2 fotos van SIN loading="lazy" a propósito, al revés
+  // que el resto del catálogo. Dos razones: (1) recién se insertan en el
+  // DOM cuando la clienta ya hizo click para abrir el popup — no existen
+  // en el HTML inicial, así que no pesan nada en la carga de la página;
+  // ya están "diferidas" por construcción. (2) están 100% visibles ni
+  // bien se abre el popup (no hay scroll de por medio), así que lazy acá
+  // no ahorra descarga — solo arriesga un delay extra en el momento en
+  // que más importa la velocidad percibida: justo después del click.
   const fotos = p.fotos.slice(0,2).map(f => `<img src="assets/productos/${f}" alt="${p.nombre}">`).join('');
 
   const precioHtml = (p.consultar || p.precio_1 == null)
@@ -1290,6 +1299,12 @@ function renderCarritoPanel(){
     return;
   }
 
+  // Fase C5.4: mismo criterio que las fotos del popup (ver openCatModal) —
+  // estas miniaturas del carrito se insertan recién cuando se abre el
+  // panel, ya visibles de entrada, así que quedan sin loading="lazy" a
+  // propósito. Fuera del alcance explícito de C5.4 (esa fase pide 81
+  // productos del catálogo + 18 placas de Novedades), pero se revisó acá
+  // para que la ausencia de "lazy" sea una decisión y no un descuido.
   titulo.textContent = CAT_FRASES.carrito.titulo;
   body.innerHTML = items.map((it, i) => {
     const cant = it.cantidad || 1;
