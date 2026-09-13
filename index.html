@@ -6,7 +6,19 @@
 <title>Dulce Aura Fashion · Colección Verano 2026/27</title>
 <meta name="description" content="Dulce Aura Fashion — Colección Verano 2026/27. Remeras, musculosas y camperas. Envíos y puntos de entrega en Zona Sur GBA. Pedí por WhatsApp.">
 
-<!-- Open Graph / Facebook / WhatsApp -->
+<!-- Open Graph / Facebook / WhatsApp
+     LIMITACIÓN (Fase C5.1): este es un sitio 100% estático, sin build ni
+     servidor propio. Los bots de WhatsApp/Instagram/Facebook que arman la
+     miniatura de un link compartido leen el HTML crudo tal como lo sirve
+     Netlify — NO ejecutan JS. Por eso estas etiquetas son siempre las
+     mismas (genéricas de marca) sin importar si la URL trae
+     ?producto=ART.XXXX. El JS de más abajo (setMetaTagsProducto) actualiza
+     estas mismas etiquetas en el DOM cuando se abre un producto, pero eso
+     solo mejora lo que ve la propia clienta en su navegador (ej. si usa el
+     botón "Compartir" del celular y esa hoja de compartir lee el DOM vivo);
+     no cambia lo que ve la persona que recibe el link. Generar una
+     miniatura distinta por producto para los bots requeriría un paso de
+     build o una función server-side, que este proyecto no tiene. -->
 <meta property="og:title" content="Dulce Aura Fashion · Colección Verano 2026/27">
 <meta property="og:description" content="Dulce Aura Fashion — Colección Verano 2026/27. Remeras, musculosas y camperas. Envíos y puntos de entrega en Zona Sur GBA. Pedí por WhatsApp.">
 <meta property="og:image" content="https://dulceaura.netlify.app/assets/og-image.jpg">
@@ -20,6 +32,31 @@
 <meta name="twitter:title" content="Dulce Aura Fashion · Colección Verano 2026/27">
 <meta name="twitter:description" content="Dulce Aura Fashion — Colección Verano 2026/27. Remeras, musculosas y camperas. Envíos y puntos de entrega en Zona Sur GBA. Pedí por WhatsApp.">
 <meta name="twitter:image" content="https://dulceaura.netlify.app/assets/og-image.jpg">
+
+<!-- PWA (Fase C5.2) -->
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#8E1428">
+<link rel="icon" href="/assets/branding/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/branding/icon-192.png">
+
+<!-- Schema.org — Organization (Fase C5.3). Datos fijos de marca, no
+     depende de ningún producto. sameAs solo lleva canales reales y
+     verificados (Instagram y WhatsApp) — no hay página de Facebook
+     propia (el script de Meta es solo el Pixel de tracking, no un link
+     de página), así que ese campo se omite en vez de inventarlo. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Dulce Aura Fashion",
+  "url": "https://dulceaura.netlify.app",
+  "logo": "https://dulceaura.netlify.app/assets/branding/emblem-dulceaura.png",
+  "sameAs": [
+    "https://instagram.com/dulceaura.style",
+    "https://wa.me/5491122413996"
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1013,12 +1050,66 @@ function compartirProducto(p){
   }
 }
 
+/* ══════════════════════════════════════════════════
+   OPEN GRAPH DINÁMICO (Fase C5.1) — ver comentario de
+   limitación en el <head>. Esto solo mejora la vista
+   previa dentro del propio navegador de la clienta,
+   no lo que ve un bot de redes al escanear el link.
+   ══════════════════════════════════════════════════ */
+const META_DEFAULT = {
+  title: document.querySelector('title').textContent,
+  ogTitle: document.querySelector('meta[property="og:title"]').content,
+  ogDesc: document.querySelector('meta[property="og:description"]').content,
+  ogImage: document.querySelector('meta[property="og:image"]').content,
+  ogUrl: document.querySelector('meta[property="og:url"]').content,
+  twTitle: document.querySelector('meta[name="twitter:title"]').content,
+  twDesc: document.querySelector('meta[name="twitter:description"]').content,
+  twImage: document.querySelector('meta[name="twitter:image"]').content
+};
+
+function setMetaTagsProducto(p){
+  const titulo = `${p.nombre} · Dulce Aura Fashion`;
+  const desc = p.descripcion || META_DEFAULT.ogDesc;
+  const img = location.origin + '/assets/productos/' + p.fotos[0];
+  const url = location.origin + location.pathname + '?producto=' + encodeURIComponent(p.codigo);
+
+  document.querySelector('title').textContent = titulo;
+  document.querySelector('meta[property="og:title"]').content = titulo;
+  document.querySelector('meta[property="og:description"]').content = desc;
+  document.querySelector('meta[property="og:image"]').content = img;
+  document.querySelector('meta[property="og:url"]').content = url;
+  document.querySelector('meta[name="twitter:title"]').content = titulo;
+  document.querySelector('meta[name="twitter:description"]').content = desc;
+  document.querySelector('meta[name="twitter:image"]').content = img;
+}
+
+function resetMetaTagsDefault(){
+  document.querySelector('title').textContent = META_DEFAULT.title;
+  document.querySelector('meta[property="og:title"]').content = META_DEFAULT.ogTitle;
+  document.querySelector('meta[property="og:description"]').content = META_DEFAULT.ogDesc;
+  document.querySelector('meta[property="og:image"]').content = META_DEFAULT.ogImage;
+  document.querySelector('meta[property="og:url"]').content = META_DEFAULT.ogUrl;
+  document.querySelector('meta[name="twitter:title"]').content = META_DEFAULT.twTitle;
+  document.querySelector('meta[name="twitter:description"]').content = META_DEFAULT.twDesc;
+  document.querySelector('meta[name="twitter:image"]').content = META_DEFAULT.twImage;
+}
+
 function openCatModal(cod){
   const p = CAT_DATA.productos.find(x => x.codigo === cod);
   popupSeleccion = { talle: null, color: null };
+  setMetaTagsProducto(p);
 
   // CL-1: el popup muestra siempre las 2 primeras fotos (frente/espalda),
   // sin importar si el producto tiene 1, 2 o 3 fotos en total.
+  //
+  // Fase C5.4: estas 2 fotos van SIN loading="lazy" a propósito, al revés
+  // que el resto del catálogo. Dos razones: (1) recién se insertan en el
+  // DOM cuando la clienta ya hizo click para abrir el popup — no existen
+  // en el HTML inicial, así que no pesan nada en la carga de la página;
+  // ya están "diferidas" por construcción. (2) están 100% visibles ni
+  // bien se abre el popup (no hay scroll de por medio), así que lazy acá
+  // no ahorra descarga — solo arriesga un delay extra en el momento en
+  // que más importa la velocidad percibida: justo después del click.
   const fotos = p.fotos.slice(0,2).map(f => `<img src="assets/productos/${f}" alt="${p.nombre}">`).join('');
 
   const precioHtml = (p.consultar || p.precio_1 == null)
@@ -1119,6 +1210,7 @@ function openCatModal(cod){
 function closeCatModal(){
   document.getElementById('catModal').classList.remove('open');
   document.body.style.overflow = '';
+  resetMetaTagsDefault();
 }
 
 document.getElementById('catModal').addEventListener('click', e => {
@@ -1207,6 +1299,12 @@ function renderCarritoPanel(){
     return;
   }
 
+  // Fase C5.4: mismo criterio que las fotos del popup (ver openCatModal) —
+  // estas miniaturas del carrito se insertan recién cuando se abre el
+  // panel, ya visibles de entrada, así que quedan sin loading="lazy" a
+  // propósito. Fuera del alcance explícito de C5.4 (esa fase pide 81
+  // productos del catálogo + 18 placas de Novedades), pero se revisó acá
+  // para que la ausencia de "lazy" sea una decisión y no un descuido.
   titulo.textContent = CAT_FRASES.carrito.titulo;
   body.innerHTML = items.map((it, i) => {
     const cant = it.cantidad || 1;
@@ -1289,6 +1387,97 @@ document.addEventListener('keydown', e => {
 
 actualizarContadorCarrito();
 
+/* ══════════════════════════════════════════════════
+   SCHEMA.ORG — Product / ItemList (Fase C5.3)
+   ══════════════════════════════════════════════════
+   Generado en runtime desde data/productos.json, nunca hardcodeado —
+   mismo criterio que destacados.json: una sola fuente de verdad. Si
+   productos.json cambia (precio, stock, producto nuevo), el schema se
+   regenera solo en la próxima carga, sin tocar código.
+
+   ItemList en vez de 81 bloques Product sueltos: es el catálogo entero
+   en una sola página (sin URL propia por producto, más allá del
+   parámetro ?producto=), y Google recomienda ItemList para páginas que
+   listan varios productos — el marcado Product suelto está pensado para
+   una página de detalle dedicada a un solo producto. Cada item de la
+   lista igual lleva su propio bloque Product completo adentro.
+
+   Precio "a consultar" (ART.500, ART.459, los 2 con consultar:true): el
+   Offer NO declara "price" — se omite el campo en vez de inventar un
+   valor, siguiendo la regla del proyecto de nunca asumir un precio que
+   el proveedor no dio. Offer sí lleva priceCurrency (y availability
+   cuando corresponde, ver abajo). Esto va a hacer que el Rich Results
+   Test marque esos 2 productos con un error de "price faltante" — es
+   esperado y correcto: la exactitud del dato le gana a la elegibilidad
+   de rich result para esos 2 casos.
+
+   Disponibilidad (instock/outofstock): se calcula de la grilla real
+   colores[].disponible_por_talle (si CUALQUIER combinación color×talle
+   tiene 1, el producto está en stock). Los 6 productos con
+   sin_planilla_colores:true NO tienen esa grilla cargada — para esos no
+   hay ninguna forma de saber el stock real a partir de la fuente, así
+   que el Offer omite "availability" directamente, mismo criterio que el
+   precio a consultar: mejor un campo ausente que un valor inventado. No
+   se asume instock por default. Hoy los 75 productos con grilla están
+   en stock (0 con la grilla en ceros); si en el futuro alguno queda sin
+   stock real, o si se carga la grilla de los 6 restantes, se refleja
+   solo con que se actualice productos.json.
+   ══════════════════════════════════════════════════ */
+function generarSchemaProductos(data){
+  const BASE = 'https://dulceaura.netlify.app';
+
+  // null = no hay grilla de colores/talles cargada, no hay forma de saber
+  // el stock real — no se asume nada, se omite el campo (ver comentario
+  // de la función). true/false: sí hay grilla, se lee el dato real.
+  function tieneStock(p){
+    if (p.sin_planilla_colores || !Array.isArray(p.colores) || !p.colores.length) return null;
+    return p.colores.some(c => (c.disponible_por_talle || []).some(v => v === 1));
+  }
+
+  const itemListElement = data.productos.map((p, i) => {
+    const offers = {
+      '@type': 'Offer',
+      priceCurrency: 'ARS',
+      url: `${BASE}/?producto=${encodeURIComponent(p.codigo)}`
+    };
+    const stock = tieneStock(p);
+    if (stock !== null) {
+      offers.availability = stock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock';
+    }
+    if (!p.consultar && p.precio_1 != null) {
+      offers.price = p.precio_1;
+    }
+
+    return {
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Product',
+        name: p.nombre,
+        description: p.descripcion,
+        sku: p.codigo,
+        image: p.fotos.map(f => `${BASE}/assets/productos/${f}`),
+        url: `${BASE}/?producto=${encodeURIComponent(p.codigo)}`,
+        offers
+      }
+    };
+  });
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Catálogo Dulce Aura Fashion — Verano 2026/27',
+    numberOfItems: itemListElement.length,
+    itemListElement
+  };
+
+  const script = document.createElement('script');
+  script.type = 'application/ld+json';
+  script.id = 'schema-productos';
+  script.textContent = JSON.stringify(schema);
+  document.head.appendChild(script);
+}
+
 Promise.all([
   fetch('data/productos.json').then(r => r.json()),
   fetch('data/frases.json').then(r => r.json()),
@@ -1307,6 +1496,7 @@ Promise.all([
   actualizarEncabezadoCategoria();
   renderCatalogo();
   renderCarruselDestacados(destacados, data);
+  generarSchemaProductos(data);
 
   // Deep-link mínimo (adelanto de Fase C5): index.html?producto=ART.1147
   // Si el código no existe (viejo, dado de baja, typo), no hace nada —
@@ -1448,6 +1638,15 @@ window.addEventListener('pagehide', function() {
     audio.pause();
   }
 });
+
+/* ══════════════════════════════════════════════════
+   PWA — Registro del Service Worker (Fase C5.2)
+   ══════════════════════════════════════════════════ */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
 </script>
 </body>
 </html>
