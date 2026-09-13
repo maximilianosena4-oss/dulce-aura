@@ -1390,27 +1390,32 @@ actualizarContadorCarrito();
    Precio "a consultar" (ART.500, ART.459, los 2 con consultar:true): el
    Offer NO declara "price" — se omite el campo en vez de inventar un
    valor, siguiendo la regla del proyecto de nunca asumir un precio que
-   el proveedor no dio. Offer sí lleva availability y priceCurrency. Esto
-   va a hacer que el Rich Results Test marque esos 2 productos con un
-   error de "price faltante" — es esperado y correcto: la exactitud del
-   dato le gana a la elegibilidad de rich result para esos 2 casos.
+   el proveedor no dio. Offer sí lleva priceCurrency (y availability
+   cuando corresponde, ver abajo). Esto va a hacer que el Rich Results
+   Test marque esos 2 productos con un error de "price faltante" — es
+   esperado y correcto: la exactitud del dato le gana a la elegibilidad
+   de rich result para esos 2 casos.
 
    Disponibilidad (instock/outofstock): se calcula de la grilla real
    colores[].disponible_por_talle (si CUALQUIER combinación color×talle
    tiene 1, el producto está en stock). Los 6 productos con
-   sin_planilla_colores:true no tienen esa grilla cargada — para esos no
-   hay señal de "sin stock" en ningún lado del dato (están publicados y
-   a la venta en el catálogo activo), así que se toman como en stock:
-   es la única lectura honesta de la fuente disponible, no un default
-   arbitrario. Hoy los 81 productos del catálogo están en stock (0 con
-   la grilla en ceros); si en el futuro alguno queda sin stock real, va
-   a reflejarse solo con que se actualice productos.json.
+   sin_planilla_colores:true NO tienen esa grilla cargada — para esos no
+   hay ninguna forma de saber el stock real a partir de la fuente, así
+   que el Offer omite "availability" directamente, mismo criterio que el
+   precio a consultar: mejor un campo ausente que un valor inventado. No
+   se asume instock por default. Hoy los 75 productos con grilla están
+   en stock (0 con la grilla en ceros); si en el futuro alguno queda sin
+   stock real, o si se carga la grilla de los 6 restantes, se refleja
+   solo con que se actualice productos.json.
    ══════════════════════════════════════════════════ */
 function generarSchemaProductos(data){
   const BASE = 'https://dulceaura.netlify.app';
 
+  // null = no hay grilla de colores/talles cargada, no hay forma de saber
+  // el stock real — no se asume nada, se omite el campo (ver comentario
+  // de la función). true/false: sí hay grilla, se lee el dato real.
   function tieneStock(p){
-    if (p.sin_planilla_colores || !Array.isArray(p.colores) || !p.colores.length) return true;
+    if (p.sin_planilla_colores || !Array.isArray(p.colores) || !p.colores.length) return null;
     return p.colores.some(c => (c.disponible_por_talle || []).some(v => v === 1));
   }
 
@@ -1418,9 +1423,12 @@ function generarSchemaProductos(data){
     const offers = {
       '@type': 'Offer',
       priceCurrency: 'ARS',
-      availability: tieneStock(p) ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
       url: `${BASE}/?producto=${encodeURIComponent(p.codigo)}`
     };
+    const stock = tieneStock(p);
+    if (stock !== null) {
+      offers.availability = stock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock';
+    }
     if (!p.consultar && p.precio_1 != null) {
       offers.price = p.precio_1;
     }
