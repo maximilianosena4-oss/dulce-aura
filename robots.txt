@@ -1,10 +1,14 @@
 User-agent: *
 Allow: /
 
-# Archivos de datos crudos: no aportan nada a un resultado de búsqueda y
-# no tiene sentido gastar crawl budget en ellos (productos.json,
-# destacados.json, novedades.json, frases.json)
+# Carpeta de datos crudos bloqueada en general, pero los .json que el JS
+# del home fetchea antes del primer render (productos.json, destacados.json,
+# novedades.json, frases.json) se permiten explícitamente: Googlebot respeta
+# robots.txt también para los recursos que pide durante el renderizado, y
+# sin estos JSON el ItemList/Product de Schema.org (C5.3) nunca se genera
+# en el DOM que Google indexa. Allow más específico que el Disallow general.
 Disallow: /data/
+Allow: /data/*.json
 
 # Scripts de mantenimiento (Node.js), no son contenido del sitio
 Disallow: /scripts/
