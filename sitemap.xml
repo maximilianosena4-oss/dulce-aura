@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fase G1.3 — por qué este sitemap NO tiene una entrada por producto
+  (81 URLs ?producto=ART.XXXX):
+
+  El deep-link ?producto=ART.XXXX no sirve un HTML distinto por
+  producto. Es el mismo index.html para cualquier valor del parámetro;
+  el contenido del popup (nombre, foto, precio) se arma en el navegador
+  recién después de un fetch a data/productos.json. Para Google esto
+  significa: 81 URLs con el mismo documento base, la misma <title>
+  estática server-side y la misma meta description en el HTML crudo
+  (el <title> dinámico de setMetaTagsProducto, de C5.1, solo existe una
+  vez que el JS corrió y el fetch terminó) — sin un <link rel="canonical">
+  propio por producto, que este sitio no tiene.
+
+  El resultado más probable en Search Console no es "81 páginas
+  indexadas": es "Duplicada, Google eligió otra canónica" o "Rastreada,
+  actualmente no indexada" para la mayoría de esas URLs, con Google
+  colapsándolas todas a la home. Publicarlas en el sitemap no cambia
+  eso — el sitemap es una sugerencia de rastreo, no fuerza indexación,
+  y 81 entradas que Google descarta solo gastan crawl budget y ensucian
+  los reportes de cobertura que se van a revisar a mano en la Fase G2
+  (Search Console).
+
+  Alternativa que se aplicó: el sitemap lista solo la home, que es la
+  única URL de este sitio con HTML propio, único y sin ambigüedad de
+  canonical. Si más adelante el negocio quiere que productos puntuales
+  aparezcan en Google como resultados propios, la vía técnica correcta
+  es generar una página HTML real y server-rendered por producto (un
+  paso de build que este proyecto hoy no tiene) con su propio
+  <link rel="canonical">, no una URL con query string sobre la SPA.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://dulceaura.netlify.app/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>
