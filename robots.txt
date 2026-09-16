@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# Archivos de datos crudos: no aportan nada a un resultado de búsqueda y
+# no tiene sentido gastar crawl budget en ellos (productos.json,
+# destacados.json, novedades.json, frases.json)
+Disallow: /data/
+
+# Scripts de mantenimiento (Node.js), no son contenido del sitio
+Disallow: /scripts/
+
+# Documento de planificación interna del proyecto — quedó público en el
+# repo (decisión del dueño del negocio), pero no tiene valor para quien
+# busca la tienda y no debería aparecer en resultados de búsqueda
+Disallow: /PLAN_EJECUCION_WEB.md
+
+# Metadata de dependencias del proyecto, no es contenido
+Disallow: /package.json
+
+# Capturas de verificación de cada fase — nunca llegan a producción
+# (gitignoreadas), pero se excluyen igual por si el patrón cambia
+Disallow: /capturas-*/
+
+Sitemap: https://dulceaura.netlify.app/sitemap.xml
