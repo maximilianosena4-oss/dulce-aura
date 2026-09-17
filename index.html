@@ -36,8 +36,15 @@
 <!-- PWA (Fase C5.2) -->
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#8E1428">
-<link rel="icon" href="/assets/branding/icon-192.png" type="image/png">
-<link rel="apple-touch-icon" href="/assets/branding/icon-192.png">
+<!-- C7.3: assets/branding/* y assets/hero/* se cachean 1 año (netlify.toml).
+     El "?v=YYYYMMDD" en cada referencia de acá abajo es el cache-busting
+     manual — no hay build ni hash de contenido en este proyecto. Si se
+     reemplaza alguno de esos archivos sin cambiarle el nombre (ej. nuevo
+     hero de temporada, logo actualizado), hay que subir esta fecha en
+     TODAS las referencias de esta lista para que quien ya visitó el
+     sitio no se quede viendo la versión vieja hasta por un año. -->
+<link rel="icon" href="/assets/branding/icon-192.png?v=20260917" type="image/png">
+<link rel="apple-touch-icon" href="/assets/branding/icon-192.png?v=20260917">
 
 <!-- Schema.org — Organization (Fase C5.3). Datos fijos de marca, no
      depende de ningún producto. sameAs solo lleva canales reales y
@@ -50,7 +57,7 @@
   "@type": "Organization",
   "name": "Dulce Aura Fashion",
   "url": "https://dulceaura.netlify.app",
-  "logo": "https://dulceaura.netlify.app/assets/branding/emblem-dulceaura.png",
+  "logo": "https://dulceaura.netlify.app/assets/branding/emblem-dulceaura.png?v=20260917",
   "sameAs": [
     "https://instagram.com/dulceaura.style",
     "https://wa.me/5491122413996"
@@ -60,15 +67,55 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/tokens.css">
+<!-- C7.2: Google Fonts ya no bloquea el primer render. Se precarga como
+     recurso genérico y se activa como stylesheet recién cuando termina de
+     bajar (patrón preload+swap); el <noscript> cubre el caso sin JS. Se
+     mantiene display=swap (no es la causa del CLS medido tras C7.2 — se
+     probó display=optional y el shift persistía idéntico; la causa real
+     era #heroSubtitulo vacío en el HTML, ver hero-subtitulo en el CSS
+     de abajo). swap conserva la tipografía de marca en toda visita, sin
+     sacrificarla en redes lentas. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&family=Kalam:wght@400;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&family=Kalam:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&family=Kalam:wght@400;700&display=swap" rel="stylesheet"></noscript>
+<!-- C7.2: css/tokens.css se fusionó acá abajo — era un segundo request
+     externo render-blocking para ~1.3 KB de variables. Los valores son
+     idénticos a los que tenía este :root más los que solo estaban en
+     tokens.css; queda una sola fuente de verdad. -->
 <style>
-:root{
-  --bg:#0B0709;--panel:#140C10;--surface:#1A1015;
-  --wine:#8E1428;--wine-deep:#5C0D1A;
-  --gold:#D4AF37;--gold-light:#EBCB6B;--gold-deep:#A8821F;
-  --ivory:#F3ECE3;--ivory-soft:#C3B7AC;
+:root {
+  /* Base de marca — INTOCABLE */
+  --wine:#8E1428; --wine-deep:#5C0D1A;
+  --gold:#D4AF37; --gold-light:#EBCB6B; --gold-deep:#A8821F;
+  --ivory:#F3ECE3; --ivory-soft:#C3B7AC;
+  --bg:#0B0709; --panel:#140C10; --surface:#1A1015;
+
+  /* Acentos de temporada — NUEVOS */
+  --rosa:#D9A6A0; --rosa-soft:#F0DCD8;
+  --celeste:#9FC4D4; --salvia:#A6BC9C;
+
+  /* Superficies claras */
+  --crema:#FAF6F1; --crema-warm:#F3EBE2;
+  --text-dark:#3A1520;
+  --line-light:rgba(142,20,40,.16);
   --line:rgba(212,175,55,.28);
+
+  /* Espaciado — escala de 4px */
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:24px;
+  --sp-6:32px; --sp-7:48px; --sp-8:64px; --sp-9:96px;
+
+  /* Radios */
+  --r-sm:8px; --r-md:14px; --r-lg:20px; --r-full:999px;
+
+  /* Sombras */
+  --sh-sm:0 2px 8px rgba(58,21,32,.06);
+  --sh-md:0 8px 24px rgba(58,21,32,.10);
+  --sh-lg:0 18px 40px -18px rgba(0,0,0,.8);
+
+  /* Tipografía */
+  --fs-xs:11px; --fs-sm:13px; --fs-base:15px; --fs-md:18px;
+  --fs-lg:23px; --fs-xl:32px; --fs-2xl:clamp(38px,7vw,62px);
+  --font-manuscrita:'Kalam',cursive;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -141,10 +188,10 @@ a{text-decoration:none;color:inherit}
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg-img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(11,7,9,.97) 0%,rgba(11,7,9,.93) 45%,rgba(11,7,9,.6) 62%,rgba(11,7,9,.2) 78%,transparent 100%)}
-.hero-content{position:relative;z-index:2;padding:0 var(--sp-5) var(--sp-7);max-width:640px}
+.hero-content{position:relative;z-index:2;padding:0 var(--sp-5) var(--sp-7);width:100%;max-width:640px}
 .hero .eyebrow{font-family:'Cinzel',serif;font-size:13px;letter-spacing:5px;color:var(--gold);font-weight:500}
 .hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(46px,10vw,80px);line-height:.92;margin:var(--sp-2) 0 var(--sp-3)}
-.hero .hero-subtitulo{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(16px,3vw,20px);color:var(--ivory);letter-spacing:.2px;margin-bottom:var(--sp-2);line-height:1.4}
+.hero .hero-subtitulo{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(16px,3vw,20px);color:var(--ivory);letter-spacing:.2px;margin-bottom:var(--sp-2);line-height:1.4;min-height:calc(1.4em * 2)}
 .hero .tentacion{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ivory-soft);letter-spacing:.3px;margin-bottom:var(--sp-5)}
 .hero .btn{margin:0}
 
@@ -215,6 +262,7 @@ a{text-decoration:none;color:inherit}
 .nov-card.nov-lateral{--sc:1;filter:brightness(.65);opacity:.6}
 .nov-card.nov-lateral:hover{--sc:1.02;filter:brightness(1);opacity:1;box-shadow:var(--sh-lg)}
 .nov-card.nov-centrada:hover{box-shadow:0 22px 46px -14px rgba(0,0,0,.9)}
+.nov-card picture{display:block;height:100%}
 .nov-card img{height:100%;width:auto;max-width:none;display:block;pointer-events:none}
 
 .nov-ctrl{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--panel);color:var(--gold);font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s;z-index:2}
@@ -429,7 +477,7 @@ src="https://www.facebook.com/tr?id=2227502608002276&ev=PageView&noscript=1"
 
 <header class="topbar">
   <div class="topbar-left">
-    <img class="topbar-logo" src="assets/branding/emblem-dulceaura.webp" alt="" aria-hidden="true">
+    <img class="topbar-logo" src="assets/branding/emblem-dulceaura.webp?v=20260917" alt="" aria-hidden="true" width="512" height="512">
     <div class="brand">Dulce <em>Aura</em></div>
   </div>
   <div class="topbar-right">
@@ -446,13 +494,15 @@ src="https://www.facebook.com/tr?id=2227502608002276&ev=PageView&noscript=1"
 
 <section class="hero">
   <picture class="hero-bg">
-    <source media="(max-width:640px)" srcset="assets/hero/hero-mobile.webp" type="image/webp">
-    <source media="(max-width:640px)" srcset="assets/hero/hero-mobile.jpg" type="image/jpeg">
-    <source srcset="assets/hero/hero-desktop.webp" type="image/webp">
-    <img class="hero-bg-img" src="assets/hero/hero-desktop.jpg" alt="Dulce Aura Fashion — Colección Verano 2026/27">
+    <source media="(max-width:640px)" type="image/avif" sizes="100vw" srcset="assets/hero/hero-mobile-640w.avif?v=20260917 640w, assets/hero/hero-mobile-960w.avif?v=20260917 960w, assets/hero/hero-mobile.avif?v=20260917 1290w">
+    <source media="(max-width:640px)" type="image/webp" sizes="100vw" srcset="assets/hero/hero-mobile-640w.webp?v=20260917 640w, assets/hero/hero-mobile-960w.webp?v=20260917 960w, assets/hero/hero-mobile.webp?v=20260917 1290w">
+    <source media="(max-width:640px)" srcset="assets/hero/hero-mobile.jpg?v=20260917" type="image/jpeg">
+    <source type="image/avif" sizes="100vw" srcset="assets/hero/hero-desktop-1280w.avif?v=20260917 1280w, assets/hero/hero-desktop-1920w.avif?v=20260917 1920w, assets/hero/hero-desktop.avif?v=20260917 2560w">
+    <source type="image/webp" sizes="100vw" srcset="assets/hero/hero-desktop-1280w.webp?v=20260917 1280w, assets/hero/hero-desktop-1920w.webp?v=20260917 1920w, assets/hero/hero-desktop.webp?v=20260917 2560w">
+    <img class="hero-bg-img" src="assets/hero/hero-desktop.jpg?v=20260917" alt="Dulce Aura Fashion — Colección Verano 2026/27" fetchpriority="high" width="2560" height="1440">
   </picture>
   <div class="hero-emblem-wrap">
-    <img class="hero-emblem" src="assets/branding/emblem-dulceaura.webp" alt="" aria-hidden="true">
+    <img class="hero-emblem" src="assets/branding/emblem-dulceaura.webp?v=20260917" alt="" aria-hidden="true" width="512" height="512">
   </div>
   <div class="hero-content">
     <p class="eyebrow">COLECCIÓN</p>
@@ -654,7 +704,7 @@ function renderCarruselDestacados(destacadosData, productosData){
   // de agregar — reusa openCatModal, sin duplicar esa lógica acá.
   car.innerHTML = slides.map(p => {
     const foto = 'assets/productos/' + p.fotos[0];
-    return `<article class="slide"><div class="slide-img"><img src="${foto}" alt="${p.nombre}" loading="lazy"></div>
+    return `<article class="slide"><div class="slide-img"><img src="${foto}" alt="${p.nombre}" loading="lazy" width="300" height="400"></div>
     <button type="button" class="btn" data-cod="${p.codigo}">
       ${WA_ICON_SVG}
       Agregar al pedido</button></article>`;
@@ -695,11 +745,18 @@ function renderCarruselDestacados(destacadosData, productosData){
         throw new Error("novedades.json sin placas válidas");
       }
 
-      pista.innerHTML = data.placas.map((p, i) => `
+      pista.innerHTML = data.placas.map((p, i) => {
+        const base = encodeURIComponent((p.imagen || "").replace(/\.jpg$/i, ""));
+        return `
         <a class="nov-card" data-idx="${i}" href="${novMsg(p.mensaje_wa || "")}" target="_blank" rel="noopener" style="transition-delay:${reducedMotion ? 0 : i * 60}ms">
-          <img src="assets/novedades/${encodeURIComponent(p.imagen)}" alt="${p.alt || ""}" loading="lazy">
+          <picture>
+            <source type="image/avif" srcset="assets/novedades/${base}-480h.avif 1x, assets/novedades/${base}-780h.avif 1.5x, assets/novedades/${base}-1040h.avif 2x">
+            <source type="image/webp" srcset="assets/novedades/${base}-480h.webp 1x, assets/novedades/${base}-780h.webp 1.5x, assets/novedades/${base}-1040h.webp 2x">
+            <img src="assets/novedades/${encodeURIComponent(p.imagen)}" alt="${p.alt || ""}" loading="lazy" width="${p.ancho || ""}" height="${p.alto || ""}">
+          </picture>
         </a>
-      `).join("");
+      `;
+      }).join("");
 
       seccion.hidden = false;
 
@@ -930,7 +987,7 @@ function catCardHtml(p){
   let backSrc = '';
   if(p.fotos.length >= 3) backSrc = 'assets/productos/' + p.fotos[2];
   else if(p.fotos.length === 2) backSrc = 'assets/productos/' + p.fotos[1];
-  const backImg = backSrc ? `<img class="back" loading="lazy" src="${backSrc}" alt="">` : '';
+  const backImg = backSrc ? `<img class="back" loading="lazy" src="${backSrc}" alt="" width="667" height="1000">` : '';
   const badge = p.promo ? '<span class="badge">PROMO</span>' : '';
   const precioHtml = (p.consultar || p.precio_1 == null)
     ? `<div class="consultar">Consultar disponibilidad</div>`
@@ -939,7 +996,7 @@ function catCardHtml(p){
   return `<article class="card" data-cod="${p.codigo}">
     <div class="card-img">
       ${badge}
-      <img loading="lazy" src="${foto0}" alt="${p.nombre}">
+      <img loading="lazy" src="${foto0}" alt="${p.nombre}" width="667" height="1000">
       ${backImg}
     </div>
     <div class="card-body">
@@ -1110,7 +1167,7 @@ function openCatModal(cod){
   // bien se abre el popup (no hay scroll de por medio), así que lazy acá
   // no ahorra descarga — solo arriesga un delay extra en el momento en
   // que más importa la velocidad percibida: justo después del click.
-  const fotos = p.fotos.slice(0,2).map(f => `<img src="assets/productos/${f}" alt="${p.nombre}">`).join('');
+  const fotos = p.fotos.slice(0,2).map(f => `<img src="assets/productos/${f}" alt="${p.nombre}" width="750" height="1000">`).join('');
 
   const precioHtml = (p.consultar || p.precio_1 == null)
     ? `<div class="pr-consultar">${CAT_FRASES.popup.consultar}</div>`
@@ -1125,7 +1182,7 @@ function openCatModal(cod){
     <h4>También te puede gustar</h4>
     <div class="rgrid">
       ${recos.map(r => `<div class="rc" data-cod="${r.codigo}">
-        <img loading="lazy" src="assets/productos/${r.fotos[0]}" alt="${r.nombre}">
+        <img loading="lazy" src="assets/productos/${r.fotos[0]}" alt="${r.nombre}" width="667" height="1000">
         <div class="rn">${r.nombre}</div>
         <div class="rp">${(r.consultar || r.precio_1 == null) ? 'Consultar' : catMoney(r.precio_1)}</div>
       </div>`).join('')}
@@ -1311,7 +1368,7 @@ function renderCarritoPanel(){
     const precioLinea = typeof it.precio === 'number' ? catMoney(it.precio * cant) : 'A confirmar';
     return `
     <div class="cart-item">
-      <img src="${it.foto}" alt="${it.nombre}">
+      <img src="${it.foto}" alt="${it.nombre}" width="56" height="75">
       <div class="ci-info">
         <p class="ci-nombre">${it.codigo} — ${it.nombre}${cant > 1 ? ` <span class="ci-cantidad">x${cant}</span>` : ''}</p>
         <p class="ci-detalle">Talle: ${it.talle}${it.color ? ' · Color: ' + it.color : ''}</p>

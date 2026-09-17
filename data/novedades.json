@@ -1,113 +1,149 @@
 {
-  "_comentario": "Placas de campaña de la sección Novedades. IMPORTANTE: el precio está incrustado dentro de cada imagen — si cambia un precio, hay que regenerar la placa, no alcanza con editar este archivo. Para agregar o quitar una placa, editá esta lista y poné/sacá el archivo de assets/novedades/.",
+  "_comentario": "Placas de campaña de la sección Novedades. IMPORTANTE: el precio está incrustado dentro de cada imagen — si cambia un precio, hay que regenerar la placa, no alcanza con editar este archivo. Para agregar o quitar una placa, editá esta lista y poné/sacá el archivo de assets/novedades/. 'ancho'/'alto' (C7.4) son las dimensiones reales del .jpg de fallback en assets/novedades/ — el JS los usa como width/height del <img> para reservar el espacio exacto y evitar layout shift, ya que estas placas se muestran a altura fija por CSS pero ancho automático (varía por placa). Si se reemplaza el archivo de una placa, hay que regenerar estos dos valores.",
   "placas": [
     {
       "id": "conjunto-blazer-oxford-verde",
       "imagen": "conjunto-blazer-oxford-verde.jpg",
       "alt": "Conjunto de blazer cruzado y pantalón oxford, color verde militar",
-      "mensaje_wa": "¡Hola! Vi la novedad del conjunto blazer y pantalón oxford verde militar en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad del conjunto blazer y pantalón oxford verde militar en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 693,
+      "alto": 1040
     },
     {
       "id": "chaqueta-crep-piedras-morada",
       "imagen": "chaqueta-crep-piedras-morada.jpg",
       "alt": "Chaqueta crep con aplique de piedras y tachas, color morado",
-      "mensaje_wa": "¡Hola! Vi la novedad de la chaqueta crep con piedras/tachas morada en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad de la chaqueta crep con piedras/tachas morada en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 693,
+      "alto": 1040
     },
     {
       "id": "remeras-estampadas-strass-surtido",
       "imagen": "remeras-estampadas-strass-surtido.jpg",
       "alt": "Surtido de remeras básicas con estampas de strass (varios diseños), blanco y negro",
-      "mensaje_wa": "¡Hola! Vi la novedad de las remeras con estampas de strass en la web y quiero consultar qué diseños y talles tenés disponibles."
+      "mensaje_wa": "¡Hola! Vi la novedad de las remeras con estampas de strass en la web y quiero consultar qué diseños y talles tenés disponibles.",
+      "ancho": 832,
+      "alto": 1040
     },
     {
       "id": "conjunto-blazer-sastrero-azul",
       "imagen": "conjunto-blazer-sastrero-azul.jpg",
       "alt": "Conjunto sastrero de blazer y pantalón, color azul marino",
-      "mensaje_wa": "¡Hola! Vi la novedad del conjunto sastrero azul marino en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad del conjunto sastrero azul marino en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 693,
+      "alto": 1040
     },
     {
       "id": "buzo-canguro-capucha-celeste",
       "imagen": "buzo-canguro-capucha-celeste.jpg",
       "alt": "Buzo canguro con capucha, color celeste",
-      "mensaje_wa": "¡Hola! Vi la novedad del buzo canguro celeste en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad del buzo canguro celeste en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 832,
+      "alto": 1040
     },
     {
       "id": "conjunto-blazer-oxford-chocolate",
       "imagen": "conjunto-blazer-oxford-chocolate.jpg",
       "alt": "Conjunto de blazer y pantalón oxford, color chocolate",
-      "mensaje_wa": "¡Hola! Vi la novedad del conjunto blazer y pantalón chocolate en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad del conjunto blazer y pantalón chocolate en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 693,
+      "alto": 1040
     },
     {
       "id": "campera-denim-capucha",
       "imagen": "campera-denim-capucha.jpg",
       "alt": "Campera de denim con capucha, disponible en azul, celeste y óxido",
-      "mensaje_wa": "¡Hola! Vi la novedad de la campera denim con capucha en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad de la campera denim con capucha en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 692,
+      "alto": 1040
     },
     {
       "id": "baby-tee-estampa-gatito",
       "imagen": "baby-tee-estampa-gatito.jpg",
       "alt": "Baby tee con estampa de gatito, disponible en blanco y negro",
-      "mensaje_wa": "¡Hola! Vi la novedad de la baby tee con estampa de gatito en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad de la baby tee con estampa de gatito en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 832,
+      "alto": 1040
     },
     {
       "id": "remeras-basicas-puntilla",
       "imagen": "remeras-basicas-puntilla.jpg",
       "alt": "Remeras básicas con detalle de puntilla en el escote, blanco, celeste y rosa",
-      "mensaje_wa": "¡Hola! Vi la novedad de las remeras básicas con puntilla en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad de las remeras básicas con puntilla en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 693,
+      "alto": 1040
     },
     {
       "id": "remeras-basicas-cuello-cuadrado",
       "imagen": "remeras-basicas-cuello-cuadrado.jpg",
       "alt": "Remeras básicas de cuello cuadrado, en natural, verde, blanco, negro y chocolate",
-      "mensaje_wa": "¡Hola! Vi la novedad de las remeras básicas de cuello cuadrado en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad de las remeras básicas de cuello cuadrado en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 832,
+      "alto": 1040
     },
     {
       "id": "shorts-mujer-surtido",
       "imagen": "shorts-mujer-surtido.jpg",
       "alt": "Shorts de mujer de algodón rústico, en varios colores",
-      "mensaje_wa": "¡Hola! Vi la novedad de los shorts de mujer en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad de los shorts de mujer en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 832,
+      "alto": 1040
     },
     {
       "id": "conjunto-musculosa-pantalon",
       "imagen": "conjunto-musculosa-pantalon.jpg",
       "alt": "Conjunto de musculosa y pantalón oxford, en negro y gris",
-      "mensaje_wa": "¡Hola! Vi la novedad del conjunto musculosa y pantalón en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad del conjunto musculosa y pantalón en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 832,
+      "alto": 1040
     },
     {
       "id": "remera-rayada-corazones",
       "imagen": "remera-rayada-corazones.jpg",
       "alt": "Remera rayada con corazones bordados, azul marino y blanco",
-      "mensaje_wa": "¡Hola! Vi la novedad de la remera rayada con corazones en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad de la remera rayada con corazones en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 867,
+      "alto": 1040
     },
     {
       "id": "remera-rayada-buddy-perrito",
       "imagen": "remera-rayada-buddy-perrito.jpg",
       "alt": "Remera rayada con bordado de perrito, azul marino y blanco",
-      "mensaje_wa": "¡Hola! Vi la novedad de la remera rayada Buddy con el perrito bordado en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad de la remera rayada Buddy con el perrito bordado en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 865,
+      "alto": 1040
     },
     {
       "id": "jogger-97-gris-negro",
       "imagen": "jogger-97-gris-negro.jpg",
       "alt": "Pantalón jogger con número 97 bordado, en gris y negro",
-      "mensaje_wa": "¡Hola! Vi la novedad del jogger 97 en la web y quiero consultar disponibilidad en talle y color."
+      "mensaje_wa": "¡Hola! Vi la novedad del jogger 97 en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 867,
+      "alto": 1040
     },
     {
       "id": "remera-hombre-honda-racing-negra",
       "imagen": "remera-hombre-honda-racing-negra.jpg",
       "alt": "Remera de hombre Honda Racing, negra, con estampas Honda y Fox",
-      "mensaje_wa": "¡Hola! Vi la novedad de la remera de hombre Honda Racing negra en la web y quiero consultar disponibilidad en talle."
+      "mensaje_wa": "¡Hola! Vi la novedad de la remera de hombre Honda Racing negra en la web y quiero consultar disponibilidad en talle.",
+      "ancho": 832,
+      "alto": 1040
     },
     {
       "id": "remera-hombre-honda-hrc-negra",
       "imagen": "remera-hombre-honda-hrc-negra.jpg",
       "alt": "Remera de hombre Honda HRC Racing, negra",
-      "mensaje_wa": "¡Hola! Vi la novedad de la remera de hombre Honda HRC Racing negra en la web y quiero consultar disponibilidad en talle."
+      "mensaje_wa": "¡Hola! Vi la novedad de la remera de hombre Honda HRC Racing negra en la web y quiero consultar disponibilidad en talle.",
+      "ancho": 832,
+      "alto": 1040
     },
     {
       "id": "remera-hombre-honda-cbr-blanca",
       "imagen": "remera-hombre-honda-cbr-blanca.jpg",
       "alt": "Remera de hombre Honda CBR Racing, blanca",
-      "mensaje_wa": "¡Hola! Vi la novedad de la remera de hombre Honda CBR Racing blanca en la web y quiero consultar disponibilidad en talle."
+      "mensaje_wa": "¡Hola! Vi la novedad de la remera de hombre Honda CBR Racing blanca en la web y quiero consultar disponibilidad en talle.",
+      "ancho": 832,
+      "alto": 1040
     }
   ]
 }
