@@ -88,7 +88,15 @@ async function networkFirst(request, cacheName) {
 async function staleWhileRevalidate(request, cacheName) {
   const cache = await caches.open(cacheName);
   const cacheada = await cache.match(request);
-  const redPromesa = fetch(request).then(red => {
+  // cache:'no-store' en el fetch de revalidación: a partir de C7.3 estas
+  // rutas (assets/productos/, assets/novedades/) llevan Cache-Control de
+  // varios días en el servidor (ver netlify.toml) para que Lighthouse no
+  // las marque como "cache lifetime ineficiente". Sin este no-store, el
+  // fetch de acá abajo podría resolverse contra el caché HTTP del
+  // navegador en vez de ir a la red de verdad, y la corrección de una
+  // foto del proveedor tardaría hasta ese Cache-Control en propagarse en
+  // vez de la próxima visita — rompería la garantía documentada arriba.
+  const redPromesa = fetch(request, { cache: 'no-store' }).then(red => {
     if (red.ok) cache.put(request, red.clone());
     return red;
   }).catch(() => null);

@@ -7,3 +7,52 @@
   [headers.values]
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
+
+# ─── Cache-Control (C7.3 — "Use efficient cache lifetimes") ───
+# Por defecto Netlify sirve TODO (HTML y estáticos por igual) con
+# "max-age=0, must-revalidate": el navegador revalida con el servidor en
+# cada visita (round-trip de 304, no cero costo). Sin build ni hash de
+# contenido en el nombre de archivo, no hay cache-busting automático —
+# por eso se separa en dos grupos según qué tan seguro es cachear cada
+# uno por mucho tiempo:
+#
+# 1) Branding y hero: pocas referencias, todas en index.html, cambian
+#    rara vez (una vez por temporada). Se cachean 1 año + immutable, y
+#    esas referencias en index.html llevan "?v=YYYYMMDD" a mano — si se
+#    reemplaza el archivo (ej. nuevo hero de temporada) sin cambiar el
+#    nombre, hay que actualizar ese "?v=" en index.html para invalidar
+#    el caché de quien ya visitó el sitio. Ver comentario junto a esas
+#    referencias.
+# 2) Fotos de productos y placas de Novedades: se referencian desde los
+#    JSON de datos (81 productos + 18 placas), no por línea individual
+#    en el HTML — versionarlas a mano no es viable acá. Además son las
+#    que el proveedor puede reemplazar por una corrección de foto o de
+#    precio sin avisar (ver AGENT.md, sección 9). Se cachean solo 7 días
+#    (no immutable) para no arriesgar que una clienta vea una foto o un
+#    precio viejo durante meses.
+#
+# data/*.json (stock, precios, novedades) NO se toca acá: sigue con el
+# comportamiento por defecto de Netlify (siempre revalida), porque ahí
+# vive la fuente de verdad de precio/stock y la corrección tiene que
+# reflejarse de inmediato — cachear esto, aunque sea poco, es el tipo de
+# regla que la Sección 2/8 de AGENT.md prohíbe negociar por performance.
+
+[[headers]]
+  for = "/assets/branding/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/hero/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/productos/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
+
+[[headers]]
+  for = "/assets/novedades/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=86400"
