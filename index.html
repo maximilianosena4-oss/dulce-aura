@@ -43,8 +43,37 @@
      hero de temporada, logo actualizado), hay que subir esta fecha en
      TODAS las referencias de esta lista para que quien ya visitó el
      sitio no se quede viendo la versión vieja hasta por un año. -->
-<link rel="icon" href="/assets/branding/icon-192.png?v=20260917" type="image/png">
+<!-- Favicon (Fase G3): Google toma el ícono de resultados de búsqueda de
+     acá — tiene que ser cuadrado, ≥48x48, alcanzable y no bloqueado por
+     robots.txt (confirmado: no hay Disallow que matchee ni /favicon.ico
+     ni /assets/branding/). Se agregan varias resoluciones (16/32/48 para
+     pestaña/favoritos del navegador, 192 ya existía para PWA) más un
+     favicon.ico en la raíz — muchos navegadores y crawlers todavía lo
+     piden ahí por default aunque haya <link rel="icon">. Todas parten
+     del emblema real de la marca vía scripts/generar-iconos-pwa.js
+     (correr ese script de nuevo si el emblema cambia). -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/branding/icon-16.png?v=20260917" type="image/png" sizes="16x16">
+<link rel="icon" href="/assets/branding/icon-32.png?v=20260917" type="image/png" sizes="32x32">
+<link rel="icon" href="/assets/branding/icon-48.png?v=20260917" type="image/png" sizes="48x48">
+<link rel="icon" href="/assets/branding/icon-192.png?v=20260917" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/assets/branding/icon-192.png?v=20260917">
+
+<!-- Schema.org — WebSite (Fase G3). Separado del Organization de acá
+     abajo: Google prioriza este bloque para decidir qué nombre mostrar
+     en el resultado de búsqueda (hoy aparecía "Netlify" con un ícono
+     genérico en vez de la marca). alternateName cubre el caso de que
+     "Dulce Aura Style" completo no entre en el espacio disponible del
+     resultado. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Dulce Aura Style",
+  "alternateName": "Dulce Aura",
+  "url": "https://dulceaura.netlify.app/"
+}
+</script>
 
 <!-- Schema.org — Organization (Fase C5.3). Datos fijos de marca, no
      depende de ningún producto. sameAs solo lleva canales reales y
