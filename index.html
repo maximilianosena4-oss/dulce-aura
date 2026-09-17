@@ -477,7 +477,7 @@ src="https://www.facebook.com/tr?id=2227502608002276&ev=PageView&noscript=1"
 
 <header class="topbar">
   <div class="topbar-left">
-    <img class="topbar-logo" src="assets/branding/emblem-dulceaura.webp?v=20260917" alt="" aria-hidden="true">
+    <img class="topbar-logo" src="assets/branding/emblem-dulceaura.webp?v=20260917" alt="" aria-hidden="true" width="512" height="512">
     <div class="brand">Dulce <em>Aura</em></div>
   </div>
   <div class="topbar-right">
@@ -499,10 +499,10 @@ src="https://www.facebook.com/tr?id=2227502608002276&ev=PageView&noscript=1"
     <source media="(max-width:640px)" srcset="assets/hero/hero-mobile.jpg?v=20260917" type="image/jpeg">
     <source type="image/avif" sizes="100vw" srcset="assets/hero/hero-desktop-1280w.avif?v=20260917 1280w, assets/hero/hero-desktop-1920w.avif?v=20260917 1920w, assets/hero/hero-desktop.avif?v=20260917 2560w">
     <source type="image/webp" sizes="100vw" srcset="assets/hero/hero-desktop-1280w.webp?v=20260917 1280w, assets/hero/hero-desktop-1920w.webp?v=20260917 1920w, assets/hero/hero-desktop.webp?v=20260917 2560w">
-    <img class="hero-bg-img" src="assets/hero/hero-desktop.jpg?v=20260917" alt="Dulce Aura Fashion — Colección Verano 2026/27" fetchpriority="high">
+    <img class="hero-bg-img" src="assets/hero/hero-desktop.jpg?v=20260917" alt="Dulce Aura Fashion — Colección Verano 2026/27" fetchpriority="high" width="2560" height="1440">
   </picture>
   <div class="hero-emblem-wrap">
-    <img class="hero-emblem" src="assets/branding/emblem-dulceaura.webp?v=20260917" alt="" aria-hidden="true">
+    <img class="hero-emblem" src="assets/branding/emblem-dulceaura.webp?v=20260917" alt="" aria-hidden="true" width="512" height="512">
   </div>
   <div class="hero-content">
     <p class="eyebrow">COLECCIÓN</p>
@@ -704,7 +704,7 @@ function renderCarruselDestacados(destacadosData, productosData){
   // de agregar — reusa openCatModal, sin duplicar esa lógica acá.
   car.innerHTML = slides.map(p => {
     const foto = 'assets/productos/' + p.fotos[0];
-    return `<article class="slide"><div class="slide-img"><img src="${foto}" alt="${p.nombre}" loading="lazy"></div>
+    return `<article class="slide"><div class="slide-img"><img src="${foto}" alt="${p.nombre}" loading="lazy" width="300" height="400"></div>
     <button type="button" class="btn" data-cod="${p.codigo}">
       ${WA_ICON_SVG}
       Agregar al pedido</button></article>`;
@@ -752,7 +752,7 @@ function renderCarruselDestacados(destacadosData, productosData){
           <picture>
             <source type="image/avif" srcset="assets/novedades/${base}-480h.avif 1x, assets/novedades/${base}-780h.avif 1.5x, assets/novedades/${base}-1040h.avif 2x">
             <source type="image/webp" srcset="assets/novedades/${base}-480h.webp 1x, assets/novedades/${base}-780h.webp 1.5x, assets/novedades/${base}-1040h.webp 2x">
-            <img src="assets/novedades/${encodeURIComponent(p.imagen)}" alt="${p.alt || ""}" loading="lazy">
+            <img src="assets/novedades/${encodeURIComponent(p.imagen)}" alt="${p.alt || ""}" loading="lazy" width="${p.ancho || ""}" height="${p.alto || ""}">
           </picture>
         </a>
       `;
@@ -987,7 +987,7 @@ function catCardHtml(p){
   let backSrc = '';
   if(p.fotos.length >= 3) backSrc = 'assets/productos/' + p.fotos[2];
   else if(p.fotos.length === 2) backSrc = 'assets/productos/' + p.fotos[1];
-  const backImg = backSrc ? `<img class="back" loading="lazy" src="${backSrc}" alt="">` : '';
+  const backImg = backSrc ? `<img class="back" loading="lazy" src="${backSrc}" alt="" width="667" height="1000">` : '';
   const badge = p.promo ? '<span class="badge">PROMO</span>' : '';
   const precioHtml = (p.consultar || p.precio_1 == null)
     ? `<div class="consultar">Consultar disponibilidad</div>`
@@ -996,7 +996,7 @@ function catCardHtml(p){
   return `<article class="card" data-cod="${p.codigo}">
     <div class="card-img">
       ${badge}
-      <img loading="lazy" src="${foto0}" alt="${p.nombre}">
+      <img loading="lazy" src="${foto0}" alt="${p.nombre}" width="667" height="1000">
       ${backImg}
     </div>
     <div class="card-body">
@@ -1167,7 +1167,7 @@ function openCatModal(cod){
   // bien se abre el popup (no hay scroll de por medio), así que lazy acá
   // no ahorra descarga — solo arriesga un delay extra en el momento en
   // que más importa la velocidad percibida: justo después del click.
-  const fotos = p.fotos.slice(0,2).map(f => `<img src="assets/productos/${f}" alt="${p.nombre}">`).join('');
+  const fotos = p.fotos.slice(0,2).map(f => `<img src="assets/productos/${f}" alt="${p.nombre}" width="750" height="1000">`).join('');
 
   const precioHtml = (p.consultar || p.precio_1 == null)
     ? `<div class="pr-consultar">${CAT_FRASES.popup.consultar}</div>`
@@ -1182,7 +1182,7 @@ function openCatModal(cod){
     <h4>También te puede gustar</h4>
     <div class="rgrid">
       ${recos.map(r => `<div class="rc" data-cod="${r.codigo}">
-        <img loading="lazy" src="assets/productos/${r.fotos[0]}" alt="${r.nombre}">
+        <img loading="lazy" src="assets/productos/${r.fotos[0]}" alt="${r.nombre}" width="667" height="1000">
         <div class="rn">${r.nombre}</div>
         <div class="rp">${(r.consultar || r.precio_1 == null) ? 'Consultar' : catMoney(r.precio_1)}</div>
       </div>`).join('')}
@@ -1368,7 +1368,7 @@ function renderCarritoPanel(){
     const precioLinea = typeof it.precio === 'number' ? catMoney(it.precio * cant) : 'A confirmar';
     return `
     <div class="cart-item">
-      <img src="${it.foto}" alt="${it.nombre}">
+      <img src="${it.foto}" alt="${it.nombre}" width="56" height="75">
       <div class="ci-info">
         <p class="ci-nombre">${it.codigo} — ${it.nombre}${cant > 1 ? ` <span class="ci-cantidad">x${cant}</span>` : ''}</p>
         <p class="ci-detalle">Talle: ${it.talle}${it.color ? ' · Color: ' + it.color : ''}</p>
