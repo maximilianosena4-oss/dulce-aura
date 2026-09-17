@@ -62,9 +62,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- C7.2: Google Fonts ya no bloquea el primer render. Se precarga como
      recurso genérico y se activa como stylesheet recién cuando termina de
-     bajar (patrón preload+swap); el <noscript> cubre el caso sin JS. El
-     texto se ve con el fallback (system-ui) hasta que la tipografía real
-     entra, gracias al &display=swap ya presente en la URL. -->
+     bajar (patrón preload+swap); el <noscript> cubre el caso sin JS. Se
+     mantiene display=swap (no es la causa del CLS medido tras C7.2 — se
+     probó display=optional y el shift persistía idéntico; la causa real
+     era #heroSubtitulo vacío en el HTML, ver hero-subtitulo en el CSS
+     de abajo). swap conserva la tipografía de marca en toda visita, sin
+     sacrificarla en redes lentas. -->
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&family=Kalam:wght@400;700&display=swap">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&family=Kalam:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500;600&family=Kalam:wght@400;700&display=swap" rel="stylesheet"></noscript>
@@ -178,10 +181,10 @@ a{text-decoration:none;color:inherit}
 .hero-bg{position:absolute;inset:0;z-index:0}
 .hero-bg-img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(11,7,9,.97) 0%,rgba(11,7,9,.93) 45%,rgba(11,7,9,.6) 62%,rgba(11,7,9,.2) 78%,transparent 100%)}
-.hero-content{position:relative;z-index:2;padding:0 var(--sp-5) var(--sp-7);max-width:640px}
+.hero-content{position:relative;z-index:2;padding:0 var(--sp-5) var(--sp-7);width:100%;max-width:640px}
 .hero .eyebrow{font-family:'Cinzel',serif;font-size:13px;letter-spacing:5px;color:var(--gold);font-weight:500}
 .hero h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(46px,10vw,80px);line-height:.92;margin:var(--sp-2) 0 var(--sp-3)}
-.hero .hero-subtitulo{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(16px,3vw,20px);color:var(--ivory);letter-spacing:.2px;margin-bottom:var(--sp-2);line-height:1.4}
+.hero .hero-subtitulo{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(16px,3vw,20px);color:var(--ivory);letter-spacing:.2px;margin-bottom:var(--sp-2);line-height:1.4;min-height:calc(1.4em * 2)}
 .hero .tentacion{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--ivory-soft);letter-spacing:.3px;margin-bottom:var(--sp-5)}
 .hero .btn{margin:0}
 
