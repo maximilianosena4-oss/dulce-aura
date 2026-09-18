@@ -1521,31 +1521,43 @@ function generarSchemaProductos(data){
   }
 
   const itemListElement = data.productos.map((p, i) => {
-    const offers = {
-      '@type': 'Offer',
-      priceCurrency: 'ARS',
+    const item = {
+      '@type': 'Product',
+      name: p.nombre,
+      description: p.descripcion,
+      sku: p.codigo,
+      image: p.fotos.map(f => `${BASE}/assets/productos/${f}`),
       url: `${BASE}/?producto=${encodeURIComponent(p.codigo)}`
     };
-    const stock = tieneStock(p);
-    if (stock !== null) {
-      offers.availability = stock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock';
-    }
+
+    // G4: un Offer sin price es inválido en Schema.org (Search Console lo
+    // marcó como error crítico — "Se debe especificar price o
+    // priceSpecification.price"). Los productos "a consultar" (sin precio
+    // impreso del proveedor, ART.459 y ART.500 al momento de este fix) no
+    // tienen ningún valor real para poner ahí — ni siquiera un tramo
+    // aproximado — así que en vez de inventar un precio o forzar price:0
+    // (Google exige price > 0 en Merchant Listing), se omite el bloque
+    // offers directamente. El Product queda igual de válido sin offers;
+    // solo pierde el rich snippet de precio, que de todos modos no podría
+    // mostrar porque no hay precio que mostrar.
     if (!p.consultar && p.precio_1 != null) {
-      offers.price = p.precio_1;
+      const offers = {
+        '@type': 'Offer',
+        priceCurrency: 'ARS',
+        url: `${BASE}/?producto=${encodeURIComponent(p.codigo)}`,
+        price: p.precio_1
+      };
+      const stock = tieneStock(p);
+      if (stock !== null) {
+        offers.availability = stock ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock';
+      }
+      item.offers = offers;
     }
 
     return {
       '@type': 'ListItem',
       position: i + 1,
-      item: {
-        '@type': 'Product',
-        name: p.nombre,
-        description: p.descripcion,
-        sku: p.codigo,
-        image: p.fotos.map(f => `${BASE}/assets/productos/${f}`),
-        url: `${BASE}/?producto=${encodeURIComponent(p.codigo)}`,
-        offers
-      }
+      item
     };
   });
 
