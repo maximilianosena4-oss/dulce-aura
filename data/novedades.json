@@ -2,59 +2,315 @@
   "_comentario": "Placas de campaña de la sección Novedades. IMPORTANTE: el precio está incrustado dentro de cada imagen — si cambia un precio, hay que regenerar la placa, no alcanza con editar este archivo. Para agregar o quitar una placa, editá esta lista y poné/sacá el archivo de assets/novedades/. 'ancho'/'alto' (C7.4) son las dimensiones reales del .jpg de fallback en assets/novedades/ — el JS los usa como width/height del <img> para reservar el espacio exacto y evitar layout shift, ya que estas placas se muestran a altura fija por CSS pero ancho automático (varía por placa). Si se reemplaza el archivo de una placa, hay que regenerar estos dos valores.",
   "placas": [
     {
-      "id": "conjunto-blazer-oxford-verde",
-      "imagen": "conjunto-blazer-oxford-verde.jpg",
-      "alt": "Conjunto de blazer cruzado y pantalón oxford, color verde militar",
-      "mensaje_wa": "¡Hola! Vi la novedad del conjunto blazer y pantalón oxford verde militar en la web y quiero consultar disponibilidad en talle y color.",
+      "id": "gorras-new-drop-colores",
+      "imagen": "gorras-new-drop-colores.jpg",
+      "alt": "Gorras planas en doce colores, visera curva con cierre regulable",
+      "mensaje_wa": "¡Hola! Vi las gorras New Drop en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 852,
+      "alto": 1040
+    },
+    {
+      "id": "gorras-quiksilver-edicion-limitada",
+      "imagen": "gorras-quiksilver-edicion-limitada.jpg",
+      "alt": "Gorras planas con logo bordado en rosa, rojo, negro y blanco",
+      "mensaje_wa": "¡Hola! Vi las gorras de edición limitada en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "jean-rigido-azul",
+      "imagen": "jean-rigido-azul.jpg",
+      "alt": "Jean rígido azul de tiro alto, talles 36 al 44",
+      "mensaje_wa": "¡Hola! Vi el jean rígido azul en la web y quiero consultar disponibilidad en talle y color.",
       "ancho": 693,
       "alto": 1040
     },
     {
-      "id": "chaqueta-crep-piedras-morada",
-      "imagen": "chaqueta-crep-piedras-morada.jpg",
-      "alt": "Chaqueta crep con aplique de piedras y tachas, color morado",
-      "mensaje_wa": "¡Hola! Vi la novedad de la chaqueta crep con piedras/tachas morada en la web y quiero consultar disponibilidad en talle y color.",
+      "id": "gorras-ny-estatua-plana",
+      "imagen": "gorras-ny-estatua-plana.jpg",
+      "alt": "Gorras planas cerradas con bordado NY, en beige, negro y azul marino",
+      "mensaje_wa": "¡Hola! Vi las gorras planas cerradas de adulto en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 1040,
+      "alto": 1040
+    },
+    {
+      "id": "pijamas-estampados-bolsita",
+      "imagen": "pijamas-estampados-bolsita.jpg",
+      "alt": "Conjuntos de pijama estampados en negro, rosa y celeste, con bolsita para guardar",
+      "mensaje_wa": "¡Hola! Vi los pijamas estampados con bolsita en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 853,
+      "alto": 1040
+    },
+    {
+      "id": "bermuda-elastizada-corte-chino",
+      "imagen": "bermuda-elastizada-corte-chino.jpg",
+      "alt": "Bermuda elastizada de corte chino en negro, talles 38 al 48",
+      "mensaje_wa": "¡Hola! Vi la bermuda elastizada corte chino en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "short-dama-rotura-desflecado-celeste",
+      "imagen": "short-dama-rotura-desflecado-celeste.jpg",
+      "alt": "Short de dama de jean celeste con roturas y bajo desflecado",
+      "mensaje_wa": "¡Hola! Vi el short de dama con rotura desflecada en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "short-dama-rotura-desflecado-negro",
+      "imagen": "short-dama-rotura-desflecado-negro.jpg",
+      "alt": "Short de dama en denim negro con roturas, talles 36 al 48",
+      "mensaje_wa": "¡Hola! Vi el short de dama negro con rotura desflecada en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "proximamente-nuevos-lanzamientos",
+      "imagen": "proximamente-nuevos-lanzamientos.jpg",
+      "alt": "Anuncio de próximos lanzamientos de la temporada",
+      "mensaje_wa": "¡Hola! Vi los nuevos lanzamientos que vienen en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 853,
+      "alto": 1040
+    },
+    {
+      "id": "campera-jean-rigida-clasica",
+      "imagen": "campera-jean-rigida-clasica.jpg",
+      "alt": "Campera de jean rígida clásica, talles M al XXL",
+      "mensaje_wa": "¡Hola! Vi la campera de jean rígida clásica en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "jeans-oxford-elastizado-negro",
+      "imagen": "jeans-oxford-elastizado-negro.jpg",
+      "alt": "Jean oxford elastizado negro de tiro alto, talles 36 al 46",
+      "mensaje_wa": "¡Hola! Vi el jean oxford elastizado negro en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "chomba-algodon-rayada",
+      "imagen": "chomba-algodon-rayada.jpg",
+      "alt": "Chomba de algodón rayada, talles S al XL, tres colores",
+      "mensaje_wa": "¡Hola! Vi la chomba de algodón rayada en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "bermuda-cargo-jean",
+      "imagen": "bermuda-cargo-jean.jpg",
+      "alt": "Bermuda cargo de jean con bolsillos laterales, talles 42 al 48",
+      "mensaje_wa": "¡Hola! Vi la bermuda cargo de jean en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "campera-denim-mujer",
+      "imagen": "campera-denim-mujer.jpg",
+      "alt": "Campera de jean de mujer con roturas, corte corto",
+      "mensaje_wa": "¡Hola! Vi la campera de jean de mujer en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "jeans-oxford-elastizado-azul",
+      "imagen": "jeans-oxford-elastizado-azul.jpg",
+      "alt": "Jean oxford elastizado azul oscuro, talles 36 al 46",
+      "mensaje_wa": "¡Hola! Vi el jean oxford elastizado azul en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "jogger-cargo-jean",
+      "imagen": "jogger-cargo-jean.jpg",
+      "alt": "Jogger cargo de jean con cintura elástica y cordón, talles 38 al 48",
+      "mensaje_wa": "¡Hola! Vi el jogger cargo de jean en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "jean-liso-celeste",
+      "imagen": "jean-liso-celeste.jpg",
+      "alt": "Jean liso celeste de tiro alto, talles 34 al 48",
+      "mensaje_wa": "¡Hola! Vi el jean liso celeste en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "chomba-waffle-azul",
+      "imagen": "chomba-waffle-azul.jpg",
+      "alt": "Chomba de tela waffle azul, liviana y fresca",
+      "mensaje_wa": "¡Hola! Vi la chomba de tela waffle azul en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "chomba-premium-blanca",
+      "imagen": "chomba-premium-blanca.jpg",
+      "alt": "Chomba blanca de algodón con vivos en el cuello, talles S al XL",
+      "mensaje_wa": "¡Hola! Vi la chomba premium blanca en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "short-dama-denim-clasico",
+      "imagen": "short-dama-denim-clasico.jpg",
+      "alt": "Short de dama en denim con roturas, look urbano",
+      "mensaje_wa": "¡Hola! Vi el short de dama de denim en la web y quiero consultar disponibilidad en talle y color.",
       "ancho": 693,
       "alto": 1040
     },
     {
-      "id": "remeras-estampadas-strass-surtido",
-      "imagen": "remeras-estampadas-strass-surtido.jpg",
-      "alt": "Surtido de remeras básicas con estampas de strass (varios diseños), blanco y negro",
-      "mensaje_wa": "¡Hola! Vi la novedad de las remeras con estampas de strass en la web y quiero consultar qué diseños y talles tenés disponibles.",
-      "ancho": 832,
+      "id": "chomba-algodon-gris",
+      "imagen": "chomba-algodon-gris.jpg",
+      "alt": "Chomba de algodón gris con vivos en cuello y puños, talles S al XL",
+      "mensaje_wa": "¡Hola! Vi la chomba de algodón gris en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
       "alto": 1040
     },
     {
-      "id": "conjunto-blazer-sastrero-azul",
-      "imagen": "conjunto-blazer-sastrero-azul.jpg",
-      "alt": "Conjunto sastrero de blazer y pantalón, color azul marino",
-      "mensaje_wa": "¡Hola! Vi la novedad del conjunto sastrero azul marino en la web y quiero consultar disponibilidad en talle y color.",
+      "id": "chomba-algodon-beige",
+      "imagen": "chomba-algodon-beige.jpg",
+      "alt": "Chomba de algodón beige con vivos en contraste",
+      "mensaje_wa": "¡Hola! Vi la chomba de algodón beige en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "remeras-bloom-fest",
+      "imagen": "remeras-bloom-fest.jpg",
+      "alt": "Remeras de algodón con estampa floral en negro, rosa, celeste y blanco",
+      "mensaje_wa": "¡Hola! Vi las remeras de la línea Bloom Fest en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 852,
+      "alto": 1040
+    },
+    {
+      "id": "remeras-estampadas-surtidas",
+      "imagen": "remeras-estampadas-surtidas.jpg",
+      "alt": "Remeras de algodón con estampas variadas en negro, crudo, blanco y bordó",
+      "mensaje_wa": "¡Hola! Vi las remeras estampadas surtidas en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 1040,
+      "alto": 1040
+    },
+    {
+      "id": "remera-con-tachas",
+      "imagen": "remera-con-tachas.jpg",
+      "alt": "Remera básica con detalle de tachas, en negro, gris y blanco",
+      "mensaje_wa": "¡Hola! Vi la remera con tachas en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 1040,
+      "alto": 1040
+    },
+    {
+      "id": "top-musculosa-tachas",
+      "imagen": "top-musculosa-tachas.jpg",
+      "alt": "Top musculosa con tachas en verde, fucsia y rosa",
+      "mensaje_wa": "¡Hola! Vi el top musculosa con tachas en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 869,
+      "alto": 1040
+    },
+    {
+      "id": "musculosa-chomba-medio-cierre",
+      "imagen": "musculosa-chomba-medio-cierre.jpg",
+      "alt": "Musculosa tipo chomba rayada con medio cierre, cuatro colores",
+      "mensaje_wa": "¡Hola! Vi la musculosa chomba con medio cierre en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 852,
+      "alto": 1040
+    },
+    {
+      "id": "remera-manga-doblada-tachas",
+      "imagen": "remera-manga-doblada-tachas.jpg",
+      "alt": "Remera de manga doblada con tachas, en gris, negro y blanco",
+      "mensaje_wa": "¡Hola! Vi la remera de manga doblada con tachas en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "pijama-algodon-soft-ciruela",
+      "imagen": "pijama-algodon-soft-ciruela.jpg",
+      "alt": "Conjunto de pijama de algodón soft estampado, tres colores",
+      "mensaje_wa": "¡Hola! Vi el pijama de algodón soft estampado en la web y quiero consultar disponibilidad en talle y color.",
       "ancho": 693,
       "alto": 1040
     },
     {
-      "id": "buzo-canguro-capucha-celeste",
-      "imagen": "buzo-canguro-capucha-celeste.jpg",
-      "alt": "Buzo canguro con capucha, color celeste",
-      "mensaje_wa": "¡Hola! Vi la novedad del buzo canguro celeste en la web y quiero consultar disponibilidad en talle y color.",
-      "ancho": 832,
+      "id": "remera-rayada-cuello-combinado",
+      "imagen": "remera-rayada-cuello-combinado.jpg",
+      "alt": "Remera rayada con cuello combinado, en amarillo y negro",
+      "mensaje_wa": "¡Hola! Vi la remera rayada de cuello combinado en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
       "alto": 1040
     },
     {
-      "id": "conjunto-blazer-oxford-chocolate",
-      "imagen": "conjunto-blazer-oxford-chocolate.jpg",
-      "alt": "Conjunto de blazer y pantalón oxford, color chocolate",
-      "mensaje_wa": "¡Hola! Vi la novedad del conjunto blazer y pantalón chocolate en la web y quiero consultar disponibilidad en talle y color.",
+      "id": "bermuda-rustico-colores",
+      "imagen": "bermuda-rustico-colores.jpg",
+      "alt": "Bermuda de tela rústica en seis colores, talles S, M, L y XL",
+      "mensaje_wa": "¡Hola! Vi la bermuda rústica en la web y quiero consultar disponibilidad en talle y color.",
       "ancho": 693,
       "alto": 1040
     },
     {
-      "id": "campera-denim-capucha",
-      "imagen": "campera-denim-capucha.jpg",
-      "alt": "Campera de denim con capucha, disponible en azul, celeste y óxido",
-      "mensaje_wa": "¡Hola! Vi la novedad de la campera denim con capucha en la web y quiero consultar disponibilidad en talle y color.",
-      "ancho": 692,
+      "id": "conjunto-campera-jean-masculino",
+      "imagen": "conjunto-campera-jean-masculino.jpg",
+      "alt": "Campera de jean y jean recto de hombre, conjunto de temporada",
+      "mensaje_wa": "¡Hola! Vi la campera y el jean de hombre en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 693,
+      "alto": 1040
+    },
+    {
+      "id": "short-rustico-elastico-costado",
+      "imagen": "short-rustico-elastico-costado.jpg",
+      "alt": "Short de tela rústica con elástico en el costado, cinco colores",
+      "mensaje_wa": "¡Hola! Vi el short rústico con elástico en el costado en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 693,
+      "alto": 1040
+    },
+    {
+      "id": "short-denim-clasico",
+      "imagen": "short-denim-clasico.jpg",
+      "alt": "Short de denim clásico con bajo desflecado",
+      "mensaje_wa": "¡Hola! Vi el short de denim clásico en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "short-denim-tiro-alto",
+      "imagen": "short-denim-tiro-alto.jpg",
+      "alt": "Short de denim de tiro alto con bajo desflecado",
+      "mensaje_wa": "¡Hola! Vi el short de denim de tiro alto en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 693,
+      "alto": 1040
+    },
+    {
+      "id": "conjunto-pijama-remeron-short-caritas",
+      "imagen": "conjunto-pijama-remeron-short-caritas.jpg",
+      "alt": "Conjunto de pijama remerón y short con estampa de caritas, talle único",
+      "mensaje_wa": "¡Hola! Vi el conjunto de pijama con estampa de caritas en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 693,
+      "alto": 1040
+    },
+    {
+      "id": "remeras-basicas-colores",
+      "imagen": "remeras-basicas-colores.jpg",
+      "alt": "Remeras básicas en rosa, blanco, gris, chocolate y azul",
+      "mensaje_wa": "¡Hola! Vi las remeras básicas en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
+      "alto": 1040
+    },
+    {
+      "id": "shorts-colores-surtidos",
+      "imagen": "shorts-colores-surtidos.jpg",
+      "alt": "Shorts de algodón en rosa, verde, gris y negro",
+      "mensaje_wa": "¡Hola! Vi los shorts de colores en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 585,
+      "alto": 1040
+    },
+    {
+      "id": "conjuntos-pijama-florales",
+      "imagen": "conjuntos-pijama-florales.jpg",
+      "alt": "Conjuntos de pijama con estampa floral, talles 1 al 5",
+      "mensaje_wa": "¡Hola! Vi los conjuntos de pijama florales en la web y quiero consultar disponibilidad en talle y color.",
+      "ancho": 866,
       "alto": 1040
     },
     {
@@ -63,62 +319,6 @@
       "alt": "Baby tee con estampa de gatito, disponible en blanco y negro",
       "mensaje_wa": "¡Hola! Vi la novedad de la baby tee con estampa de gatito en la web y quiero consultar disponibilidad en talle y color.",
       "ancho": 832,
-      "alto": 1040
-    },
-    {
-      "id": "remeras-basicas-puntilla",
-      "imagen": "remeras-basicas-puntilla.jpg",
-      "alt": "Remeras básicas con detalle de puntilla en el escote, blanco, celeste y rosa",
-      "mensaje_wa": "¡Hola! Vi la novedad de las remeras básicas con puntilla en la web y quiero consultar disponibilidad en talle y color.",
-      "ancho": 693,
-      "alto": 1040
-    },
-    {
-      "id": "remeras-basicas-cuello-cuadrado",
-      "imagen": "remeras-basicas-cuello-cuadrado.jpg",
-      "alt": "Remeras básicas de cuello cuadrado, en natural, verde, blanco, negro y chocolate",
-      "mensaje_wa": "¡Hola! Vi la novedad de las remeras básicas de cuello cuadrado en la web y quiero consultar disponibilidad en talle y color.",
-      "ancho": 832,
-      "alto": 1040
-    },
-    {
-      "id": "shorts-mujer-surtido",
-      "imagen": "shorts-mujer-surtido.jpg",
-      "alt": "Shorts de mujer de algodón rústico, en varios colores",
-      "mensaje_wa": "¡Hola! Vi la novedad de los shorts de mujer en la web y quiero consultar disponibilidad en talle y color.",
-      "ancho": 832,
-      "alto": 1040
-    },
-    {
-      "id": "conjunto-musculosa-pantalon",
-      "imagen": "conjunto-musculosa-pantalon.jpg",
-      "alt": "Conjunto de musculosa y pantalón oxford, en negro y gris",
-      "mensaje_wa": "¡Hola! Vi la novedad del conjunto musculosa y pantalón en la web y quiero consultar disponibilidad en talle y color.",
-      "ancho": 832,
-      "alto": 1040
-    },
-    {
-      "id": "remera-rayada-corazones",
-      "imagen": "remera-rayada-corazones.jpg",
-      "alt": "Remera rayada con corazones bordados, azul marino y blanco",
-      "mensaje_wa": "¡Hola! Vi la novedad de la remera rayada con corazones en la web y quiero consultar disponibilidad en talle y color.",
-      "ancho": 867,
-      "alto": 1040
-    },
-    {
-      "id": "remera-rayada-buddy-perrito",
-      "imagen": "remera-rayada-buddy-perrito.jpg",
-      "alt": "Remera rayada con bordado de perrito, azul marino y blanco",
-      "mensaje_wa": "¡Hola! Vi la novedad de la remera rayada Buddy con el perrito bordado en la web y quiero consultar disponibilidad en talle y color.",
-      "ancho": 865,
-      "alto": 1040
-    },
-    {
-      "id": "jogger-97-gris-negro",
-      "imagen": "jogger-97-gris-negro.jpg",
-      "alt": "Pantalón jogger con número 97 bordado, en gris y negro",
-      "mensaje_wa": "¡Hola! Vi la novedad del jogger 97 en la web y quiero consultar disponibilidad en talle y color.",
-      "ancho": 867,
       "alto": 1040
     },
     {
